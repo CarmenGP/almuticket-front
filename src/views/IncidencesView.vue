@@ -6,7 +6,7 @@ export default {
 </script>
 <template>
     <div>
-    <h1>Hola bienvenido a Incidencias
+    <h1>Bienvenid@ a Incidencias
     </h1>
     <Incidences/>
     </div>

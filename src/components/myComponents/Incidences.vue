@@ -1,68 +1,66 @@
 <script>
-import axios, { Axios } from 'axios';
+import axios from 'axios';
 export default {
     data() {
         return {
             incidencesData :null,
         }
     },
-    created() {             axios.get('https://pokeapi.co/api/v2/pokemon/pikachu').then((result)=> {this.incidencesData = result.data
+    created() {             
+		axios.get('https://jsonplaceholder.typicode.com/users/1').then((result)=> {this.incidencesData = result.data
                     })
                 },
 }
 </script>
 <template>
-    <div>
-        <div v-if="incidencesData">
-            <h2>
-                {{ incidencesData.name  }}
-            </h2>
+    <div>     
+		<!--Card-->
+		<div v-if="incidencesData" id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
+			<table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+				<thead>
+					<tr>
+						<th data-priority="1">Fecha</th>
+						<th data-priority="2">Usuario</th>
+						<th data-priority="3">Tipo de ticket</th>
+						<th data-priority="4">Categoría</th>
+						<th data-priority="5">Programa</th>
+						<th data-priority="6">Proyecto</th>
+						<th data-priority="7">Descripción</th>
+						<th data-priority="5">Sede</th>
+						<th data-priority="6">Estado</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>{{ incidencesData.name  }}</td>
+						<td>{{ incidencesData.name  }}</td>
+						<td></td>
+						<td>61</td>
+						<td>2011/04/25</td>
+						<td>$320,800</td>
+						<td>61</td>
+						<td>2011/04/25</td>
+						<td>$320,800</td>
+					</tr>
 
-        </div>
+					<!-- Rest of your data (refer to https://datatables.net/examples/server_side/ for server side processing)-->
 
+					<tr>
+						<td>Donna Snider</td>
+						<td>Customer Support</td>
+						<td>New York</td>
+						<td>27</td>
+						<td>2011/01/25</td>
+						<td>$112,000</td>
+						<td>61</td>
+						<td>2011/04/25</td>
+						<td>$320,800</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<!--/Card-->
     </div>
-    <!--Card-->
-		<div id='recipients' class="p-8 mt-6 lg:mt-0 rounded shadow bg-white">
-
-
-<table id="example" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
-    <thead>
-        <tr>
-            <th data-priority="1">Name</th>
-            <th data-priority="2">Position</th>
-            <th data-priority="3">Office</th>
-            <th data-priority="4">Age</th>
-            <th data-priority="5">Start date</th>
-            <th data-priority="6">Salary</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
-            <td>2011/04/25</td>
-            <td>$320,800</td>
-        </tr>
-
-        <!-- Rest of your data (refer to https://datatables.net/examples/server_side/ for server side processing)-->
-
-        <tr>
-            <td>Donna Snider</td>
-            <td>Customer Support</td>
-            <td>New York</td>
-            <td>27</td>
-            <td>2011/01/25</td>
-            <td>$112,000</td>
-        </tr>
-    </tbody>
-
-</table>
-
-
-</div>
-<!--/Card-->
 </template>
 <style lang="css" scoped>
 		/*Overrides for Tailwind CSS */
