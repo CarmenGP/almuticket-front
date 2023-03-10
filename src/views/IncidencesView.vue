@@ -1,15 +1,15 @@
 <script>
- import Button from '../components/myComponents/Button.vue'
+ import Incidences from '../components/myComponents/Incidences.vue'
 export default {
-  components: { Button },
+  components: { Incidences },
 }
 </script>
 <template>
-  <div>
+    <div>
     <h1>Hola bienvenido a Incidencias
     </h1>
-    <Button/>
-  </div>
+    <Incidences/>
+    </div>
 </template>
 <style>
 </style>
