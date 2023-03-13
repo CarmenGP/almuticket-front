@@ -48,7 +48,7 @@ form {
     width:400px ; /* Ancho del formulario */
 }
 label{
-    color:#F08419;
+    
 }
 
 .input-container {
