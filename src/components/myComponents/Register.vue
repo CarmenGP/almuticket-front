@@ -95,13 +95,13 @@ label{
         border: .1rem solid #F08149;
         background-color: #F5F6F6;
         margin-bottom: 5%;
-
 }
     
 .register-button{
     font-weight: bold;
     color: white;
     background-color:#F08419;
+    width: auto;
     padding: 10px 20px; /* Agregar relleno al botón */  
     border-radius:10px ; /* Redondear las esquinas del botón */
     margin-top: 20px; /* Agregar margen superior al botón */
