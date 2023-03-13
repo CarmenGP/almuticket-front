@@ -50,7 +50,7 @@ export default{}
                 </label>
                 <button
                     type="submit"
-                    class="submit-button mt-4 px-4 py-2  leading-6 text-base rounded-md border border-transparent text-white focus:outline-none bg-orange-500 text-blue-100 hover:text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer inline-flex items-center w-full justify-center items-center font-medium focus:outline-none"
+                    class="register-button mt-4 px-4 py-2  leading-6 text-base rounded-md border border-transparent text-white focus:outline-none bg-orange-500 text-blue-100 hover:text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer inline-flex items-center w-full justify-center items-center font-medium focus:outline-none"
                 >
                     Registrarse
                 </button>            
@@ -61,6 +61,7 @@ export default{}
 </template>
 
 <style language="CSS" scoped>
+
 h1{
     color:#F08419;
     text-align:center;
@@ -82,8 +83,9 @@ label{
 
 }
 .input-container {
-        display: flex;
-        background-color: #FFF3D6;
+    display: flex;
+    background-color: #FFF3D6;
+    margin-bottom:15px;
 
 }    
 .input-field {
@@ -96,10 +98,13 @@ label{
 
 }
     
-.submit-button {
-        font-weight: bold;
-        color: white;
-        background-color:#F08419 ;
+.register-button{
+    font-weight: bold;
+    color: white;
+    background-color:#F08419;
+    padding: 10px 20px; /* Agregar relleno al botón */  
+    border-radius:10px ; /* Redondear las esquinas del botón */
+    margin-top: 20px; /* Agregar margen superior al botón */
     }
 
 </style>
