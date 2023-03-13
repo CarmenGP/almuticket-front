@@ -1,5 +1,5 @@
 <script>
- import Incidences from '../components/myComponents/Incidences.vue'
+import Incidences from '../components/myComponents/Incidences.vue'
 export default {
   components: { Incidences },
 }
