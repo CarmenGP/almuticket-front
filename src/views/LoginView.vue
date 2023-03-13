@@ -1,7 +1,7 @@
 <template>
-    
+ 
     <div class="login-container">
-        <h1>Acceso</h1>
+      <div><h1>Acceso</h1></div>
       <form @submit.prevent="submitForm">
         
         <div class="input-container">
@@ -15,9 +15,10 @@
         <button type="submit" class="submit-button">Ingresar</button>
       </form>
     </div>
+ 
   </template>
   
-  <style scoped>
+  <style language="css" scoped>
   .login-container {
     background-color: #FFF3D6;
     padding: 2rem;
@@ -25,20 +26,23 @@
     height: 700px; /* Alto del contenedor */
     
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
-  h1{
+
+h1{
     color:#F08419;
     text-align:center;
-    margin-bottom: 5%;   
+    margin-bottom: 5%; 
+    background-color:purple; 
 }
-  
-  form {
+
+form {
       background-color: #FFFCFC ;
       border:.5rem solid #F08419 ;
-      padding:2rem ;
-      
+      border-radius:10px;
+      padding:2rem ;      
       width:400px ; /* Ancho del formulario */
   }
   
@@ -54,8 +58,7 @@
   color:#F08419 ;
   border-radius:.5rem ;
   border:.1rem solid #F08149 ;
-  background-color:#F5F6F6 ;
-  
+  background-color:#F5F6F6 ;  
   padding:10px ; /* Agregar relleno a los campos de texto */
   font-size:10px ; /* Cambiar el tamaño de la fuente en los campos de texto */
   }
