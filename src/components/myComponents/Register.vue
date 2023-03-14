@@ -11,7 +11,7 @@ export default{}
                 <label>Nombre
                     <input
                     type="text"
-                    name="full-name"
+                    name="name"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Nombre"
                     />
@@ -19,13 +19,13 @@ export default{}
                 <label>Apellidos
                     <input
                     type="text"
-                    name="full-name"
+                    name="surname"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Apellidos"
                     />
                 </label>
                 <label>Correo electrónico
-                <input
+                    <input
                     type="email"
                     name="email"
                     class="input-field px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
@@ -33,7 +33,7 @@ export default{}
                 />
                 </label>
                 <label>Contraseña
-                <input
+                    <input
                     type="password"
                     name="password"
                     class="input-field px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
@@ -41,16 +41,14 @@ export default{}
                 />
                 </label>
                 <label>Confirmar contraseña
-                <input
+                    <input
                     type="password"
                     name="repeat-password"
                     class="input-field px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm"
-                    placeholder="Confirmar constraseña"
+                    placeholder="Confirmar contraseña"
                 />
                 </label>
-                <button
-                    type="submit"
-                    class="register-button mt-4 px-4 py-2  leading-6 text-base rounded-md border border-transparent text-white focus:outline-none bg-orange-500 text-blue-100 hover:text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer inline-flex items-center w-full justify-center items-center font-medium focus:outline-none"
+                <button  type="submit" class="register-button mt-4 px-4 py-2  text-base rounded-md border border-transparent text-white focus:outline-none bg-orange-500 text-blue-100 hover:text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer inline-flex items-center w-full justify-center items-center font-medium focus:outline-none"
                 >
                     Registrarse
                 </button>            
@@ -78,7 +76,6 @@ h1{
 
 label{
     color:#F08419;
-    margin-bottom: 5%;
     font-weight: bold;
 
 }
@@ -89,7 +86,6 @@ label{
 
 }    
 .input-field {
-        font-weight: bold;
         color: #F08419;
         border-radius: 10px;
         border: .1rem solid #F08149;
@@ -101,10 +97,10 @@ label{
     font-weight: bold;
     color: white;
     background-color:#F08419;
-    width: auto;
-    padding: 10px 20px; /* Agregar relleno al botón */  
     border-radius:10px ; /* Redondear las esquinas del botón */
-    margin-top: 20px; /* Agregar margen superior al botón */
+    width:30%;
+    margin:auto;
+    text-align: center;
     }
 
 </style>
