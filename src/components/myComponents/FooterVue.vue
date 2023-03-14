@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-    <footer :text="['lg-start']">
+    <footer>
         <div class="text-center p-3">
             &copy; Asociacionarrabal.org
         </div>
@@ -15,9 +15,8 @@ export default {
         <div class="text-center p-3">
             Málaga Tel: 952 300 500                                                             
         </div>
-        <div class="text-center p-3">
-            Diseñado por FemCoders Málaga        
-            <a class="text-white" href="public\femLogo.png" alt=logoFemCoders> </a>                                                 
+        <div class="femCoders">
+            Diseñado por <img src="public\femLogo.png" width="10%" alt=logoFemCoders>                                                   
         </div>
     </footer>
 </template>
@@ -25,7 +24,14 @@ export default {
 footer{
     display: flex;
     flex-direction: row;
-    background-color:#F19701;
-
+    background-color:#F08419;
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    color: white;
+}
+.femCoders{
+    display: flex;
+    justify-items: center;
 }
 </style>
