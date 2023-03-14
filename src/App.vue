@@ -4,7 +4,7 @@ import FooterVue from './components/myComponents/FooterVue.vue';
 </script>
 
 <template>
-  <header>
+  <!-- <header>
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Inicio</RouterLink>
@@ -13,7 +13,7 @@ import FooterVue from './components/myComponents/FooterVue.vue';
       </nav>
       
     </div>
-  </header>
+  </header> -->
   
   <RouterView />
 
