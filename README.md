@@ -7,9 +7,34 @@ Create an internal APP for Asociación Arrabal in order to centralize all the re
 
 This web application will allow to generate tickets with requests, incidents and room reservations to the people who are part of Arrabal from their cell phones or desktops and to Almudena to manage them all from only one place: AlmuTicket app.
 
-## Members
+## Members and GitHub Links
 
-xxxxxxxxxxxxxxxxxxxxx
+<ul dir="auto">
+<li>
+<p dir="auto"><a href="https://github.com/CarmenGP">Carmen Gallardo Pozo</a> - Developer</p>
+</li>
+<li>
+<p dir="auto"><a href="https://github.com/CarmenCruces">Carmen Cruces Fernández</a> - Product Owner and Developer</p>
+</li>
+<li>
+<p dir="auto"><a href="https://github.com/Himorell">Himorell Jaramillo</a> - Scrum Master and Developer</p>
+</li>
+<li>
+<p dir="auto"><a href="https://github.com/LolaGM">Lola García Morcillo</a> - Developer</p>
+</li>
+<li>
+<p dir="auto"><a href="https://github.com/FlorTiscornia">Flor Tiscornia</a> - Developer</p>
+</li>
+ <li>
+<p dir="auto"><a href="https://github.com/raquel2002x">Raquel Palomo Fuentes</a> - Developer</p>
+</li>
+  <li>
+<p dir="auto"><a href="https://github.com/sandraldr27">Sandra León</a> - Developer</p>
+</li>
+  <li>
+<p dir="auto"><a href="https://github.com/pagudelo884">Paula Ramírez</a> - Developer</p>
+</li>
+</ul>
 
 ## ScreenShots
 
@@ -40,7 +65,9 @@ xxxxxxxxxxxxxxxxxxxxxxx
 
  <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"></img>
  <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></img>
- <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white)"></img>
+ <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white"></img>
+ <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"></img>
+
 
 ## Methodology
 
@@ -49,6 +76,14 @@ xxxxxxxxxxxxxxxxxxxxxxx
 * Pair programming
 * Single programming
 * TDD 
+
+## Core skills:
+
+ * MVC Design pattern.
+ * Git version control system.
+ * User stories and tasks implementation (Trello).
+ * Communication and self-evaluation.
+
 
 ## Next steps
 
