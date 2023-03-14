@@ -1,13 +1,30 @@
-<img src="https://user-images.githubusercontent.com/116545851/224990921-19f8cfa0-c88d-4367-960a-cc7769223c58.png" align="center" alt="My AlmuTicket" width = 100% height = 350px>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
+<img style="width:1000px; height:450px; margin:12px" src="https://user-images.githubusercontent.com/116545851/224990921-19f8cfa0-c88d-4367-960a-cc7769223c58.png" alt="My AlmuTicket"/>
+</div>
 
-
-## AlmuTicket: Description
+<h2>1. AlmuTicket: Project Description</h2>
 
 Create an internal APP for Asociación Arrabal in order to centralize all the requests currently received by Almudena(the receptionist) from different sources and people.
 
 This web application will allow to generate tickets with requests, incidents and room reservations to the people who are part of Arrabal from their cell phones or desktops and to Almudena to manage them all from only one place: AlmuTicket app.
 
-## Members and GitHub Links
+<h2>2. User Stories</h2>
+<h4>2.1 Administrator</h4>
+<ul>
+<li>........</li>
+<li>........</li>
+<li>........</li>
+</ul>
+    
+<h4>2.2 Users</h4>     
+<ul>
+<li>........</li>
+<li>........</li>
+<li>........</li>
+</ul>
+   
+   
+<h2>3. Fullstack Developer Team and GitHub Links</h2>
 
 <ul dir="auto">
 <li>
@@ -36,11 +53,31 @@ This web application will allow to generate tickets with requests, incidents and
 </li>
 </ul>
 
-## ScreenShots
+<h2>4. Project Demo</h2>
 
-xxxxxxxxxxxxxxxxxxxxxxx
+<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
+<img style="width:220px; height:150px; margin:12px" src="https://user-images.githubusercontent.com/116546588/225119393-5b21b696-647a-47fc-9df0-d18d1d969a8e.gif" alt="Preliminary project demo"/>
+</div>
 
-## Stacks and technologies
+<h2>5. Initial Sketch</h2>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
+<img style="width:220px; height:150px; margin:12px" src="https://user-images.githubusercontent.com/116546588/225119393-5b21b696-647a-47fc-9df0-d18d1d969a8e.gif" alt="Preliminary project demo"/>
+</div>
+
+<h2>6. Atomic Design</h2>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
+<img style="width:220px; height:150px; margin:12px" src="https://user-images.githubusercontent.com/116546588/225119393-5b21b696-647a-47fc-9df0-d18d1d969a8e.gif" alt="Preliminary project demo"/>
+</div>
+
+<h2>7. Final Design</h2>
+
+<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
+<img style="width:220px; height:150px; margin:12px" src="https://user-images.githubusercontent.com/116546588/225119393-5b21b696-647a-47fc-9df0-d18d1d969a8e.gif" alt="Preliminary project demo"/>
+</div>
+
+<h2>8. Stacks and technologies</h2>
 
  <p align="left">
  <img src= "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"></img>
@@ -61,7 +98,7 @@ xxxxxxxxxxxxxxxxxxxxxxx
  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"></img>
  </p>
  
-## Other Tools
+<h2>9. Other Tools</h2>
 
  <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"></img>
  <img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white"></img>
@@ -69,7 +106,7 @@ xxxxxxxxxxxxxxxxxxxxxxx
  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white"></img>
 
 
-## Methodology
+<h2>10. Methodology</h2>
 
 * Agile (SCRUM) 
 * Mob programming
@@ -77,7 +114,7 @@ xxxxxxxxxxxxxxxxxxxxxxx
 * Single programming
 * TDD 
 
-## Core skills:
+<h2>11. Core skills</h2>:
 
  * MVC Design pattern.
  * Git version control system.
@@ -85,11 +122,29 @@ xxxxxxxxxxxxxxxxxxxxxxx
  * Communication and self-evaluation.
 
 
-## Next steps
+<h2>12. How to install</h2>
+<h4>12.1 Required</h4>
+<ul>
+<li>........</li>
+<li>........</li>
+<li>........</li>
+</ul>
+
+<h4>12.2 To install Project</h4>
+<ul>
+<li>........</li>
+<li>........</li>
+<li>........</li>
+</ul>
+
+<h4>12.3 Testing</h4>
+<div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
+<img style="width:220px; height:150px; margin:12px" src="https://user-images.githubusercontent.com/116546588/225119393-5b21b696-647a-47fc-9df0-d18d1d969a8e.gif" alt="Preliminary project demo"/>
+</div>
+
+<h2>13. Next steps</h2>
 
 xxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-## How to install
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
