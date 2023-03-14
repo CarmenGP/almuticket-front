@@ -16,12 +16,12 @@ import Header from './components/myComponents/Header.vue'
     </div>
   </header> -->
 
-  <RouterView />
+  <!-- <RouterView /> -->
 </template>
 
 <style>
-* {
-  padding: 0;
-  margin: 0;
+#app{
+  width: 100%;
+  height: 100%;
 }
 </style>

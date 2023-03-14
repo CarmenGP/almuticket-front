@@ -6,8 +6,8 @@ export default {
 
 
 <template>
-    <nav class="navbar">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="Header">
+    <a class="navbar-brand" href="#">Header</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,10 +31,9 @@ export default {
 </template>
 
 <style>
-.navbar{
-    display:flex;
+.Header{
     background-color:#F08419;
-    margin-top: 0;
-    align-items: flex-start;
+    width: 100%;
+    height: 200px;
 }
 </style>
