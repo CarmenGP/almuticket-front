@@ -20,7 +20,7 @@
 <style language="css" scoped>
 
 body {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family:'Nunito Sans', sans-serif;
 } 
 .login-container {
     background-color: #FFF3D6;
