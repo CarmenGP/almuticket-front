@@ -28,7 +28,7 @@ export default{}
                     <input
                     type="email"
                     name="email"
-                    class="input-field px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
+                    class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Correo electrónico"
                 />
                 </label>
@@ -36,7 +36,7 @@ export default{}
                     <input
                     type="password"
                     name="password"
-                    class="input-field px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
+                    class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Contraseña"
                 />
                 </label>
@@ -44,7 +44,7 @@ export default{}
                     <input
                     type="password"
                     name="repeat-password"
-                    class="input-field px-4 py-3 mt-4 w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0 text-sm"
+                    class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Confirmar contraseña"
                 />
                 </label>
@@ -58,7 +58,7 @@ export default{}
     </div>
 </template>
 
-<style language="CSS" scoped>
+<style language="css" scoped>
 
 h1{
     color:#F08419;
@@ -81,7 +81,8 @@ label{
 }
 .input-container {
     display: flex;
-    background-color: #FFF3D6;
+    width:100%;
+    background-color:#FFF3D6;
     margin-bottom:15px;
 
 }    
@@ -98,8 +99,8 @@ label{
     color: white;
     background-color:#F08419;
     border-radius:10px ; /* Redondear las esquinas del botón */
-    width:30%;
-    margin:auto;
+    width:50%;
+
     text-align: center;
     }
 
