@@ -1,12 +1,12 @@
 <script>
-import Register from '../components/myComponents/Register.vue'
+import RegistrationForm from '../components/myComponents/RegistrationForm.vue'
 export default {
-components: { Register },
+components: { RegistrationForm },
 
 }
 </script>
 <template>
-        <Register/>
+        <RegistrationForm/>
 </template>
 <style>
 
