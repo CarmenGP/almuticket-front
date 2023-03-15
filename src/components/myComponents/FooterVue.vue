@@ -6,24 +6,24 @@ export default {
 
 <template>
     <footer>
-        <div class="text-center p-3">
-            &copy; Asociacionarrabal.org
+        <div class="text-center">
+            <p>&copy; Asociacionarrabal.org</p>
         </div>
-        <div class="text-center p-3">
-            <a class="text-white" href="https://asociacionarrabal.org/avisos-legales">Aviso legal</a>
+        <div class="text-center">
+            <p>Málaga Tel: 952 300 500 </p>                                                                                                                       
         </div>
-        <div class="text-center p-3">
-            Málaga Tel: 952 300 500                                                             
-        </div>
-        <div class="femCoders">
-            Diseñado por <img src="public\femLogo.png" width="10%" alt=logoFemCoders>                                                   
+        <div class="text-center femCoders">
+            <p>Diseñado por </p>  
+            <div><img class="logo" src="public\femCoders.png" alt="logo FemCoders"></div>                                               
         </div>
     </footer>
 </template>
-<style>
+<style lang="css" scoped>
+@import "bootstrap/dist/css/bootstrap.min.css";
 footer{
     display: flex;
     flex-direction: row;
+    justify-content: space-around !important;
     background-color:#F08419;
     position:absolute;
     bottom: 0px;
@@ -32,6 +32,12 @@ footer{
 }
 .femCoders{
     display: flex;
-    justify-items: center;
+    flex-direction: row;
+    justify-content: space-between !important;
+    
+}
+.logo{
+    width: 40px;
+    margin-left: 10px;
 }
 </style>
