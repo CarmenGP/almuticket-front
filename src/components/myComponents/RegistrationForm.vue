@@ -1,9 +1,11 @@
 <script>
-export default{}
+export default{
+    
 computed: {
   emailIsValid(){
     return this.email.endsWith('@arrabalempleo.org');
   }
+}
 }
 </script>
 
