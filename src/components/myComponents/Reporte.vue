@@ -8,7 +8,7 @@
                     infoFiltered: '(Filtrados de _MAX_ registros.)',
                     paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
                 }}">
-                    <thead class="p-3 mb-2 bg-warning text-dark">
+                    <thead class="thead">
                         <tr>
                         <th>#</th>
 						<th>Fecha</th>
@@ -90,5 +90,9 @@ export default {
 
 <style lang="css">
     @import 'datatables.net-bs5';
-
+    .thead{
+        background: #FBE6C6;
+        border: 3px solid #F08419;
+    }
+    
 </style>
