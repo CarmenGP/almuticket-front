@@ -7,6 +7,7 @@ components: { Reporte },
 <template>
     <div>
     <h1>Tickets</h1>
+    <br>
     <Reporte/>
     </div>
 </template>
