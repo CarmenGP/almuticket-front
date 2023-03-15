@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="css">
     @import 'datatables.net-bs5';
 
 </style>
