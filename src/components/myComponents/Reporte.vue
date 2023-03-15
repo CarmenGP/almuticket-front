@@ -10,6 +10,7 @@
                 }}">
                     <thead>
                         <tr>
+                        <th data-priority="1">#</th>
 						<th data-priority="1">Fecha</th>
 						<th data-priority="2">Usuario</th>
 						<th data-priority="3">Tipo de ticket</th>
@@ -57,7 +58,8 @@ export default {
                 {data: 'site'},
                 {data: 'company'},
                 {data: 'address'},
-                {data: ''},
+                {data: 'name'},
+                {data: 'name'},
 
 
             ],
