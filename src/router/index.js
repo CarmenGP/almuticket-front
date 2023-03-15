@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import IncidencesView from '../views/IncidencesView.vue'
-import ReporteWiew from '../views/ReporteView.vue'
+import MyTickestWiew from '../views/MyTickestView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,9 +17,9 @@ const router = createRouter({
       component: IncidencesView
     },
     {
-      path: '/reporte',
-      name: 'reporte',
-      component: ReporteWiew
+      path: '/tickest',
+      name: 'tickest',
+      component: MyTickestWiew
     },
     {
       path: '/about',

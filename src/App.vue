@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/">Inicio</RouterLink>
         <RouterLink to="/about">Sobre AlmuTicket</RouterLink>
         <RouterLink to="/incidences">Incidencias</RouterLink>
-        <RouterLink to="/reporte">Reporte</RouterLink>
+        <RouterLink to="/tickest">My tickest</RouterLink>
       </nav>
     </div>
   </header>
@@ -21,6 +21,7 @@ import { RouterLink, RouterView } from 'vue-router'
 header {
   line-height: 1.5;
   max-height: 100vh;
+
 }
 
 .logo {
@@ -33,6 +34,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  display: flex;
 }
 
 nav a.router-link-exact-active {
