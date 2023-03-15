@@ -1,39 +1,67 @@
 <script>
+
 export default {
     name:'Header'
 }
+
 </script>
 
 
 <template>
-    <nav class="Header">
-    <a class="navbar-brand" href="#">Header</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-        <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Crear Reserva</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Crear Incidencia</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Mis Tickets</a>
-        </li>
-        </ul>
-    </div>
+    <div class="header">
+        <div class="headerContainer">
+            <a class="logoArrabal" href="#">
+            <img src="public/logoArrabal.png" alt="Logo Arrabal">
+            </a>
+    <nav class="menu">
+        <RouterLink to="/">Inicio</RouterLink>
+        <RouterLink to="/about">Crear Reserva</RouterLink>
+        <RouterLink to="/login">Crear Incidencia</RouterLink>
+        <RouterLink to="/register">Mis Tickets</RouterLink>
     </nav>
+        </div>
+    </div>
 </template>
 
-<style>
-.Header{
-    background-color:#F08419;
+<style lang="css" scoped>
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.header{
+    background-color:#F08419; 
+    height: 25%;
     width: 100%;
-    height: 200px;
 }
+
+.headerContainer{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}  
+
+.logoContainer{
+    height: 20%;
+    width: 30%;
+} 
+
+.logoArrabal{
+    height: 20%;
+    width: 25%;
+    margin: 10px 10px 10px 10px;
+}
+
+.menu{
+    display:flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color:white;
+    margin:15px;
+}
+
 </style>
