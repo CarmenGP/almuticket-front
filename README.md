@@ -148,21 +148,25 @@ This web application will allow to generate tickets with requests, incidents and
 
 
 <h2>12. How to install</h2>
-<h4>12.1 Required</h4>
-<ul>
-<li>........</li>
-<li>........</li>
-<li>........</li>
-</ul>
+<h4>12.1 Required:</h4>
+<li>NPM Installed.</li>
+<li>VUE Installed and updated to latest version</li>
+<li>MySQL.</li><br>
 
-<h4>12.2 To install Project</h4>
-<ul>
-<li>........</li>
-<li>........</li>
-<li>........</li>
-</ul>
+<h4>12.2 To install our project</h4>
+<li>Open IDE</li>
+<li>Copy in the terminal: git clone https://github.com/CarmenGP/almuticket-front</li>
+<li>In the IDE run <b>git clone</b> command, an paste the HTTPS.</li>
+<li>Write in the IDE terminal (In the project folder) the command: <b>npm install vue</b>.</li>
+<li>Type in the IDE terminal: <b>npm run format</b> and press intro.</li>
+<li>Type in the IDE terminal: <b>npm run dev</b> and press intro. It will open the port http://localhost:5173/ from where we can view the project</li>
 
-<h4>12.3 Testing</h4>
+<h4>12.3 Warning & Testing</h4>
+<ol>
+<li><b>Important</b>: If we then need to run more commands in the IDE, we'll open a third terminal without closing the previous two.</li>
+<li><b>Test</b>: Run in the IDE <b>npm run test:unit</b> where it should return the following result:<b> xxx passed</b> and <b> OK (xxx test, xxx assertions)</b></li>
+</ol>
+
 <div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
 <img style="width:220px; height:150px; margin:12px" src="https://user-images.githubusercontent.com/116546588/225119393-5b21b696-647a-47fc-9df0-d18d1d969a8e.gif" alt="Preliminary project demo"/>
 </div>
