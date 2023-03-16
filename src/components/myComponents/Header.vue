@@ -8,17 +8,17 @@ export default {
 
 
 <template>
-    <div class="header">
-        <div class="headerContainer">
+    <div class="headerContainer">
+        <div class="logoContainer">
             <a class="logoArrabal" href="#">
             <img src="public/logoArrabal.png" alt="Logo Arrabal">
             </a>
-    <nav class="menu">
-        <RouterLink to="/">Inicio</RouterLink>
-        <RouterLink to="/about">Crear Reserva</RouterLink>
-        <RouterLink to="/login">Crear Incidencia</RouterLink>
-        <RouterLink to="/register">Mis Tickets</RouterLink>
-    </nav>
+            </div>
+        <div class="menu">
+            <RouterLink to="/"><a>Inicio</a></RouterLink>
+            <RouterLink to="/about"><a>Crear Reserva</a></RouterLink>
+            <RouterLink to="/login"><a>Crear Incidencia</a></RouterLink>
+            <RouterLink to="/register"><a>Mis Tickets</a></RouterLink>
         </div>
     </div>
 </template>
@@ -26,34 +26,36 @@ export default {
 <style lang="css" scoped>
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-.header{
-    background-color:#F08419; 
-    height: 25%;
-    width: 100%;
-}
-
 .headerContainer{
+    background-color:#F08419; 
+    height: 20%;
+    width: 100%!important;
     display:flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
 }  
 
 .logoContainer{
-    height: 20%;
-    width: 30%;
-} 
+    margin-top: 0px;
+    width: 20%;
+    align-items: center;
+}  
 
 .logoArrabal{
-    height: 20%;
-    width: 25%;
-    margin: 10px 10px 10px 10px;
+    margin-top:10px;
+    margin-left: 10px;
+    align-items: center;
+
 }
 
 .menu{
-    display:flex;
+    display: flex;
     flex-direction: row;
-    text-decoration: none;
-    justify-content: center;
+    margin-right: 0;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10%;
 }
 a{
     text-decoration: none;
@@ -62,6 +64,12 @@ a{
     justify-content: space-between;
     color:white;
     margin:15px;
+    justify-items: center;
+    align-items: baseline;
+}
+
+a:hover{
+    color:black;
 }
 
 </style>
