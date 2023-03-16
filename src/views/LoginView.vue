@@ -6,7 +6,7 @@ components: { Login },
 }
 </script>
 <template>
-        <Login/>
+        <Login/>        
 </template>
 <style>
 
