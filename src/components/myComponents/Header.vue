@@ -14,12 +14,12 @@ export default {
             <img src="public/logoArrabal.png" alt="Logo Arrabal">
             </a>
             </div>
-        <div class="menu">
-            <RouterLink to="/"><a>Inicio</a></RouterLink>
-            <RouterLink to="/about"><a>Crear Reserva</a></RouterLink>
-            <RouterLink to="/login"><a>Crear Incidencia</a></RouterLink>
-            <RouterLink to="/register"><a>Mis Tickets</a></RouterLink>
-        </div>
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Crear Reserva</a></li>
+            <li><a href="#">Crear Incidencia</a></li>
+            <li><a href="#">Mis Tickets</a></li>
+        </ul>
     </div>
 </template>
 
