@@ -16,7 +16,7 @@ export default {
 
 <template>
         <div class="reservas-container">
-        <h1 class="text-3xl font-bold text-center mb-8" style="color: #F08419">Reservas</h1>
+        <h1 class="text-3xl font-bold text-center mb-8" style="color: #F08419">Crear Ticket</h1>
         <div class="buttons-container flex justify-center">
             <button class="solicitud-button mr-4" @click="solicitarReserva()">Solicitud de reserva de sala</button>
             <button class="incidencia-button mx-4" @click="crearIncidencia()">Incidencia/Apoyo Programas</button>
@@ -49,16 +49,19 @@ html, body {
     margin-top: 2rem;
 }
 .solicitud-button, .incidencia-button, .tickets-button {
-    background-color: #F08419;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    background-color: #F8F8F8;
+    color: #F08419;
+    border: 8px solid #F08419;
+    border-radius: 13px;
     font-size: 1.2rem;
     padding: 0.8rem 1.2rem;
     cursor: pointer;
+    transition: all 0.2s;
 }
 .solicitud-button:hover, .incidencia-button:hover, .tickets-button:hover {
-    background-color: #E57000;
+    background-color: #F08419;
+    color: #F8F8F8;
+    border-color: #F8F8F8;
 }
 .footer {
     position: absolute;
