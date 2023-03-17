@@ -1,12 +1,24 @@
 <script>
-export default{
-    
-computed: {
-  emailIsValid(){
-    return this.email.endsWith('@arrabalempleo.org');
-  }
-}
-}
+    export default {
+        data() {
+            return {
+                email: "",
+                password: ""
+            };
+        },
+        methods: {
+            submitForm() {
+                // Validar datos ingresados por el usuario
+                if (!this.email.endsWith('@arrabalempleo.org')) {
+                    alert('Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".');
+                    return;
+                }
+                
+                // Enviar datos al servidor para iniciar sesión
+                // ...
+            }
+        }
+    }
 </script>
 
 <template>
