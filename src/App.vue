@@ -21,5 +21,13 @@ import FooterVue from './components/myComponents/FooterVue.vue';
 </template>
 
 <style scoped>
+import Header from './components/myComponents/Header.vue'
+</script>
+
+<template>
+<Header/>
+</template>
+
+<style>
 
 </style>
