@@ -46,7 +46,8 @@ html, body {
     .solicitud-button, .incidencia-button, .tickets-button {
         font-size: 1rem;
         padding: 0.5rem 0.8rem;
-        margin-top: 1rem;
+        margin-top:5rem;
+        margin-bottom: 2;
     }
 }
 .buttons-container {
