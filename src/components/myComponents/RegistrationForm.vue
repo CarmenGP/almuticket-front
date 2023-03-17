@@ -1,24 +1,26 @@
 <script>
     export default {
         data() {
-            return {
-                email: "",
-                password: ""
-            };
+        return {
+            email: "",
+            password: "",
+        };
         },
         methods: {
-            submitForm() {
-                // Validar datos ingresados por el usuario
-                if (!this.email.endsWith('@arrabalempleo.org')) {
-                    alert('Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".');
-                    return;
-                }
-                
-                // Enviar datos al servidor para iniciar sesión
-                // ...
+        submitForm() {
+            // Validar datos ingresados por el usuario
+            if (!this.email.endsWith("@arrabalempleo.org")) {
+            // Asignar el mensaje de error al elemento div
+            const errorMessage = document.querySelector(".error-message");
+            errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
+            return;
             }
-        }
-    }
+    
+            // Enviar datos al servidor para iniciar sesión
+            // ...
+        },
+        },
+    };
 </script>
 
 <template>
@@ -72,6 +74,7 @@
                     Registrarse
                 </button>            
                 </form>
+                <div class="error-message"></div> <!-- Agregar un elemento div para mostrar el mensaje de error -->
             </div>
         </div>
     </div>
