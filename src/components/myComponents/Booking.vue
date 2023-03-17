@@ -37,10 +37,17 @@ html, body {
     margin: 0;
     padding: 0;
 }
-.reservas-container {
-    background-color: #F2F2F2;
-    padding: 2rem;
-    min-height: 100%;
+@media screen and (max-width: 768px) {
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .solicitud-button, .incidencia-button, .tickets-button {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+        margin-top: 1rem;
+    }
 }
 .buttons-container {
     margin-bottom: 4rem;
@@ -62,6 +69,11 @@ html, body {
     background-color: #F08419;
     color: #F8F8F8;
     border-color: #F8F8F8;
+}
+.booking-container {
+    background-color: #F2F2F2;
+    padding: 2rem;
+    min-height: 100vh;
 }
 .footer {
     position: absolute;
