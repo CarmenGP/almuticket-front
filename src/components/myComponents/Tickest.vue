@@ -1,9 +1,7 @@
 <template>
-        <div class="caja">
         <div class="row">
-            <div class="col-lg-8 offset-lg-2">
-                <div class="table-responsive">
-                    <DataTable :data="products" :columns="columns" class="table table-striped table-bordered display"
+            <div class="table-responsive">
+                <DataTable :data="products" :columns="columns" class="table table-success table-striped table-bordered display"
                     :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
                         search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
                         infoFiltered: '(Filtrados de _MAX_ registros.)',
@@ -11,23 +9,21 @@
                     }}">
                         <thead class="thead">
                             <tr>
-                            <th>#</th>
-                            <th>Fecha</th>
-                            <th>Usuario</th>
-                            <th>Tipo de ticket</th>
-                            <th>Categoría</th>
-                            <th>Programa</th>
-                            <th>Proyecto</th>
-                            <th>Descripción</th>
-                            <th>Sede</th>
-                            <th>Estado</th>
-                        </tr>
+                                <th>#</th>
+                                <th>Fecha</th>
+                                <th>Usuario</th>
+                                <th>Tipo de ticket</th>
+                                <th>Categoría</th>
+                                <th>Programa</th>
+                                <th>Proyecto</th>
+                                <th>Descripción</th>
+                                <th>Sede</th>
+                                <th>Estado</th>
+                            </tr>
                         </thead>
                 </DataTable>
-                </div>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
