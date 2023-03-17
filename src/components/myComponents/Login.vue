@@ -76,7 +76,7 @@ h1 {
     border-width: 5px;
     border-color: #f08419;
     border-radius: 10px;
-    padding: 50px;
+    padding: 5px;
     background-color: #fffcfc;
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@ label {
     display: flex;
     width: 100%;
     background-color: #fff3d6;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     flex-direction: column !important; /* Cambiar la dirección del contenedor de entrada a columna */
     justify-content: center; /* Centrar elementos dentro del contenedor de entrada */
     align-items: center; /* Centrar elementos dentro del contenedor de entrada */
