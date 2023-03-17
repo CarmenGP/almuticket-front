@@ -1,3 +1,27 @@
+<script>
+    export default {
+        data() {
+        return {
+            email: "",
+            password: "",
+        };
+        },
+        methods: {
+        submitForm() {
+            // Validar datos ingresados por el usuario
+            if (!this.email.endsWith("@arrabalempleo.org")) {
+            // Asignar el mensaje de error al elemento div
+            const errorMessage = document.querySelector(".error-message");
+            errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
+            return;
+            }
+    
+            // Enviar datos al servidor para iniciar sesión
+            // ...
+        },
+        },
+    };
+</script>
 <template>
     <div class="input-container container mx-auto p-4">
     <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
@@ -36,32 +60,6 @@
     </div>
     </div>
 </template>
-
-<script>
-    export default {
-        data() {
-        return {
-            email: "",
-            password: "",
-        };
-        },
-        methods: {
-        submitForm() {
-            // Validar datos ingresados por el usuario
-            if (!this.email.endsWith("@arrabalempleo.org")) {
-            // Asignar el mensaje de error al elemento div
-            const errorMessage = document.querySelector(".error-message");
-            errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
-            return;
-            }
-    
-            // Enviar datos al servidor para iniciar sesión
-            // ...
-        },
-        },
-    };
-</script>
-
 <style lang="css" scoped>
 h1 {
     color: #f08419;
@@ -70,7 +68,6 @@ h1 {
     font-weight: bold;
     font-family: "Nunito Sans", sans-serif;
 }
-
 .formContainer {
     color: #f08419;
     border-width: 5px;
@@ -82,13 +79,11 @@ h1 {
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
 label {
     color: #f08419;
     font-weight: bold;
     font-family: "Nunito Sans", sans-serif;
 }
-
 .input-container {
     display: flex;
     width: 100%;
@@ -98,7 +93,6 @@ label {
     justify-content: center; /* Centrar elementos dentro del contenedor de entrada */
     align-items: center; /* Centrar elementos dentro del contenedor de entrada */
 }
-
 .input-field {
     color: #f08419;
     border-radius: 10px;
@@ -107,7 +101,6 @@ label {
     margin-bottom: 5%;
     font-family: "Nunito Sans", sans-serif;
 }
-
 .login-button {
     font-weight: bold;
     color: white;

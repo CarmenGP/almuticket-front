@@ -30,6 +30,9 @@ footer{
     color: white;
     height: 70px;
     align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .femCoders{
     display: flex;

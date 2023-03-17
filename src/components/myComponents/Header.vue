@@ -16,7 +16,7 @@ export default {
             </div>
         <div class="menu">
             <RouterLink to="/"><a>Inicio</a></RouterLink>
-            <RouterLink to="/about"><a>Crear Reserva</a></RouterLink>
+            <RouterLink to="/booking"><a>Crear Reserva</a></RouterLink>
             <RouterLink to="/login"><a>Crear Incidencia</a></RouterLink>
             <RouterLink to="/tickets"><a>Mis Tickets</a></RouterLink>
         </div>

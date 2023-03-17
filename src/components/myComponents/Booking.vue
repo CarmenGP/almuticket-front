@@ -1,0 +1,76 @@
+<script>
+export default {
+    methods: {
+        solicitarReserva() {
+        // Lógica para mostrar el formulario de solicitud de reserva de sala
+        },
+        crearIncidencia() {
+        // Lógica para crear una nueva incidencia o solicitud de apoyo de programas
+        },
+        verTickets() {
+        // Lógica para mostrar los tickets del usuario actual
+        }
+    }
+}
+</script>
+
+<template>
+        <div class="reservas-container">
+        <h1 class="text-3xl font-bold text-center mb-8" style="color: #F08419">Reservas</h1>
+        <div class="buttons-container flex justify-center">
+            <button class="solicitud-button mr-4" @click="solicitarReserva()">Solicitud de reserva de sala</button>
+            <button class="incidencia-button mx-4" @click="crearIncidencia()">Incidencia/Apoyo Programas</button>
+            <button class="tickets-button ml-4" @click="verTickets()">Ver mis tickets</button>
+        </div>
+        </div>
+</template>
+
+<style scoped>
+h1 {
+    color: #F08419;
+    margin-top: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.reservas-container {
+    background-color: #F2F2F2;
+    padding: 2rem;
+    min-height: 100%;
+}
+.buttons-container {
+    margin-bottom: 4rem;
+}
+.buttons-wrapper {
+    margin-top: 2rem;
+}
+.solicitud-button, .incidencia-button, .tickets-button {
+    background-color: #F08419;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0.8rem 1.2rem;
+    cursor: pointer;
+}
+.solicitud-button:hover, .incidencia-button:hover, .tickets-button:hover {
+    background-color: #E57000;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #F08419;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    color: white;
+}
+</style>
