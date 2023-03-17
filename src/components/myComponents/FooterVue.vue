@@ -40,4 +40,9 @@ footer{
     width: 40px;
     margin-left: 10px;
 }
+
+@media only screen and (max-width: 700px) {
+
+
+}
 </style>
