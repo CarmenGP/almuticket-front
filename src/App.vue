@@ -5,9 +5,9 @@ import Header from './components/myComponents/Header.vue'
 
 </script>
 <template>
-  <Header/>
+  <Header />
   <RouterView />
   <FooterVue />
 </template>
-<style scoped>
+<style language="css" scoped>
 </style>
