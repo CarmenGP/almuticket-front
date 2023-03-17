@@ -6,13 +6,13 @@ export default {
 
 <template>
     <footer>
-        <div class="text-center">
+        <div class="textCenter">
             <p>&copy; Asociacionarrabal.org</p>
         </div>
-        <div class="text-center">
+        <div class="textCenter">
             <p>Málaga Tel: 952 300 500 </p>                                                                                                                       
         </div>
-        <div class="text-center femCoders">
+        <div class="textCenter femCoders">
             <p>Diseñado por </p>  
             <div><img class="logo" src="public\femCoders.png" alt="logo FemCoders"></div>                                               
         </div>
@@ -29,6 +29,8 @@ footer{
     bottom: 0px;
     width: 100%;
     color: white;
+    height: 70px;
+    align-items: center;
 }
 .femCoders{
     display: flex;
@@ -37,12 +39,22 @@ footer{
     
 }
 .logo{
-    width: 40px;
+    width: 55px;
     margin-left: 10px;
 }
 
-@media only screen and (max-width: 700px) {
 
+@media only screen and (max-width: 768px) {
 
+    .textCenter {
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+    }
+
+    .textCenter .femCoders {
+        flex-basis: 100%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
 }
 </style>
