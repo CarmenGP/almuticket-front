@@ -1,8 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import IncidencesView from '../views/IncidencesView.vue'
 import LoginView from '../views/LoginView.vue'
 import RegisterView from '../views/RegisterView.vue'
-
+import MyTicketsView from '../views/MyTicketsView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,9 +12,9 @@ const router = createRouter({
       component: LoginView // Cambiar el componente por defecto a LoginView
     },
     {
-      path: '/incidences',
-      name: 'incidences',
-      component: IncidencesView
+      path: '/tickets',
+      name: 'tickets',
+      component: MyTicketsView
     },
     {
       path: '/about',

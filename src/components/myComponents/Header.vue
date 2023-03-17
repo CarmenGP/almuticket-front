@@ -18,7 +18,7 @@ export default {
             <RouterLink to="/"><a>Inicio</a></RouterLink>
             <RouterLink to="/about"><a>Crear Reserva</a></RouterLink>
             <RouterLink to="/login"><a>Crear Incidencia</a></RouterLink>
-            <RouterLink to="/register"><a>Mis Tickets</a></RouterLink>
+            <RouterLink to="/tickets"><a>Mis Tickets</a></RouterLink>
         </div>
     </div>
 </template>
