@@ -9,6 +9,20 @@ export default {
 
 <template>
     <div class="headerContainer">
+    <input type="checkbox">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-times"></i>
+    <nav>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Crear Reserva</a></li>
+        <li><a href="#">Crear Incidencia</a></li>
+        <li><a href="#">Mis tickets</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <!-- <div class="headerContainer">
         <div class="logoContainer">
             <a class="logoArrabal" href="#">
             <img src="public/logoArrabal.png" alt="Logo Arrabal">
@@ -20,7 +34,7 @@ export default {
             <li><a href="#">Crear Incidencia</a></li>
             <li><a href="#">Mis Tickets</a></li>
         </ul>
-    </div>
+    </div> -->
 </template>
 
 <style lang="css" scoped>
@@ -35,7 +49,7 @@ export default {
     justify-content: space-between;
 }  
 
-.logoContainer{
+/* .logoContainer{
     margin-top: 0px;
     width: 20%;
     align-items: center;
@@ -70,6 +84,6 @@ a{
 
 a:hover{
     color:black;
-}
+} */
 
 </style>
