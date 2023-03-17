@@ -8,18 +8,18 @@
                         infoFiltered: '(Filtrados de _MAX_ registros.)',
                         paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
                     }}">
-                        <thead class="thead">
+                        <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Fecha</th>
-                                <th>Usuario</th>
-                                <th>Tipo de ticket</th>
-                                <th>Categoría</th>
-                                <th>Programa</th>
-                                <th>Proyecto</th>
-                                <th>Descripción</th>
-                                <th>Sede</th>
-                                <th>Estado</th>
+                                <th class="thead">#</th>
+                                <th class="thead">Fecha</th>
+                                <th class="thead">Usuario</th>
+                                <th class="thead">Tipo de ticket</th>
+                                <th class="thead">Categoría</th>
+                                <th class="thead">Programa</th>
+                                <th class="thead">Proyecto</th>
+                                <th class="thead">Descripción</th>
+                                <th class="thead">Sede</th>
+                                <th class="thead">Estado</th>
                             </tr>
                         </thead>
                 </DataTable>
@@ -79,9 +79,9 @@ export default {
 
 <style>
     @import 'datatables.net-bs5';
-    .thead{
-        background: #FBE6C6;
-        border: 3px solid #F08419;
+    .thead {
+        background-color: #FBE6C6 !important;
+        border: 2px solid #F08419;
     }
     div{
         background-color: #FBE6C6;
