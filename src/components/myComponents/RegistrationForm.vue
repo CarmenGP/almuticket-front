@@ -26,7 +26,7 @@
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <h1 class="text-lg font-bold">Registro</h1>
             <div class="formContainer">
-                <form class="flex flex-col mt-4">
+                <form class="flex flex-col mt-4" @submit.prevent="submitForm">
                 <label>Nombre
                     <input
                     type="text"
