@@ -25,7 +25,6 @@ footer{
     flex-direction: row;
     justify-content: space-around !important;
     background-color:#F08419;
-    position:absolute;
     bottom: 0px;
     width: 100%;
     color: white;
