@@ -6,8 +6,12 @@ components: { RegistrationForm },
 }
 </script>
 <template>
-        <RegistrationForm/>
+        <div class="bodyContainer">
+                <RegistrationForm/>     
+        </div>
 </template>
-<style>
-
+<style lang="css" scoped>
+.bodyContainer{
+        background-color: #fff3d6;
+}
 </style>

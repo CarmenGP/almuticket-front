@@ -92,7 +92,7 @@ h1{
     border-width: 5px;
     border-color: #F08419;
     border-radius: 10px;
-    padding: 50px;
+    padding: 20px;
     background-color: #FFFCFC;
 }
 
@@ -122,7 +122,7 @@ label{
     background-color:#F08419;
     border-radius:10px ; /* Redondear las esquinas del botón */
     width:50%;
-
+    margin:auto;
     text-align: center;
     }
 
