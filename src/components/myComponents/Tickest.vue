@@ -1,5 +1,6 @@
 <template>
         <div class="row">
+            <div class="table">
             <div class="table-responsive">
                 <DataTable :data="products" :columns="columns" class="table table-success table-striped table-bordered display"
                     :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
@@ -24,6 +25,7 @@
                 </DataTable>
             </div>
         </div>
+    </div>
 </template>
 
 <script>
@@ -75,7 +77,7 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style>
     @import 'datatables.net-bs5';
     .thead{
         background: #FBE6C6;
@@ -83,6 +85,9 @@ export default {
     }
     div{
         background-color: #FBE6C6;
+    }
+    .table{
+        margin: 0.5px;
     }
 
 </style>
