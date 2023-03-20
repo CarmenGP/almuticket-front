@@ -6,6 +6,7 @@ components: { Tickets },
 </script>
 <template>
     <div>
+        <h1>Vista de Mis Tickets</h1>
     <br>
     <Tickets/>
     </div>
