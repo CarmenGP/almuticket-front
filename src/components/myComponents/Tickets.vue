@@ -1,107 +1,113 @@
+<script>
+let dataTable;
+let dataTableIsInitialized = false;
+
+const dataTableOptions = {
+    lengthMenu: [5, 10, 15],
+    columnDefs: [
+        { className: "centered", targets: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] },
+        { searchable: false, targets: [3] }
+    ],
+    pageLength: 5,
+    destroy: true,
+    language: {
+        lengthMenu: "Mostrar _MENU_ registros por página",
+        zeroRecords: "Ningún usuario encontrado",
+        info: "Mostrando de _START_ a _END_ de un total de _TOTAL_ registros",
+        infoEmpty: "Ningún usuario encontrado",
+        infoFiltered: "(filtrados desde _MAX_ registros totales)",
+        search: "Buscar:",
+        loadingRecords: "Cargando...",
+        paginate: {
+            first: "Primero",
+            last: "Último",
+            next: "Siguiente",
+            previous: "Anterior"
+        }
+    }
+};
+
+const initDataTable = async () => {
+    if (dataTableIsInitialized) {
+        dataTable.destroy();
+    }
+
+    await listUsers();
+
+    dataTable = $("#datatable_users").DataTable(dataTableOptions);
+
+    dataTableIsInitialized = true;
+};
+
+const listUsers = async () => {
+    try {
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const users = await response.json();
+
+        let content = ``;
+        users.forEach((user, index) => {
+            content += `
+                <tr>
+                    <td>${index + 1}</td>
+                    <td>${user.email}</td>
+                    <td>${user.name}</td>
+                    <td>${user.address.city}</td>
+                    <td>${user.company.name}</td>
+                    <td>${user.name}</td>
+                    <td>${user.name}</td>
+                    <td>${user.email}</td>
+                    <td>${user.email}</td>
+                    <td><i class="fa-solid fa-check" style="color: green;"></i></td>
+                    <td>
+                        <button class="btn btn-sm btn-success"><i class="fa-solid fa-eye"></i></button>
+                    </td>
+
+                </tr>`;
+        });
+        tableBody_users.innerHTML = content;
+    } catch (ex) {
+        alert(ex);
+    }
+};
+
+window.addEventListener("load", async () => {
+    await initDataTable();
+});
+</script>
 <template>
-        <div class="row">
-            <div class="table">
-            <div class="table-responsive">
-                <DataTable 
-                :data="products" 
-                :columns="columns" class="table table-success table-striped table-bordered display"
-                :options="{
-                            response:true,
-                            autoWidth:false, 
-                            dom:'Bfrtip', 
-                            pageLength: 5,
-                            language:{
-                                        search:'Buscar', 
-                                        zeroRecords:'No hay registro para mostrar', 
-                                        info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
-                                        infoFiltered: '(Filtrados de _MAX_ registros.)',
-                                        paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
-                                    }
-                        }">
+    <div class="container my-4">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <table id="datatable_users" class="table table-striped">
+                        <!-- <caption>
+                            DataTable.js Demo
+                        </caption> -->
                         <thead>
                             <tr>
-                                <th class="thead">#</th>
-                                <th class="thead">Fecha</th>
-                                <th class="thead">Usuario</th>
-                                <th class="thead">Tipo de ticket</th>
-                                <th class="thead">Categoría</th>
-                                <th class="thead">Programa</th>
-                                <th class="thead">Proyecto</th>
-                                <th class="thead">Descripción</th>
-                                <th class="thead">Sede</th>
-                                <th class="thead">Estado</th>
-                                <th class="thead">Option</th>
+                                <th class="centered">ID</th>
+                                <th class="centered">Fecha</th>
+                                <th class="centered">Usuario</th>
+                                <th class="centered">Tipo de ticket</th>
+                                <th class="centered">Categoria</th>
+                                <th class="centered">Programa</th>
+                                <th class="centered">Proyecto</th>
+                                <th class="centered">Description</th>
+                                <th class="centered">Sede</th>
+                                <th class="centered">Estado</th>
+                                <th class="centered">Options</th>
                             </tr>
                         </thead>
-                </DataTable>
+                        <tbody id="tableBody_users"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
 </template>
-
-<script>
-import axios from 'axios';
-import DataTable from 'datatables.net-vue3' ;
-import DataTablesLib from 'dataTables.net-bs5';
-import 'datatables.net-responsive-bs5';
-DataTable.use(DataTablesLib);
-export default {
-    components:{DataTable},
-    data(){
-        return {
-            products:null,
-                columns:[
-                {data:null, render: function(data,type,row,meta)
-                {return `${meta.row+1}`}},
-                {data: 'name'},
-                {data: 'ticket'},
-                {data: 'email'},
-                {data: 'phone'},
-                {data: 'site'},
-                {data: 'company'},
-                {data: 'address'},
-                {data: 'name'},
-                {data: 'name'},
-                {"defaultContent": "<button type='button' class='btn btn-outline-success'>Ver</button>"}
-            ],
-        }
-    },
-    mounted(){
-        this.getProduct();
-    },
-    methods:{
-        getProduct(){
-            axios.get('https://jsonplaceholder.typicode.com/users').then(
-                response=>(
-                    this.products = response.data.map(product => ({
-                        name: product.name ,
-                        ticket: product.username,
-                        email: product.email,
-                        phone: product.phone,
-                        site: product.website,
-                        company: product.company.name,
-                        address:product.address.street
-                    }))
-                )
-            );
-        }
-    }
-}
-</script>
-
 <style lang="css" scoped>
-    @import 'datatables.net-bs5';
-    .thead {
-        background-color: #FBE6C6 !important;
-        border: 2px solid #F08419 !important;
-        text-align: center !important;
-        vertical-align: middle !important;
-    }
-    div{
-        background-color: #FBE6C6;
-    }
-    .table{
-        margin: 0.5px;
-    }
-
+    .centered {
+    background-color: #FEF7EF !important;
+    border: 2px solid #F08419 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
 </style>
