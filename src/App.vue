@@ -9,5 +9,8 @@ import Header from './components/myComponents/Header.vue'
   <RouterView />
   <FooterVue />
 </template>
-<style language="css" scoped>
+<style>
+#app{
+  background-color:#FFF3D6;
+  }
 </style>
