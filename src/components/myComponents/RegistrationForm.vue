@@ -112,7 +112,7 @@ label{
         color: #F08419;
         border-radius: 10px;
         border: .1rem solid #F08149;
-        background-color: #F5F6F6;
+        background-color: #E6E6E6;
         margin-bottom: 5%;
 }
     
