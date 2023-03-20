@@ -6,8 +6,12 @@ components: { Login },
 }
 </script>
 <template>
-        <Login/>        
+        <div class="bodyContainer">
+                <Login/>     
+        </div>
 </template>
-<style>
-
+<style lang="css" scoped>
+.bodyContainer{
+        background-color: #fff3d6;
+}
 </style>

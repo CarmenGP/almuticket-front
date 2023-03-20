@@ -26,8 +26,8 @@
 <template>
     <div class="input-container container mx-auto p-4">
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
-            <h1 class="text-lg font-bold">Registro</h1>
             <div class="formContainer">
+                <h1 class="text-lg font-bold">Registro</h1>
                 <form class="flex flex-col mt-4" @submit.prevent="submitForm">
                 <label>Nombre
                     <input
@@ -92,7 +92,7 @@ h1{
     border-width: 5px;
     border-color: #F08419;
     border-radius: 10px;
-    padding: 50px;
+    padding: 20px;
     background-color: #FFFCFC;
 }
 
@@ -122,7 +122,7 @@ label{
     background-color:#F08419;
     border-radius:10px ; /* Redondear las esquinas del botón */
     width:50%;
-
+    margin:auto;
     text-align: center;
     }
 
