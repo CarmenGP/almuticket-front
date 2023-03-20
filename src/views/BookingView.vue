@@ -8,6 +8,8 @@ components: { Booking},
 <template>
         <Booking/>        
 </template>
-<style>
-
+<style lang="css" scoped>
+body{
+        background-color:#FFF3D6;
+}
 </style>

@@ -1,13 +1,13 @@
 <script>
 export default {
     methods: {
-        solicitarReserva() {
+        requestReservation() {
         // Lógica para mostrar el formulario de solicitud de reserva de sala
         },
-        crearIncidencia() {
+        createIncidence() {
         // Lógica para crear una nueva incidencia o solicitud de apoyo de programas
         },
-        verTickets() {
+        seeTickets() {
         // Lógica para mostrar los tickets del usuario actual
         }
     }
@@ -15,17 +15,18 @@ export default {
 </script>
 
 <template>
-        <div class="reservas-container">
+        <div class="reservations-container">
         <!-- <h1 class="text-3xl font-bold text-center mb-8" style="color: #F08419">Crear Ticket</h1>  -->
         <div class="buttons-container flex justify-center">
-            <button class="solicitud-button mr-4" @click="solicitarReserva()">Solicitud de reserva de sala</button>
-            <button class="incidencia-button mx-4" @click="crearIncidencia()">Incidencia/Apoyo Programas</button>
-            <button class="tickets-button ml-4" @click="verTickets()">Ver mis tickets</button>
+            <button class="request-button mr-4" @click="requestReservation()">Solicitud de reserva de sala</button>
+            <button class="incidence-button mx-4" @click="createIncidence()">Incidencia/Apoyo Programas</button>
+            <button class="tickets-button ml-4" @click="seeTickets()">Ver mis tickets</button>
         </div>
         </div>
 </template>
 
 <style lang="css" scoped>
+
 h1 {
     color: #F08419;
     margin-top: 4rem;
@@ -44,7 +45,7 @@ html, body {
 .buttons-wrapper {
     margin-top: 2rem;
 }
-.solicitud-button, .incidencia-button, .tickets-button {
+.request-button, .incidence-button, .tickets-button {
     background-color: #F8F8F8;
     color: #F08419;
     border: 8px solid #F08419;
@@ -54,12 +55,12 @@ html, body {
     cursor: pointer;
     transition: all 0.2s;
 }
-.solicitud-button:hover, .incidencia-button:hover, .tickets-button:hover {
+.request-button:hover, .incidence-button:hover, .tickets-button:hover {
     background-color: #F08419;
     color: #F8F8F8;
     border-color: #F8F8F8;
 }
-.booking-container {
+.reservations-container {
     background-color: #F2F2F2;
     padding: 2rem;
     min-height: 100vh;
@@ -71,11 +72,16 @@ html, body {
         align-items: center;
         margin-top: 5rem;   
     }
-    .solicitud-button, .incidencia-button, .tickets-button {
+    .request-button, .incidence-button, .tickets-button {
         font-size: 1rem;
         padding: 0.5rem 0.8rem;
         margin-top:5rem;
         margin-bottom: 2;
+    }
+    .request-button:hover, .incidence-button:hover, .tickets-button:hover {
+    background-color: #F08419;
+    color: #F8F8F8;
+    border-color: #F8F8F8;
     }
 }
 </style>
