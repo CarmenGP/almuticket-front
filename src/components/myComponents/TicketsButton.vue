@@ -1,15 +1,16 @@
 <script>
 export default {
-    methods: {
-        seeTickets() {
-    }
-}
+
 }
 </script>
 
 <template>
         <div>
-            <button class="tickets-button" @click="seeTickets()">Ver mis Tickets</button>   
+            <RouterLink to="/allTickets">
+                <a href="../views/AllTicketsView.vue">
+                    <button class="tickets-button" @click="seeTickets()">Ver mis Tickets</button>   
+                </a>
+            </RouterLink>            
         </div>
 </template>
 

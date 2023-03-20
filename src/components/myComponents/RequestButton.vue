@@ -1,20 +1,18 @@
 <script>
 export default {
-    methods: {
-        requestReservation() {
 
-    }
-}
 }
 </script>
 
 <template>
         <div>
-            <a href="../views/BookingView.vue">
-                <button class="request-button" @click="requestReservation()">
-                Solicitud de reserva de sala
-                </button>   
-            </a>
+            <RouterLink to="/booking">
+                <a href="../views/BookingView.vue">
+                    <button class="request-button">
+                    Solicitud de reserva de sala
+                    </button>   
+                </a>
+            </RouterLink>
         </div>
 </template>
 

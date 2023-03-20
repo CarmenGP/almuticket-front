@@ -1,15 +1,16 @@
 <script>
 export default {
-    methods: {
-        createIncidence() {
-    }
-}
+    
 }
 </script>
 
 <template>
         <div>
-            <button class="incidence-button"  @click="createIncidence()">Incidencia/Apoyo Programas</button>   
+            <RouterLink to="/incidence">
+                <a href="../views/IncidenceView.vue">
+                    <button class="incidence-button">Incidencia/Apoyo Programas</button>   
+                </a>
+            </RouterLink>
         </div>
 </template>
 
