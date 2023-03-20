@@ -19,8 +19,8 @@ export default {
 .buttonsContainer {
     display: flex;
     flex-direction: row;
-    margin: 10rem;
-    justify-content: space-around;
+    margin: 15.5rem 10rem 20rem 10rem;
+    justify-content:space-evenly!important;
 }
 @media screen and (max-width: 768px) {
     .buttonsContainer {

@@ -9,7 +9,7 @@ export default {
 
 <template>
         <div>
-            <button class="tickets-button mr-4" @click="seeTickets()">Ver mis Tickets</button>   
+            <button class="tickets-button" @click="seeTickets()">Ver mis Tickets</button>   
         </div>
 </template>
 
@@ -23,6 +23,7 @@ export default {
     padding: 0.8rem 1.2rem;
     cursor: pointer;
     transition: all 0.2s;
+
 }
 .tickets-button:hover {
     background-color: #F08419;

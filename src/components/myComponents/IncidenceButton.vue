@@ -9,7 +9,7 @@ export default {
 
 <template>
         <div>
-            <button class="incidence-button mr-4" @click="createIncidence()">Incidencia/Apoyo Programas</button>   
+            <button class="incidence-button"  @click="createIncidence()">Incidencia/Apoyo Programas</button>   
         </div>
 </template>
 

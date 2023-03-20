@@ -9,7 +9,7 @@ export default {
 
 <template>
         <div>
-            <button class="request-button mr-4" @click="requestReservation()">Solicitud de reserva de sala</button>   
+            <button class="request-button" @click="requestReservation()">Solicitud de reserva de sala</button>   
         </div>
 </template>
 
