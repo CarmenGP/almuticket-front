@@ -1,26 +1,54 @@
 <script>
 export default {
-    name:'FooterVue',
 }
 </script>
-
 <template>
-    <footer>
-        <div class="textCenter">
-            <p>&copy; Asociacionarrabal.org</p>
+    <MDBFooter :text="['center', 'lg-start']">
+    <!-- Grid container -->
+    <MDBContainer class="p-4 pb-0">
+        <form action="">
+        <!--Grid row-->
+        <MDBRow>
+            <!--Grid column-->
+            <MDBCol auto class="mb-4 mb-md-0">
+
+            </MDBCol>
+            <!--Grid column-->
+            <!--Grid column-->
+            <MDBCol md="5" col="12" class="mb-4 mb-md-0">
+            <!-- Email input -->
+
+            </MDBCol>
+            <!--Grid column-->
+            <!--Grid column-->
+            <MDBCol auto class="mb-4 mb-md-0">
+
+            </MDBCol>
+            <!--Grid column-->
+        </MDBRow>
+        <!--Grid row-->
+        </form>
+    </MDBContainer>
+    <!-- Grid container -->
+    <!-- Copyright -->
+        <div class="footerContainer">
+            <div class="text-center p-3">
+                <p>&copy; Asociacionarrabal.org</p>
+            </div>
+            <div class="text-center p-3">
+                <p>Málaga Tel: 952 300 500 </p>                                                                                                                       
+            </div>
+            <div class="text-center p-3 femCoders">
+                <p>Diseñado por </p>  
+                <div><img class="logo" src="public\femCoders.png" alt="logo FemCoders"></div>                                               
+            </div>
         </div>
-        <div class="textCenter">
-            <p>Málaga Tel: 952 300 500 </p>                                                                                                                       
-        </div>
-        <div class="textCenter femCoders">
-            <p>Diseñado por </p>  
-            <div><img class="logo" src="public\femCoders.png" alt="logo FemCoders"></div>                                               
-        </div>
-    </footer>
+    <!-- Copyright -->
+    </MDBFooter>
 </template>
+
 <style lang="css" scoped>
-@import "bootstrap/dist/css/bootstrap.min.css";
-footer{
+    .footerContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-around !important;
@@ -41,19 +69,5 @@ footer{
     width: 55px;
     margin-left: 10px;
 }
-
-
-@media only screen and (max-width: 768px) {
-
-    .textCenter {
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-    }
-
-    .textCenter .femCoders {
-        flex-basis: 100%;
-        margin-bottom: 5%;
-        margin-top: 5%;
-    }
-}
+    
 </style>
