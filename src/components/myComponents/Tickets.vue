@@ -7,7 +7,7 @@
                         search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
                         infoFiltered: '(Filtrados de _MAX_ registros.)',
                         paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
-                    }}">
+                            }}">
                         <thead>
                             <tr>
                                 <th class="thead">#</th>

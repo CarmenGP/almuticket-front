@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 import MenuView from '../views/MenuView.vue'
-import BookingView from '../views/BookingView.vue'
 import IncidenceView from '../views/IncidenceView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import MyTicketsView from '../views/MyTicketsView.vue'
+import ReservationFormView from '../views/ReservationFormView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,11 +18,6 @@ const router = createRouter({
       path: '/login',
       name: 'login',
       component: LoginView
-    },
-    {
-      path: '/booking',
-      name: 'booking',
-      component: BookingView
     },
     {
       path: '/incidence',
@@ -41,6 +36,11 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: RegisterView
+    },
+    {
+      path: '/reservation',
+      name: 'reservation',
+      component: ReservationFormView
     }
   ]
 })
