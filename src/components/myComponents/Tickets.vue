@@ -3,7 +3,7 @@
             <div class="table">
             <div class="table-responsive">
                 <DataTable :data="products" :columns="columns" class="table table-success table-striped table-bordered display"
-                    :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
+                    :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
                         search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
                         infoFiltered: '(Filtrados de _MAX_ registros.)',
                         paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
@@ -20,6 +20,7 @@
                                 <th class="thead">Descripción</th>
                                 <th class="thead">Sede</th>
                                 <th class="thead">Estado</th>
+                                <th class="thead">Option</th>
                             </tr>
                         </thead>
                 </DataTable>
@@ -51,6 +52,7 @@ export default {
                 {data: 'address'},
                 {data: 'name'},
                 {data: 'name'},
+                {"defaultContent": "<button type='button' class='btn btn-outline-success'>Ver</button>"}
             ],
         }
     },
