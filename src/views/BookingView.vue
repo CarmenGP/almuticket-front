@@ -1,15 +1,18 @@
 <script>
 import Booking from '../components/myComponents/Booking.vue'
 export default {
-components: { Booking},
-
+components: {Booking},
 }
 </script>
+
 <template>
-        <Booking/>        
+        <div class="bodyContainer">
+                <Booking/>     
+        </div>
 </template>
+
 <style lang="css" scoped>
-body{
-        background-color:#FFF3D6;
+.bodyContainer{
+        background-color: #fff3d6;
 }
 </style>
