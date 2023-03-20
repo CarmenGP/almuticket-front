@@ -5,8 +5,7 @@ export default {
 <template>
     <MDBFooter :text="['center', 'lg-start']">
     <!-- Grid container -->
-    <MDBContainer class="p-4 pb-0">
-        <form action="">
+    <MDBContainer class=" p-4 pb-0">
         <!--Grid row-->
         <MDBRow>
             <!--Grid column-->
@@ -27,7 +26,6 @@ export default {
             <!--Grid column-->
         </MDBRow>
         <!--Grid row-->
-        </form>
     </MDBContainer>
     <!-- Grid container -->
     <!-- Copyright -->
@@ -48,7 +46,8 @@ export default {
 </template>
 
 <style lang="css" scoped>
-    .footerContainer{
+
+.footerContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-around !important;
@@ -69,5 +68,13 @@ export default {
     width: 55px;
     margin-left: 10px;
 }
-    
+
+@media only screen and (max-width: 992px) {
+    p{
+        font-size: 0.8em;
+    }
+    .logo{
+    width: 70px;
+}
+}
 </style>
