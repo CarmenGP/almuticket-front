@@ -26,8 +26,11 @@ export default {
 </script>
 
 <template>
-    <div class="container"> 
+    <!-- <div class="container">  -->
         <form @submit.prevent="submitForm" class="row g-3">
+        <div class="containerTitle">
+            <h1 class="reservationTitle"> Crear Reserva </h1>
+        </div>
         <div class="col-md-6">
         <label for="state" class="form-label">Estado:</label>
         <select class="form-select" id="estado" v-model="form.estado">
@@ -83,36 +86,62 @@ export default {
             <label for="comments" class="form-label">Comentarios:</label>
             <textarea class="form-control" id="comentarios" rows="3" v-model="form.comentarios"></textarea>
         </div>
+        <div class="containerButton">
         <div class="sendButton">
             <button type="submit" class="btn "> Enviar </button>
         </div>
+        </div>
         </form>
-    </div>
+    <!-- </div> -->
 </template>
 
 <style lang="css" scoped>
 .container{
-    background-color:#FFF3D6;
-    height: 100%;
-    margin-top: 0px;
-}
-
-.g-3{
-    background-color:#FFF3D6;
-    margin: 10px 10px 10px 10px;
     width: 100%;
     height: 100%;
+}
+
+/* .g-3{
+    display: flex;
+    justify-content: center;
+    background-color:#FFFCFC;
+    border-width: 5px;
+    border-color: #f08419;
+    border-radius: 10px;
+    margin: 20px 20px 20px 20px; 
+    
+    width: 100%;
+    height: 100%;
+} */
+
+.g-3{
+    background-color:#FFFCFC;
+    margin: 20px 20px 20px 20px; 
+    border-width: 5px;
+    border-color: #f08419;
+    border-radius: 10px;
 }
 
 h1{
     color:#F08419;
     text-align:center;
-    margin-bottom: 5%;   
-}
+    margin-bottom: 5%;
+    /* font-family:'Nunito Sans Black';  */
+    font-size: 1.5rem;  
+    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    }
+
 
 label{
     color:#F08419;
     font-weight: bold;
+    font-family:'Nunito Sans Black';
+}
+
+.containerButton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .sendButton{
@@ -120,9 +149,8 @@ label{
     color: white;
     background-color:#F08419;
     border-radius:10px;
-    width:15%;
+    width:10%;
     text-align: center;
-    margin-bottom: 10px;
 }
 
 .btn{
@@ -130,4 +158,46 @@ label{
     color: white;
 }
 
+input[type="text"], select {
+    background-color: #E6E6E6;
+    border: 2px solid #F08419;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+input[type="date"], select {
+    background-color: #E6E6E6;
+    border: 2px solid #F08419;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+input[type="time"], select {
+    background-color: #E6E6E6;
+    border: 2px solid #F08419;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+input[type="number"], select {
+    background-color: #E6E6E6;
+    border: 2px solid #F08419;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+textarea{
+    background-color: #E6E6E6;
+    border: 2px solid #F08419;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+input[value], select {
+    font-family: 'Nunito Sans Black';
+    }
+
+input[type="date"], select {
+    font-family: 'Nunito Sans Black';
+}
 </style>
