@@ -16,7 +16,7 @@ export default {
 
 <template>
         <div class="reservas-container">
-        <h1 class="text-3xl font-bold text-center mb-8" style="color: #F08419">Crear Ticket</h1>
+        <!-- <h1 class="text-3xl font-bold text-center mb-8" style="color: #F08419">Crear Ticket</h1>  -->
         <div class="buttons-container flex justify-center">
             <button class="solicitud-button mr-4" @click="solicitarReserva()">Solicitud de reserva de sala</button>
             <button class="incidencia-button mx-4" @click="crearIncidencia()">Incidencia/Apoyo Programas</button>
@@ -25,7 +25,7 @@ export default {
         </div>
 </template>
 
-<style scoped>
+<style lang="css" scoped>
 h1 {
     color: #F08419;
     margin-top: 4rem;
@@ -37,21 +37,9 @@ html, body {
     margin: 0;
     padding: 0;
 }
-@media screen and (max-width: 768px) {
-    .buttons-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .solicitud-button, .incidencia-button, .tickets-button {
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
-        margin-top:5rem;
-        margin-bottom: 2;
-    }
-}
+
 .buttons-container {
-    margin-bottom: 4rem;
+    margin-top: 13rem;
 }
 .buttons-wrapper {
     margin-top: 2rem;
@@ -76,17 +64,18 @@ html, body {
     padding: 2rem;
     min-height: 100vh;
 }
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 70px;
-    background-color: #F08419;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    color: white;
+@media screen and (max-width: 768px) {
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;   
+    }
+    .solicitud-button, .incidencia-button, .tickets-button {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+        margin-top:5rem;
+        margin-bottom: 2;
+    }
 }
 </style>
