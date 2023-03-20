@@ -9,7 +9,7 @@
                             response:true,
                             autoWidth:false, 
                             dom:'Bfrtip', 
-                            pageLength: 5, 
+                            pageLength: 5,
                             language:{
                                         search:'Buscar', 
                                         zeroRecords:'No hay registro para mostrar', 
@@ -50,7 +50,7 @@ export default {
     data(){
         return {
             products:null,
-            columns:[
+                columns:[
                 {data:null, render: function(data,type,row,meta)
                 {return `${meta.row+1}`}},
                 {data: 'name'},
@@ -93,7 +93,9 @@ export default {
     @import 'datatables.net-bs5';
     .thead {
         background-color: #FBE6C6 !important;
-        border: 2px solid #F08419;
+        border: 2px solid #F08419 !important;
+        text-align: center !important;
+        vertical-align: middle !important;
     }
     div{
         background-color: #FBE6C6;
