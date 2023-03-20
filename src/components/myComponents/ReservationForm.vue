@@ -53,7 +53,7 @@ export default {
         <div class="col-md-6">
         <label for="sede" class="form-label">Sede:</label>
         <select class="form-select" id="sede" v-model="form.sede">
-            <option value="Seleccione un estado">Seleccione un estado</option>
+            <option value="Seleccione un estado">Seleccione una sede</option>
             <option value="Remoto">Remoto</option>
             <option value="Edificio Galaxia">Edificio Galaxia</option>
             <option value="Innova. Social">Innova. Social</option>
