@@ -2,6 +2,7 @@
 export default {
     methods: {
         requestReservation() {
+
     }
 }
 }
@@ -9,7 +10,11 @@ export default {
 
 <template>
         <div>
-            <button class="request-button" @click="requestReservation()">Solicitud de reserva de sala</button>   
+            <a href="../views/BookingView.vue">
+                <button class="request-button" @click="requestReservation()">
+                Solicitud de reserva de sala
+                </button>   
+            </a>
         </div>
 </template>
 
