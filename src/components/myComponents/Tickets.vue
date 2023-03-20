@@ -2,12 +2,22 @@
         <div class="row">
             <div class="table">
             <div class="table-responsive">
-                <DataTable :data="products" :columns="columns" class="table table-success table-striped table-bordered display"
-                    :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
-                        search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
-                        infoFiltered: '(Filtrados de _MAX_ registros.)',
-                        paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
-                    }}">
+                <DataTable 
+                :data="products" 
+                :columns="columns" class="table table-success table-striped table-bordered display"
+                :options="{
+                            response:true,
+                            autoWidth:false, 
+                            dom:'Bfrtip', 
+                            pageLength: 5, 
+                            language:{
+                                        search:'Buscar', 
+                                        zeroRecords:'No hay registro para mostrar', 
+                                        info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
+                                        infoFiltered: '(Filtrados de _MAX_ registros.)',
+                                        paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
+                                    }
+                        }">
                         <thead>
                             <tr>
                                 <th class="thead">#</th>
