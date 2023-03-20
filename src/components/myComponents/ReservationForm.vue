@@ -96,24 +96,11 @@ export default {
 </template>
 
 <style lang="css" scoped>
+
 .container{
     width: 100%;
     height: 100%;
 }
-
-/* .g-3{
-    display: flex;
-    justify-content: center;
-    background-color:#FFFCFC;
-    border-width: 5px;
-    border-color: #f08419;
-    border-radius: 10px;
-    margin: 20px 20px 20px 20px; 
-    
-    width: 100%;
-    height: 100%;
-} */
-
 .g-3{
     background-color:#FFFCFC;
     margin: 20px 20px 20px 20px; 
@@ -121,7 +108,6 @@ export default {
     border-color: #f08419;
     border-radius: 10px;
 }
-
 h1{
     color:#F08419;
     text-align:center;
@@ -131,18 +117,15 @@ h1{
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
 
-
 label{
     color:#F08419;;
     font-weight: 600;
 }
-
 .containerButton{
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
 }
-
 .sendButton{
     font-weight: bold;
     color: white;
@@ -151,12 +134,10 @@ label{
     width:10%;
     text-align: center;
 }
-
 .btn{
     font-weight: bold;
     color: white;
 }
-
 input[type="text"], select {
     background-color: #E6E6E6;
     border: 2px solid #F08419;
