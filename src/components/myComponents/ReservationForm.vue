@@ -34,8 +34,8 @@ export default {
         <div class="col-md-6">
         <label for="state" class="form-label">Estado:</label>
         <select class="form-select" id="estado" v-model="form.estado">
-            <option value="">Seleccione un estado</option>
-            <option value="Visto">Visto</option>
+            <option value="Seleccione un estado" >Seleccione un estado</option>
+            <option value="Visto" style="">Visto</option>
             <option value="Pendiente">Pendiente</option>
             <option value="En trámite">En trámite</option>
             <option value="Finalizado">Finalizado</option>
@@ -53,7 +53,7 @@ export default {
         <div class="col-md-6">
         <label for="sede" class="form-label">Sede:</label>
         <select class="form-select" id="sede" v-model="form.sede">
-            <option value="">Seleccione un estado</option>
+            <option value="Seleccione un estado">Seleccione un estado</option>
             <option value="Remoto">Remoto</option>
             <option value="Edificio Galaxia">Edificio Galaxia</option>
             <option value="Innova. Social">Innova. Social</option>
@@ -126,16 +126,15 @@ h1{
     color:#F08419;
     text-align:center;
     margin-bottom: 5%;
-    /* font-family:'Nunito Sans Black';  */
+    font-weight:800;
     font-size: 1.5rem;  
-    /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+    text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
 
 
 label{
-    color:#F08419;
-    font-weight: bold;
-    font-family:'Nunito Sans Black';
+    color:#F08419;;
+    font-weight: 600;
 }
 
 .containerButton{
@@ -193,11 +192,8 @@ textarea{
     padding: 5px;
     margin-bottom: 10px;
 }
-input[value], select {
-    font-family: 'Nunito Sans Black';
-    }
-
-input[type="date"], select {
-    font-family: 'Nunito Sans Black';
+select {
+    color:#402306;
 }
+
 </style>
