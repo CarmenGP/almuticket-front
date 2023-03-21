@@ -27,7 +27,7 @@ export default {
 <template>
 <form @submit.prevent="submitForm" class="row g-3">
   <div class="containerTitle">
-      <h1 class="incidentTitle"> Incidencia/Apoyo </h1>
+      <h1 class="incidentTitle"> Crear Incidencia </h1>
   </div>
   <div class="col-md-6">
   <label for="state" class="form-label">Estado:</label>
@@ -74,7 +74,7 @@ export default {
   </div>
   <div class="containerButton">
   <div class="sendButton">
-      <button type="submit" class="btn ">Actualizar Ticket</button>
+      <button type="submit" class="btn ">Enviar</button>
   </div>
   </div>
   <div class="containerBack">
