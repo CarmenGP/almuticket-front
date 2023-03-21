@@ -2,9 +2,9 @@
 import RegistrationForm from '../components/myComponents/RegistrationForm.vue'
 export default {
 components: { RegistrationForm },
-
 }
 </script>
+
 <template>
         <div class="bodyContainer">
                 <RegistrationForm/>     

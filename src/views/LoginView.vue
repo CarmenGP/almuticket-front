@@ -2,12 +2,12 @@
 import Login from '../components/myComponents/Login.vue'
 export default {
 components: { Login },
-
 }
 </script>
+
 <template>
         <div class="bodyContainer">
-                <Login/>     
+                <Login/>
         </div>
 </template>
 <style lang="css" scoped>

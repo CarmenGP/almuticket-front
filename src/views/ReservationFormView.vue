@@ -9,6 +9,4 @@ components:{ReservationForm},
     <ReservationForm/>
 </template>
 
-<style>
-
-</style>
+<style></style>

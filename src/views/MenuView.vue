@@ -41,8 +41,7 @@ export default {
     transition: all 0.2s;
     margin-top:2rem;
     margin-bottom: 2rem;
-    }
-   
+    }   
     .request-button:hover, .incidence-button:hover, .tickets-button:hover {
     background-color: #F08419;
     color:  #F5F6F6;
