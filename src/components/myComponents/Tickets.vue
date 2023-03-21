@@ -3,6 +3,16 @@ import axios from 'axios';
 import DataTable from 'datatables.net-vue3' ;
 import DataTablesLib from 'dataTables.net-bs5';
 import 'datatables.net-responsive-bs5';
+import Buttons from 'datatables.net-buttons-bs5' ;
+import ButtonsHtml5 from 'datatables.net-buttons/js/buttons.html5';
+import print from 'datatables.net-buttons/js/buttons.print'
+import pdfmake from 'pdfmake';
+import pdfFonts from 'pdfmake/build/vfs_fonts';
+pdfmake.vfs =pdfFonts.pdfMake.vfs;
+import JsZip from 'jszip';
+window.JsZip = JsZip;
+DataTable.use(pdfmake);
+DataTable.use(ButtonsHtml5);
 DataTable.use(DataTablesLib);
 export default {
     components:{DataTable},
@@ -20,6 +30,7 @@ export default {
                 {data: 'address'},
                 {data: 'name'},
                 {data: 'name'},
+                {"defaultContent": "<button type='button' class='form btn btn-primary btn-xs '> <span class='glyphicon glyphicon-search'></span>Ver</button>"}
             ],
         }
     },
@@ -51,10 +62,11 @@ export default {
                 <h1>Mis Tickets</h1>
                 <div class="table-responsive">
                     <DataTable :data="tickets" :columns="columns" class="table table-striped display"    
-                    :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
+                    :options="{response:true,autoWidth:false, dom:'Bfrtip' ,pageLength: 5, language:{
                             search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
                             infoFiltered: '(Filtrados de _MAX_ registros.)',
                             paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
+                            
                                 }}">
                             <thead>
                                 <tr>
@@ -77,8 +89,6 @@ export default {
 
 <style lang="css" scoped>
 @import 'datatables.net-bs5';
-.table-responsive{
-}
 
 h1{
     color:#F08419;
@@ -115,5 +125,20 @@ th{
 td{
     color:#402306;
 }
+.dataTables_wrapper .dataTables_filter {
+      float: none;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .dataTables_wrapper .dataTables_filter input {
+      width: 100%;
+      max-width: 300px;
+      display: inline-block;
+    }
+
+
+
+
 
 </style>
