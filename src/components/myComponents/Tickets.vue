@@ -1,29 +1,30 @@
 <template>
         <div class="row">
-            <div class="table">
-            <div class="table-responsive">
-                <DataTable :data="products" :columns="columns" class="table table-success table-striped table-bordered display"
-                    :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
-                        search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
-                        infoFiltered: '(Filtrados de _MAX_ registros.)',
-                        paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
-                            }}">
-                        <thead>
-                            <tr>
-                                <th class="thead">#</th>
-                                <th class="thead">Fecha</th>
-                                <th class="thead">Usuario</th>
-                                <th class="thead">Tipo de ticket</th>
-                                <th class="thead">Categoría</th>
-                                <th class="thead">Programa</th>
-                                <th class="thead">Proyecto</th>
-                                <th class="thead">Descripción</th>
-                                <th class="thead">Sede</th>
-                                <th class="thead">Estado</th>
-                            </tr>
-                        </thead>
-                </DataTable>
-            </div>
+            <div class="myTickets table">
+                <h1>Mis Tickets</h1>
+                <div class="table-responsive">
+                    <DataTable :data="products" :columns="columns" class="table table-success table-striped table-bordered display"
+                        :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
+                            search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
+                            infoFiltered: '(Filtrados de _MAX_ registros.)',
+                            paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
+                                }}">
+                            <thead>
+                                <tr>
+                                    <th class="thead">#</th>
+                                    <th class="thead">Fecha</th>
+                                    <th class="thead">Usuario</th>
+                                    <th class="thead">Tipo de ticket</th>
+                                    <th class="thead">Categoría</th>
+                                    <th class="thead">Programa</th>
+                                    <th class="thead">Proyecto</th>
+                                    <th class="thead">Descripción</th>
+                                    <th class="thead">Sede</th>
+                                    <th class="thead">Estado</th>
+                                </tr>
+                            </thead>
+                    </DataTable>
+                </div>
         </div>
     </div>
 </template>
@@ -79,15 +80,29 @@ export default {
 
 <style lang="css" scoped>
     @import 'datatables.net-bs5';
-    .thead {
-        background-color: #FBE6C6 !important;
+
+h1 {
+    color: #f08419;
+    text-align: center;
+    margin-top: 1%;
+    font-weight: 700;
+}
+.myTickets{
+    border-color:#F08419;
+    border-width: 5px;
+    margin: 5%!important;
+    border-radius: 10px;
+    background-color: #fffcfc;
+
+
+}
+.thead {
+        background-color:#FFF3D6;
         border: 2px solid #F08419;
-    }
-    div{
-        background-color: #FBE6C6;
-    }
-    .table{
-        margin: 0.5px;
-    }
+}
+.table{
+    width:90%;
+    margin: auto;
+}
 
 </style>
