@@ -91,7 +91,7 @@ export default {
         </div>
         </div>
         <div class="containerBack">
-        <router-link to="/" class="back-btn">&#60; Volver</router-link>
+        <router-link to="/" class="back-btn">← Volver</router-link>
         </div>
         </form>
 </template>
