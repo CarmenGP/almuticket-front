@@ -1,33 +1,3 @@
-<template>
-        <div class="row">
-            <div class="table">
-            <div class="table-responsive">
-                <DataTable :data="products" :columns="columns" class="table table-success table-striped table-bordered display"
-                    :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
-                        search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
-                        infoFiltered: '(Filtrados de _MAX_ registros.)',
-                        paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
-                            }}">
-                        <thead>
-                            <tr>
-                                <th class="thead">#</th>
-                                <th class="thead">Fecha</th>
-                                <th class="thead">Usuario</th>
-                                <th class="thead">Tipo de ticket</th>
-                                <th class="thead">Categoría</th>
-                                <th class="thead">Programa</th>
-                                <th class="thead">Proyecto</th>
-                                <th class="thead">Descripción</th>
-                                <th class="thead">Sede</th>
-                                <th class="thead">Estado</th>
-                            </tr>
-                        </thead>
-                </DataTable>
-            </div>
-        </div>
-    </div>
-</template>
-
 <script>
 import axios from 'axios';
 import DataTable from 'datatables.net-vue3' ;
@@ -38,7 +8,7 @@ export default {
     components:{DataTable},
     data(){
         return {
-            products:null,
+            tickets:null,
             columns:[
                 {data:null, render: function(data,type,row,meta)
                 {return `${meta.row+1}`}},
@@ -47,7 +17,6 @@ export default {
                 {data: 'email'},
                 {data: 'phone'},
                 {data: 'site'},
-                {data: 'company'},
                 {data: 'address'},
                 {data: 'name'},
                 {data: 'name'},
@@ -55,20 +24,20 @@ export default {
         }
     },
     mounted(){
-        this.getProduct();
+        this.getticket();
     },
     methods:{
-        getProduct(){
+        getticket(){
             axios.get('https://jsonplaceholder.typicode.com/users').then(
                 response=>(
-                    this.products = response.data.map(product => ({
-                        name: product.name ,
-                        ticket: product.username,
-                        email: product.email,
-                        phone: product.phone,
-                        site: product.website,
-                        company: product.company.name,
-                        address:product.address.street
+                    this.tickets = response.data.map(ticket => ({
+                        name: ticket.name ,
+                        ticket: ticket.username,
+                        email: ticket.email,
+                        phone: ticket.phone,
+                        site: ticket.website,
+                        company: ticket.company.name,
+                        address:ticket.address.street
                     }))
                 )
             );
@@ -77,17 +46,74 @@ export default {
 }
 </script>
 
+<template>
+            <div class="myTickets table">
+                <h1>Mis Tickets</h1>
+                <div class="table-responsive">
+                    <DataTable :data="tickets" :columns="columns" class="table table-striped display"    
+                    :options="{response:true,autoWidth:false, dom:'Bfrtip', language:{
+                            search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
+                            infoFiltered: '(Filtrados de _MAX_ registros.)',
+                            paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
+                                }}">
+                            <thead>
+                                <tr>
+                                    <th >Nº</th>
+                                    <th >Fecha</th>
+                                    <th >Usuario</th>
+                                    <th >Tipo de ticket</th>
+                                    <th >Categoría</th>
+                                    <th >Área</th>
+                                    <th >Descripción</th>
+                                    <th >Sede</th>
+                                    <th >Estado</th>
+                                    <th >Acciones</th>
+                                </tr>
+                            </thead>
+                    </DataTable>
+                </div>
+        </div>
+</template>
+
 <style lang="css" scoped>
-    @import 'datatables.net-bs5';
-    .thead {
-        background-color: #FBE6C6 !important;
-        border: 2px solid #F08419;
-    }
-    div{
-        background-color: #FBE6C6;
-    }
-    .table{
-        margin: 0.5px;
-    }
+@import 'datatables.net-bs5';
+.table-responsive{
+}
+
+h1{
+    color:#F08419;
+    text-align:center;
+    font-weight:800;
+    font-size: 1.5rem;  
+    text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
+}
+.myTickets{
+    border-color:#F08419;
+    border-width: 5px;
+    margin: 5%!important;
+    border-radius: 10px;
+    background-color: #fffcfc;
+}
+
+.table{
+    width:90%;
+    margin: auto;
+    
+}
+thead {
+    margin-top:5%!important;
+    background-color:#FFF3D6!important;
+    border: 5px solid #F08419;
+    
+}
+
+th{
+    color:#402306;
+    background-color:#FFF3D6!important;
+}
+
+td{
+    color:#402306;
+}
 
 </style>
