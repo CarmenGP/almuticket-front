@@ -41,7 +41,8 @@ const router = createRouter({
     {
       path: '/reservation',
       name: 'reservation',
-      component: ReservationFormView}, 
+      component: ReservationFormView
+    }, 
     {
       path: '/incident',
       name: 'incident',

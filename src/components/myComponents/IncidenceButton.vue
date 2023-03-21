@@ -6,8 +6,8 @@ export default {
 
 <template>
         <div>
-            <RouterLink to="/incidence">
-                <a href="../views/IncidenceView.vue">
+            <RouterLink to="/incident">
+                <a href="../views/IncidentView.vue">
                     <button class="incidence-button">Incidencia/Apoyo Programas</button>   
                 </a>
             </RouterLink>

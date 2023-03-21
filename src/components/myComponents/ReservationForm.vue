@@ -87,7 +87,7 @@ export default {
         </div>
         <div class="containerButton">
         <div class="sendButton">
-            <button type="submit" class="btn "> Enviar </button>
+            <button type="submit" class="btn ">Actualizar Ticket</button>
         </div>
         </div>
         <div class="containerBack">
