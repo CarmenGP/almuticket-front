@@ -27,7 +27,7 @@
     <div class="input-container container mx-auto p-4">
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <div class="formContainer">
-                <h1 class="text-lg font-bold">Registro</h1>
+                <h1 class="">Registro</h1>
                 <form class="flex flex-col mt-4" @submit.prevent="submitForm">
                 <label>Nombre
                     <input
@@ -81,12 +81,16 @@
 </template>
 
 <style language="css" scoped>
-
 h1{
     color:#F08419;
     text-align:center;
-    margin-bottom: 5%;   
-}
+    margin-bottom: 5%;
+    font-weight:800;
+    font-size: 1.5rem;
+    margin-bottom: 5%;  
+    text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
+    }
+
 .formContainer{
     color:#F08419;
     border-width: 5px;

@@ -90,7 +90,7 @@ export default {
 }
 .g-3{
     background-color:#FFFCFC;
-    margin: 20px 20px 20px 20px; 
+    margin: 50px 50px 50px 50px;
     border-width: 5px;
     border-color: #f08419;
     border-radius: 10px;
@@ -128,6 +128,15 @@ label{
 input[type="text"], select {
     background-color: #E6E6E6;
     border: 2px solid #F08419;
+    color:#402306;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+input[type="text"]:focus {
+    background-color: #E6E6E6;
+    border: 2px solid #F08419;
+    color:#402306;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -135,6 +144,7 @@ input[type="text"], select {
 input[type="date"], select {
     background-color: #E6E6E6;
     border: 2px solid #F08419;
+    color:#402306;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -142,6 +152,7 @@ input[type="date"], select {
 input[type="time"], select {
     background-color: #E6E6E6;
     border: 2px solid #F08419;
+    color:#402306;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -149,6 +160,7 @@ input[type="time"], select {
 input[type="number"], select {
     background-color: #E6E6E6;
     border: 2px solid #F08419;
+    color:#402306;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -156,6 +168,7 @@ input[type="number"], select {
 textarea{
     background-color: #E6E6E6;
     border: 2px solid #F08419;
+    color:#402306;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;
@@ -169,13 +182,11 @@ select {
     font-weight: 600;
     color: #F08419;
     font-size: 1.2rem;
-    /* text-decoration: underline; */
     cursor: pointer;
     }
 .containerBack{
     margin-bottom: 20px;
 }
-
 </style>
 
 
