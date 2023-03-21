@@ -26,7 +26,6 @@ export default {
 </script>
 
 <template>
-    <!-- <div class="container">  -->
         <form @submit.prevent="submitForm" class="row g-3">
         <div class="containerTitle">
             <h1 class="reservationTitle"> Crear Reserva </h1>
@@ -91,8 +90,10 @@ export default {
             <button type="submit" class="btn "> Enviar </button>
         </div>
         </div>
+        <div class="containerBack">
+        <router-link to="/" class="back-btn">&#60; Volver</router-link>
+        </div>
         </form>
-    <!-- </div> -->
 </template>
 
 <style lang="css" scoped>
@@ -118,7 +119,7 @@ h1{
     }
 
 label{
-    color:#F08419;;
+    color:#F08419;
     font-weight: 600;
 }
 .containerButton{
@@ -175,6 +176,18 @@ textarea{
 }
 select {
     color:#402306;
+}
+.back-btn {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    color: #F08419;
+    font-size: 1.2rem;
+    /* text-decoration: underline; */
+    cursor: pointer;
+    }
+.containerBack{
+    margin-bottom: 20px;
 }
 
 </style>
