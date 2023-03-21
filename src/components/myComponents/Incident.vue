@@ -25,76 +25,84 @@ export default {
 </script>
 
 <template>
-<form @submit.prevent="submitForm" class="row g-3">
-  <div class="containerTitle">
-      <h1 class="incidentTitle"> Crear Incidencia </h1>
-  </div>
-  <div class="col-md-6">
-  <label for="state" class="form-label">Estado:</label>
-  <select class="form-select" id="state" v-model="form.estado">
-      <option value="selectState" >Seleccione un estado</option>
-      <option value="seen" style="">Visto</option>
-      <option value="pending">Pendiente</option>
-      <option value="rejected">Rechazado</option>
-      <option value="inProgress">En Trámite</option>
-      <option value="finished">Finalizado</option>
-  </select>
-  </div>
-  <div class="col-md-6">
-      <label for="program" class="form-label">Programa:</label>
-      <input type="text" class="form-control" id="program" v-model="form.programa">
-  </div>
-  <div class="col-md-6">
-      <label for="proyect" class="form-label">Proyecto:</label>
-      <input type="text" class="form-control" id="proyect" v-model="form.proyecto">
-  </div>
-  <div class="col-md-6">
-  <label for="sede" class="form-label">Sede:</label>
-  <select class="form-select" id="sede" v-model="form.sede">
-      <option value="Seleccione un estado">Seleccione una sede</option>
-      <option value="Remote">Remoto</option>
-      <option value="Edificio Galaxia">Edificio Galaxia</option>
-      <option value="Innova. Social">Innova. Social</option>
-      <option value="Pasaje Begoña">Pasaje Begoña</option>
-      <option value="El Carmen">El Carmen</option>
-      <option value="Dos aceras">Dos aceras</option>
-  </select>
-  </div>
-  <div class="col-md-12">
-      <label for="category" class="form-label">Categoria:</label>
-      <textarea class="form-control" id="category" rows="3" v-model="form.categoria"></textarea>
-  </div>
-  <div class="col-md-12">
-      <label for="description" class="form-label">Descripción:</label>
-      <textarea class="form-control" id="description" rows="3" v-model="form.descripcion"></textarea>
-  </div>
-  <div class="col-md-12">
-      <label for="comments" class="form-label">Comentarios/AlmuMail:</label>
-      <textarea class="form-control" id="comments" rows="3" v-model="form.comentarios"></textarea>
-  </div>
-  <div class="containerButton">
-  <div class="sendButton">
-      <button type="submit" class="btn ">Enviar</button>
-  </div>
-  </div>
-  <div class="containerBack">
-    <router-link to="/" class="back-btn">← Volver</router-link>
-  </div>
-  </form>
+    <div class="formContainer">
+        <form @submit.prevent="submitForm" class="form row g-3">
+            <div class="containerTitle">
+                <h1 class="incidentTitle"> Crear Incidencia </h1>
+            </div>
+            <div class="col-md-6">
+            <label for="state" class="form-label">Estado:</label>
+            <select class="form-select" id="state" v-model="form.estado">
+                <option value="selectState" >Seleccione un estado</option>
+                <option value="seen" style="">Visto</option>
+                <option value="pending">Pendiente</option>
+                <option value="rejected">Rechazado</option>
+                <option value="inProgress">En Trámite</option>
+                <option value="finished">Finalizado</option>
+            </select>
+            </div>
+            <div class="col-md-6">
+                <label for="program" class="form-label">Programa:</label>
+                <input type="text" class="form-control" id="program" v-model="form.programa">
+            </div>
+            <div class="col-md-6">
+                <label for="proyect" class="form-label">Proyecto:</label>
+                <input type="text" class="form-control" id="proyect" v-model="form.proyecto">
+            </div>
+            <div class="col-md-6">
+            <label for="sede" class="form-label">Sede:</label>
+            <select class="form-select" id="sede" v-model="form.sede">
+                <option value="Seleccione un estado">Seleccione una sede</option>
+                <option value="Remote">Remoto</option>
+                <option value="Edificio Galaxia">Edificio Galaxia</option>
+                <option value="Innova. Social">Innova. Social</option>
+                <option value="Pasaje Begoña">Pasaje Begoña</option>
+                <option value="El Carmen">El Carmen</option>
+                <option value="Dos aceras">Dos aceras</option>
+            </select>
+            </div>
+            <div class="col-md-12">
+                <label for="category" class="form-label">Categoria:</label>
+                <textarea class="form-control" id="category" rows="3" v-model="form.categoria"></textarea>
+            </div>
+            <div class="col-md-12">
+                <label for="description" class="form-label">Descripción:</label>
+                <textarea class="form-control" id="description" rows="3" v-model="form.descripcion"></textarea>
+            </div>
+            <div class="col-md-12">
+                <label for="comments" class="form-label">Comentarios/AlmuMail:</label>
+                <textarea class="form-control" id="comments" rows="3" v-model="form.comentarios"></textarea>
+            </div>
+            <div class="containerButton">
+            <div class="sendButton">
+                <button type="submit" class="btn ">Enviar</button>
+            </div>
+            </div>
+            <div class="containerBack">
+                <router-link to="/" class="back-btn">← Volver</router-link>
+            </div>
+        </form>
+    </div>
 </template>
 
 <style lang="css" scoped>
+.formContainer{
+    width:70%;
+    margin:auto;
+}
 .container{
     width: 100%;
     height: 100%;
 }
-.g-3{
+.form{
     background-color:#FFFCFC;
-    margin: 50px 50px 50px 50px;
+    margin: 5%; 
+    padding: 20px;
     border-width: 5px;
     border-color: #f08419;
     border-radius: 10px;
 }
+
 h1{
     color:#F08419;
     text-align:center;
@@ -186,6 +194,12 @@ select {
     }
 .containerBack{
     margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+.formContainer{
+    width:100%;
+    margin:auto;
+    }
 }
 </style>
 
