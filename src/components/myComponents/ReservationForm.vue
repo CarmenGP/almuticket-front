@@ -115,7 +115,7 @@ h1{
     font-weight:800;
     font-size: 1.5rem;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
-    }
+}
 
 label{
     color:#F08419;;
