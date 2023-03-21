@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<script setup>
-import { RouterView } from 'vue-router'
-=======
 <script>
 import { RouterLink, RouterView } from 'vue-router'
->>>>>>> gestionDeIncidencias
 import FooterVue from './components/myComponents/FooterVue.vue';
 import Header from './components/myComponents/Header.vue'
 
