@@ -30,7 +30,7 @@ export default {
           <select id="state">
             <option value="pending">Pendiente</option>
             <option value="rejected">Rechazado</option>
-            <option value="in progress">En Trámite</option>
+            <option value="inProgress">En Trámite</option>
             <option value="finished">Finalizado</option>
           </select>
         </div>
@@ -68,7 +68,7 @@ export default {
 </template>
 
 
-<style scoped lang="css">
+<style lang="css" scoped>
 /* Fondo y tipografía */
 body {
   background-color: #FBE6C6;
