@@ -21,52 +21,52 @@ export default {
     <div class="fields-container">
       <div class="title-container">
         <div class="title-rectangle">
-          <p class="title-text">INCIDENCIA / APOYO</p>
+          <p class="title-text">Incidencia / Apoyo</p>
         </div>
       </div>
       <div class="field-container">
         <div class="field-rectangle">
-          <label for="estado">Estado</label>
-          <select id="estado">
-            <option value="visto">Visto</option>
-            <option value="pendiente">Pendiente</option>
-            <option value="rechazado">Rechazado</option>
-            <option value="en tramite">En Trámite</option>
-            <option value="finalizado">Finalizado</option>
+          <label for="state">Estado</label>
+          <select id="state">
+            <option value="pending">Pendiente</option>
+            <option value="rejected">Rechazado</option>
+            <option value="in progress">En Trámite</option>
+            <option value="finished">Finalizado</option>
           </select>
         </div>
         <div class="field-rectangle">
-          <label for="programa">Programa</label>
-          <input type="text" id="programa">
+          <label for="program">Programa</label>
+          <input type="text" id="program">
         </div>
         <div class="field-rectangle">
-          <label for="proyecto">Proyecto</label>
-          <input type="text" id="proyecto">
+          <label for="project">Proyecto</label>
+          <input type="text" id="project">
         </div>
         <div class="field-rectangle">
-          <label for="sede">Sede</label>
-          <input type="text" id="sede">
+          <label for="location">Sede</label>
+          <input type="text" id="location">
         </div>
         <div class="field-rectangle">
-          <label for="categoria">Categoría</label>
-          <input type="text" id="categoria">
+          <label for="category">Categoría</label>
+          <input type="text" id="category">
         </div>
         <div class="field-rectangle">
-          <label for="descripcion">Descripción</label>
-          <input type="text" id="descripcion">
+          <label for="description">Descripción</label>
+          <input type="text" id="description">
         </div>
         <div class="field-rectangle">
-          <label for="comentarios">Comentarios/ALMUMAIL</label>
-          <textarea id="comentarios"></textarea>
+          <label for="comments">Comentarios/ALMUMAIL</label>
+          <textarea id="comments"></textarea>
         </div>
         <div class="btn-container">
-          <button class="btn-actualizar">Actualizar ticket</button>
+          <button class="btn-update">Actualizar ticket</button>
         </div>
       </div>
     </div>
     <router-link to="/" class="back-btn">&#60; Volver</router-link>
   </div>
 </template>
+
 
 <style scoped lang="css">
 /* Fondo y tipografía */
@@ -76,20 +76,20 @@ body {
 }
 
 /* Título */
+
 .title-container {
   text-align: center;
   margin-bottom: 20px;
 }
-.title-rectangle {
-  background-color: #F08419;
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-  display: inline-block;
-}
+
 .title-text {
   font-size: 1.5rem;
   margin: 0;
+  color:#F08419;
+  text-align:center;
+  margin-bottom: 5%;
+  font-family: 'Nunito Sans', sans-serif;
+    
 }
 
 /* Contenedor de campos */
