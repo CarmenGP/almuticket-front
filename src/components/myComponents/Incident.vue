@@ -67,21 +67,17 @@ export default {
   </div>
 </template>
 
-
 <style lang="css" scoped>
 /* Fondo y tipografía */
 body {
   background-color: #FBE6C6;
   font-family: 'Nunito Sans', sans-serif;
 }
-
 /* Título */
-
 .title-container {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .title-text {
   font-size: 1.5rem;
   margin: 0;
@@ -91,20 +87,18 @@ body {
   font-family: 'Nunito Sans', sans-serif;
     
 }
-
 /* Contenedor de campos */
 .fields-container {
-  border: 13px solid #F08419;
+  border: 5px solid #F08419;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
 }
-
 /* Campo */
 .field-rectangle {
   background-color: #FFFCFC;
   border: 2px solid #F08419;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 15px;
   padding: 10px;
 }
@@ -115,7 +109,6 @@ label {
   margin-bottom: 5px;
   color: #F08419;
 }
-
 /* Input del campo */
 .input-field {
   padding: 10px;
@@ -124,7 +117,6 @@ label {
   width: 100%;
   color: #F08419;
 }
-
 /* Select del campo */
 select {
   padding: 10px;
@@ -133,7 +125,6 @@ select {
   width: 100%;
   color: #F08419;
 }
-
 /* Área de texto del campo */
 textarea {
   padding: 10px;
@@ -143,7 +134,6 @@ textarea {
   width: 100%;
   color: #F08419;
 }
-
 /* Botón */
 .register-button {
   font-weight: bold;
@@ -156,7 +146,6 @@ textarea {
   padding: 10px;
   border: none;
 }
-
 /* Error message */
 .error-message {
   color: red;
@@ -173,7 +162,6 @@ textarea {
   cursor: pointer;
   margin-top: 20px;
 }
-
 @media only screen and (max-width: 768px) {
   /* Campo */
   .field-rectangle {
