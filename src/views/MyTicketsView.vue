@@ -1,13 +1,13 @@
 <script>
-import Tickets from '../components/myComponents/Tickets.vue'
+import MyTickets from '../components/myComponents/MyTickets.vue'
 export default {
-components: { Tickets },
+components: { MyTickets },
 }
 </script>
 
 <template>
     <div class="bodyContainer">
-        <Tickets/>
+        <MyTickets/>
     </div>
 </template>
 
