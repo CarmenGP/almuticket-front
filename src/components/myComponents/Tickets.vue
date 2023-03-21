@@ -32,6 +32,15 @@ export default {
                 {data: 'name'},
                 {"defaultContent": "<button type='button' class='form btn btn-primary btn-xs '> <span class='glyphicon glyphicon-search'></span>Ver</button>"}
             ],
+            botones: [
+                {
+                    title: 'Reporte de users',
+                    extend: 'pdfHtml5',
+                    text: '<li class="fa-solid fa-file-pdf"></li> PDF',
+                    className: 'btn btn-danger'
+
+                }
+            ],
         }
     },
     mounted(){
@@ -61,13 +70,12 @@ export default {
             <div class="myTickets table">
                 <h1>Mis Tickets</h1>
                 <div class="table-responsive">
-                    <DataTable :data="tickets" :columns="columns" class="table table-striped display"    
-                    :options="{response:true,autoWidth:false, dom:'Bfrtip' ,pageLength: 5, language:{
+                    <DataTable :data="tickets" :columns="columns" class="table table-striped display"  
+                    :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
                             search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
                             infoFiltered: '(Filtrados de _MAX_ registros.)',
                             paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
-                            
-                                }}">
+                            }, buttons:botones}">
                             <thead>
                                 <tr>
                                     <th >Nº</th>
@@ -113,32 +121,7 @@ h1{
 thead {
     margin-top:5%!important;
     background-color:#FFF3D6!important;
-    border: 5px solid #F08419;
+    border: 3px solid #F08419;
     
 }
-
-th{
-    color:#402306;
-    background-color:#FFF3D6!important;
-}
-
-td{
-    color:#402306;
-}
-.dataTables_wrapper .dataTables_filter {
-      float: none;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .dataTables_wrapper .dataTables_filter input {
-      width: 100%;
-      max-width: 300px;
-      display: inline-block;
-    }
-
-
-
-
-
 </style>
