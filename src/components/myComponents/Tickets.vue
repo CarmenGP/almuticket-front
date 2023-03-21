@@ -77,6 +77,8 @@ export default {
 
 <style lang="css" scoped>
 @import 'datatables.net-bs5';
+.table-responsive{
+}
 
 h1{
     color:#F08419;
@@ -99,6 +101,7 @@ h1{
     
 }
 thead {
+    margin-top:5%!important;
     background-color:#FFF3D6!important;
     border: 5px solid #F08419;
     
