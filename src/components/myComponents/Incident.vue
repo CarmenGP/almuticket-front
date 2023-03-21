@@ -74,83 +74,14 @@ body {
   background-color: #FBE6C6;
   font-family: 'Nunito Sans', sans-serif;
 }
-/* Campo */
-.field-rectangle {
-  background-color: #F8C577;
-  border: 2px solid #F09600;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 5px;
-}
-/* Etiqueta del campo */
-label {
-  font-size: 0.8rem;
-  margin-bottom: 5px;
-}
-/* Input del campo */
-input {
-  padding: 5px;
-  border-radius: 5px;
-  border: 2px solid #F09600;
-  width: 100%;
-}
-/* Select del campo */
-select {
-  padding: 5px;
-  border-radius: 5px;
-  border: 2px solid #F09600;
-  width: 100%;
-}
-/* Área de texto del campo */
-textarea {
-  padding: 5px;
-  border-radius: 5px;
-  border: 2px solid #F09600;
-  resize: none; /* Evita que el usuario pueda cambiar el tamaño de la caja de texto */
-  width: 100%;
-}
-/* Botón */
-.btn-rectangle {
-  background-color: #F09600;
-  border: 2px solid #F09600;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  padding: 5px 10px;
-  font-size: 1rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  display: block;
-  margin: 20px auto 0 auto;
-}
-/* Volver */
-.btn-volver {
-  background-color: transparent;
-  border: none;
-  color: #F09600 !important;
-  font-size: 2.5rem;
-  text-decoration: underline;
-  cursor: pointer;
-  margin-top: 20px;
-}
-/* Contenedor de campos */
-.fields-container {
-  border: 13px solid #F09600;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-/* Estado */
-#estado {
-  width: 100%;
-}
+
 /* Título */
 .title-container {
   text-align: center;
   margin-bottom: 20px;
 }
 .title-rectangle {
-  background-color: #F09600;
+  background-color: #F08419;
   color: white;
   padding: 5px;
   border-radius: 5px;
@@ -160,19 +91,87 @@ textarea {
   font-size: 1.5rem;
   margin: 0;
 }
-.btn-actualizar {
-  background-color: #F09600;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  padding: 5px 10px;
-  font-size: 1rem;
+
+/* Contenedor de campos */
+.fields-container {
+  border: 13px solid #F08419;
+  padding: 20px;
+  border-radius: 10px;
   margin-top: 20px;
-  margin-bottom: 10px;
-  display: block;
-  margin: 20px auto 0 auto;
-  width: fit-content;
+}
+
+/* Campo */
+.field-rectangle {
+  background-color: #FFFCFC;
+  border: 2px solid #F08419;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+/* Etiqueta del campo */
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #F08419;
+}
+
+/* Input del campo */
+.input-field {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #F08419;
+  width: 100%;
+  color: #F08419;
+}
+
+/* Select del campo */
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #F08419;
+  width: 100%;
+  color: #F08419;
+}
+
+/* Área de texto del campo */
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #F08419;
+  resize: none;
+  width: 100%;
+  color: #F08419;
+}
+
+/* Botón */
+.register-button {
+  font-weight: bold;
+  color: white;
+  background-color: #F08419;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 10px;
+  border: none;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+/* Volver */
+.back-btn {
+  background-color: transparent;
+  border: none;
+  color: #F08419;
+  font-size: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -185,27 +184,17 @@ textarea {
     font-size: 1rem;
   }
   /* Input del campo */
-  input {
-    width: 100%;
-  }
-  /* Select del campo */
-  select {
-    width: 100%;
-  }
-  /* Área de texto del campo */
+  input,
+  select,
   textarea {
     width: 100%;
   }
-  /* Contenedor de campos */
-  .fields-container {
-    border: none;
-    padding: 0;
-    margin: 0;
-  }
   /* Botón */
-  .btn-actualizar {
+  .register-button {
     margin-top: 40px;
   }
 }
 </style>
+
+
 
