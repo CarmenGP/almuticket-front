@@ -57,7 +57,7 @@ const listUsers = async () => {
                     <td>${user.name}</td>
                     <td>${user.email}</td>
                     <td>${user.email}</td>
-                    <td><i class="fa-solid fa-check" style="color: green;"></i></td>
+                    <td>${user.name}</td>
                     <td>
                         <button class="btn btn-sm btn-success"><i class="fa-solid fa-eye"></i></button>
                     </td>
@@ -79,9 +79,6 @@ window.addEventListener("load", async () => {
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <table id="datatable_users" class="table table-striped">
-                        <!-- <caption>
-                            DataTable.js Demo
-                        </caption> -->
                         <thead>
                             <tr>
                                 <th class="centered">ID</th>
@@ -101,7 +98,7 @@ window.addEventListener("load", async () => {
                     </table>
                 </div>
             </div>
-        </div>
+    </div>
 </template>
 <style lang="css" scoped>
     .centered {
