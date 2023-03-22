@@ -58,16 +58,19 @@ export default {
                 </select>
             </div>
             <div class="col-md-6">
-            <label for="sede" class="form-label">Sede:</label>
-            <select class="form-select" id="sede" v-model="form.sede">
-                <option value="Seleccione un estado">Seleccione una sede</option>
-                <option value="Remote">Remoto</option>
-                <option value="Edificio Galaxia">Edificio Galaxia</option>
-                <option value="Innova. Social">Innova. Social</option>
-                <option value="Pasaje Begoña">Pasaje Begoña</option>
-                <option value="El Carmen">El Carmen</option>
-                <option value="Dos aceras">Dos aceras</option>
-            </select>
+                <label for="room" class="form-label">Sala:</label>
+                <select class="form-select" id="room" v-model="form.room">
+                <option disabled value="">Seleccione una sala</option>
+                <option value="carmenTrainingRoom">El Carmen / Aula de formación</option>
+                <option value="carmenCoworking">El Carmen / Coworking</option>
+                <option value="carmenOpenSpace">El Carmen / Espacio central abierto</option>
+                
+                <option value="begonaGalaxia">Begoña / Edificio Galaxia</option>
+                    <option value="Edificio Galaxia">Edificio Galaxia</option>
+                    <option value="Innova. Social">Innova. Social</option>
+                    <option value="Pasaje Begoña">Pasaje Begoña</option>
+                    <option value="El Carmen">El Carmen</option>
+                </select>
             </div>
             <div class="col-md-12">
                 <label for="category" class="form-label">Categoria:</label>
