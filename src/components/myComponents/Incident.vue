@@ -1,26 +1,24 @@
 <script>
 export default {
-  name: "IncidentView",
-  data() {
-    return {
-      form: {
-        estado: "",
-        programa: "",
-        proyecto: "",
-        sede: "",
-        categoria: "",
-        almumail: "",
-        descripcion: "",
-        comentarios: "",
-      },
-    };
-  },
-  methods: {
-    submitForm() {
-      //Aquí puedes poner la lógica para enviar el formulario
-      console.log("Formulario enviado");
+    name: "IncidentView",
+    data() {
+        return {
+            form: {
+                subject: "",
+                area: "",
+                room: "",
+                category: "",
+                description: "",
+                comments: "",
+            },
+        };
     },
-  },
+    methods: {
+        submitForm() {
+        //Aquí puedes poner la lógica para enviar el formulario
+        console.log("Formulario enviado");
+        },
+    },
 };
 </script>
 
@@ -220,6 +218,3 @@ select {
     }
 }
 </style>
-
-
-
