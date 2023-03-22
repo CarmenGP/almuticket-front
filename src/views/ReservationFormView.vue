@@ -1,5 +1,5 @@
 <script>
-import ReservationForm from '../components/myComponents/ReservationForm.vue'
+import ReservationForm from '../components/forms/ReservationForm.vue'
 export default {
 components:{ReservationForm},
 }

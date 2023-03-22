@@ -1,5 +1,5 @@
 <script>
-import Incident from '../components/myComponents/Incident.vue'
+import Incident from '../components/forms/Incident.vue'
 export default {
     components: { Incident }}
 </script>
