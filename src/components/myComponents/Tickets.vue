@@ -78,7 +78,7 @@ export default {
 <template>
             <div class="myTickets table">
                 <h1>Mis Tickets</h1>
-                <div div="table" class="table-responsive">
+                <div class="table-responsive">
                     <DataTable :data="tickets" :columns="columns" class="table table-striped display"  
                     :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
                             search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
@@ -133,5 +133,6 @@ thead {
     border: 3px solid #F08419;
     
 }
+
 
 </style>
