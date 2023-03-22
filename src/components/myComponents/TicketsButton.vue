@@ -6,8 +6,8 @@ export default {
 
 <template>
         <div>
-            <RouterLink to="/allTickets">
-                <a href="../views/AllTicketsView.vue">
+            <RouterLink to="/tickets">
+                <a href="../views/MyTicketsView.vue">
                     <button class="tickets-button" @click="seeTickets()">Ver mis Tickets</button>   
                 </a>
             </RouterLink>            
