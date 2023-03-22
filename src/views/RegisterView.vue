@@ -7,7 +7,8 @@ components: { RegistrationForm },
 </script>
 <template>
         <div class="bodyContainer">
-                <RegistrationForm/>     
+                <RegistrationForm/>  
+                <SendButton/>   
         </div>
 </template>
 <style lang="css" scoped>
