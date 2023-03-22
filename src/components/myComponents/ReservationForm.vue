@@ -85,11 +85,11 @@ export default {
             <label for="comments" class="form-label">Comentarios:</label>
             <textarea class="form-control" id="comentarios" rows="3" v-model="form.comentarios"></textarea>
         </div>
-        <div class="containerButton">
+        <!-- <div class="containerButton">
         <div class="sendButton">
             <button type="submit" class="btn ">Enviar</button>
-        </div>
-        </div>
+        </div> -->
+        
         <div class="containerBack">
         <router-link to="/" class="back-btn">← Volver</router-link>
         </div>

@@ -1,16 +1,23 @@
 <script>
 import ReservationForm from '../components/myComponents/ReservationForm.vue'
 import SendButton from '../components/myComponents/SendButton.vue'
+
 export default {
-components:{ReservationForm},{SendButton},
+components: { ReservationForm , SendButton },
 }
 </script>
 
 <template>
-    <ReservationForm/>
-    <SendButton/>
+    <div class="containerFormButton">
+        <ReservationForm/>
+        <SendButton/>
+    </div>
 </template>
 
-<style>
+<style lang="css" scoped>
+/* .containerFormButton{
+    display:flex;
+    justify-content: center;
 
+} */
 </style>

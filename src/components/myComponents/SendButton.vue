@@ -1,31 +1,27 @@
 <script>
 export default {
-    methods: {
-    send() {
-        console.log("¡Haz hecho clic en Enviar!");
-    }
-    }
 }
 </script>
 
 <template>
-    <div class="containerButton">
-    <button @click="SendButton">Enviar</button>
-    </div>
+    <div>
+        <RouterLink to="/">
+            <a href="../views/MenuView.vue">
+                <button class="sendButton">Enviar</button>   
+            </a>
+        </RouterLink>
+        </div>
 </template>
 
 <style lang="css" scoped>
-.containerButton{
+.sendButton {
     font-weight: bold;
     color: white;
-    background-color:blueviolet;
-    border-radius:10px;
-    width:10%;
+    background-color: #f08419;
+    border-radius: 10px;
+    width: 50%;
     text-align: center;
-}
-
-button{
-    font-weight: bold;
-    color: white;
+    margin-bottom: 5%;
+    margin:auto;
 }
 </style>
