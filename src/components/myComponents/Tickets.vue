@@ -14,6 +14,7 @@ window.JsZip = JsZip;
 DataTable.use(pdfmake);
 DataTable.use(ButtonsHtml5);
 DataTable.use(DataTablesLib);
+
 export default {
     components:{DataTable},
     data(){
@@ -30,14 +31,21 @@ export default {
                 {data: 'address'},
                 {data: 'name'},
                 {data: 'name'},
-                {"defaultContent": "<button type='button' class='form btn btn-primary btn-xs '> <span class='glyphicon glyphicon-search'></span>Ver</button>"}
+                {"defaultContent": "<div class='btn-group'><button type='button' class='form btn btn-primary btn-xs'> <i class='fas fa-eye'></i></button><button type='button' class='form btn btn-danger btn-xs'> <i class='fas fa-trash'></i></button></div>"}
             ],
             botones: [
                 {
-                    title: 'Reporte de users',
+                    title: 'Reporte de tickets',
                     extend: 'pdfHtml5',
                     text: '<li class="fa-solid fa-file-pdf"></li> PDF',
                     className: 'btn btn-danger'
+
+                },
+                {
+                    title: 'Reporte de tickets',
+                    extend: 'print',
+                    text: '<li class="fa-solid fa-print"></li> Imprimir',
+                    className: 'btn btn-dark'
 
                 }
             ],
@@ -46,6 +54,7 @@ export default {
     mounted(){
         this.getticket();
     },
+
     methods:{
         getticket(){
             axios.get('https://jsonplaceholder.typicode.com/users').then(
@@ -69,7 +78,7 @@ export default {
 <template>
             <div class="myTickets table">
                 <h1>Mis Tickets</h1>
-                <div class="table-responsive">
+                <div div="table" class="table-responsive">
                     <DataTable :data="tickets" :columns="columns" class="table table-striped display"  
                     :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
                             search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
@@ -124,4 +133,5 @@ thead {
     border: 3px solid #F08419;
     
 }
+
 </style>
