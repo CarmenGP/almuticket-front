@@ -30,24 +30,32 @@ export default {
             <div class="containerTitle">
                 <h1 class="incidentTitle"> Crear Incidencia </h1>
             </div>
-            <div class="col-md-6">
-            <label for="state" class="form-label">Estado:</label>
-            <select class="form-select" id="state" v-model="form.estado">
-                <option value="selectState" >Seleccione un estado</option>
-                <option value="seen" style="">Visto</option>
-                <option value="pending">Pendiente</option>
-                <option value="rejected">Rechazado</option>
-                <option value="inProgress">En Trámite</option>
-                <option value="finished">Finalizado</option>
-            </select>
+            <div class="col-md-12">
+                <label for="subject" class="form-label">Asunto:</label>
+                <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Asunto de la incidencia">
             </div>
             <div class="col-md-6">
-                <label for="program" class="form-label">Programa:</label>
-                <input type="text" class="form-control" id="program" v-model="form.programa">
-            </div>
-            <div class="col-md-6">
-                <label for="proyect" class="form-label">Proyecto:</label>
-                <input type="text" class="form-control" id="proyect" v-model="form.proyecto">
+                <label for="area" class="form-label">Área:</label>
+                <select class="form-select" id="area" v-model="form.area">
+                    <option disabled value="">Seleccione un área</option>
+                    <option value="aidei">AIDEI</option>
+                    <option value="communication">Comunicación</option>
+                    <option value="economics">Económica</option>
+                    <option value="employability">Empleabilidad</option>
+                    <option value="entrepeneuring">Emprendimiento</option>
+                    <option value="specialVulnerability">Especial Vulnerabilidad</option>
+                    <option value="workEntry">Incorporación Laboral</option>
+                    <option value="infantryFamily">Infancia y Familia</option>
+                    <option value="socialInnovation">Innovación Social</option>
+                    <option value="international">Internacional</option>
+                    <option value="participation">Participación</option>
+                    <option value="peopleTalent" >Personas y Talento</option>
+                    <option value="freedomExcluded">Privadas de Libertad</option>
+                    <option value="projects">Proyectos</option>
+                    <option value="begonaReception">Recepción Begoña</option>               
+                    <option value="chiclanaReception">Recepción Chiclana</option>
+                    <option value="galaxiaReception">Recepción Galaxia</option>
+                </select>
             </div>
             <div class="col-md-6">
             <label for="sede" class="form-label">Sede:</label>
@@ -63,7 +71,14 @@ export default {
             </div>
             <div class="col-md-12">
                 <label for="category" class="form-label">Categoria:</label>
-                <textarea class="form-control" id="category" rows="3" v-model="form.categoria"></textarea>
+                <select class="form-select" id="area" v-model="form.area">
+                    <option disabled value="">Seleccione un área</option>
+                    <option value="programSupport">Apoyo a programa</option>
+                    <option value="it">Informática</option>
+                    <option value="maintenance">Mantenimiento</option>
+                    <option value="supplies">Materiales</option>
+                    <option value="cleaning">Limpieza</option>
+                </select>
             </div>
             <div class="col-md-12">
                 <label for="description" class="form-label">Descripción:</label>

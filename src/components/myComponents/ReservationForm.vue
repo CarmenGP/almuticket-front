@@ -3,7 +3,7 @@ export default {
     data() {
         return {
         form: {
-            state:'',
+            subject:'',
             area:'',
             site:'',
             room:'',
@@ -31,15 +31,8 @@ export default {
                 <h1 class="reservationTitle"> Crear Reserva </h1>
             </div>
             <div class="col-md-6">
-                <label for="state" class="form-label">Estado:</label>
-                <select class="form-select" id="state" v-model="form.state" >
-                    <option disabled value="">Seleccione un estado</option>
-                    <option value="seen">Visto</option>
-                    <option value="pending">Pendiente</option>
-                    <option value="inProgress">En trámite</option>
-                    <option value="finished">Finalizado</option>
-                    <option value="rejected">Rechazado</option>
-                </select>
+                <label for="subject" class="form-label">Asunto:</label>
+                <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Asunto de la reserva">
             </div>
             <div class="col-md-6">
                 <label for="area" class="form-label">Área:</label>
@@ -104,7 +97,7 @@ export default {
                 <input type="time" class="form-control" id="finishTime" v-model="form.finishTime">
             </div>
             <div class="col-md-6">
-                <label for="assistantsNumber" class="form-label">Número de asistencias:</label>
+                <label for="assistantsNumber" class="form-label">Número de asistentes:</label>
                 <input type="number" class="form-control" id="assistantsNumber" v-model="form.assistantsNumber">
             </div>
             <div class="col-md-12">
