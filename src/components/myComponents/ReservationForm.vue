@@ -4,10 +4,9 @@ export default {
         return {
         form: {
             state:'',
-            program:'',
-            proyect:'',
-            sede:'',
-            hall:'',
+            area:'',
+            site:'',
+            room:'',
             date:'',
             startTime:'',
             finishTime:'',
@@ -32,59 +31,85 @@ export default {
                 <h1 class="reservationTitle"> Crear Reserva </h1>
             </div>
             <div class="col-md-6">
-            <label for="state" class="form-label">Estado:</label>
-            <select class="form-select" id="estado" v-model="form.estado">
-                <option value="Seleccione un estado" >Seleccione un estado</option>
-                <option value="Visto" style="">Visto</option>
-                <option value="Pendiente">Pendiente</option>
-                <option value="En trámite">En trámite</option>
-                <option value="Finalizado">Finalizado</option>
-                <option value="Rechazado">Rechazado</option>
-            </select>
+                <label for="state" class="form-label">Estado:</label>
+                <select class="form-select" id="state" v-model="form.state" >
+                    <option disabled value="">Seleccione un estado</option>
+                    <option value="seen">Visto</option>
+                    <option value="pending">Pendiente</option>
+                    <option value="inProgress">En trámite</option>
+                    <option value="finished">Finalizado</option>
+                    <option value="rejected">Rechazado</option>
+                </select>
             </div>
             <div class="col-md-6">
-                <label for="program" class="form-label">Programa:</label>
-                <input type="text" class="form-control" id="programa" v-model="form.programa">
+                <label for="area" class="form-label">Área:</label>
+                <select class="form-select" id="area" v-model="form.area">
+                    <option disabled value="">Seleccione un área</option>
+                    <option value="aidei">AIDEI</option>
+                    <option value="communication">Comunicación</option>
+                    <option value="economics">Económica</option>
+                    <option value="employability">Empleabilidad</option>
+                    <option value="entrepeneuring">Emprendimiento</option>
+                    <option value="specialVulnerability">Especial Vulnerabilidad</option>
+                    <option value="workEntry">Incorporación Laboral</option>
+                    <option value="infantryFamily">Infancia y Familia</option>
+                    <option value="socialInnovation">Innovación Social</option>
+                    <option value="international">Internacional</option>
+                    <option value="participation">Participación</option>
+                    <option value="peopleTalent" >Personas y Talento</option>
+                    <option value="freedomExcluded">Privadas de Libertad</option>
+                    <option value="projects">Proyectos</option>
+                    <option value="begonaReception">Recepción Begoña</option>               
+                    <option value="chiclanaReception">Recepción Chiclana</option>
+                    <option value="galaxiaReception">Recepción Galaxia</option>
+                </select>
             </div>
             <div class="col-md-6">
-                <label for="proyect" class="form-label">Proyecto:</label>
-                <input type="text" class="form-control" id="proyecto" v-model="form.proyecto">
+                <label for="site" class="form-label">Sede:</label>
+                <select class="form-select" id="site" v-model="form.site">
+                    <option disabled value="">Seleccione una sede</option>
+                    <option value="dosAceras">Dos aceras</option>
+                    <option value="galaxiaBuilding">Edificio Galaxia</option>
+                    <option value="carmen">El Carmen</option>
+                    <option value="socialInnovation">Innovación Social</option>
+                    <option value="begonaPassage">Pasaje Begoña</option>
+                    <option value="remote">Remoto</option>                    
+                </select>
             </div>
             <div class="col-md-6">
-            <label for="sede" class="form-label">Sede:</label>
-            <select class="form-select" id="sede" v-model="form.sede">
-                <option value="Seleccione un estado">Seleccione una sede</option>
-                <option value="Remoto">Remoto</option>
-                <option value="Edificio Galaxia">Edificio Galaxia</option>
-                <option value="Innova. Social">Innova. Social</option>
-                <option value="Pasaje Begoña">Pasaje Begoña</option>
-                <option value="El Carmen">El Carmen</option>
-                <option value="Dos aceras">Dos aceras</option>
-            </select>
-            </div>
-            <div class="col-md-6">
-                <label for="hall" class="form-label">Sala:</label>
-                <input type="text" class="form-control" id="sala" v-model="form.sala">
+                <label for="room" class="form-label">Sala:</label>
+                <select class="form-select" id="room" v-model="form.room">
+                <option disabled value="">Seleccione una sala</option>
+                <option value="carmenTrainingRoom">El Carmen / Aula de formación</option>
+                <option value="carmenCoworking">El Carmen / Coworking</option>
+                <option value="carmenOpenSpace">El Carmen / Espacio central abierto</option>
+                
+                <option value="begonaGalaxia">Begoña / Edificio Galaxia</option>
+                    <option value="Edificio Galaxia">Edificio Galaxia</option>
+                    <option value="Innova. Social">Innova. Social</option>
+                    <option value="Pasaje Begoña">Pasaje Begoña</option>
+                    <option value="El Carmen">El Carmen</option>
+                </select>
             </div>
             <div class="col-md-6">
                 <label for="date" class="form-label">Fecha:</label>
-                <input type="date" class="form-control" id="fecha" v-model="form.fecha">
+                <input type="date" class="form-control" id="date" v-model="form.date">
             </div>
             <div class="col-md-6">
                 <label for="startTime" class="form-label">Hora de inicio:</label>
-                <input type="time" class="form-control" id="horaInicio" v-model="form.horaInicio">
+                <input type="time" class="form-control" id="startTime" v-model="form.startTime">
             </div>
             <div class="col-md-6">
                 <label for="finishTime" class="form-label">Hora final:</label>
-                <input type="time" class="form-control" id="horaFinal" v-model="form.horaFinal">
+                <input type="time" class="form-control" id="finishTime" v-model="form.finishTime">
             </div>
             <div class="col-md-6">
                 <label for="assistantsNumber" class="form-label">Número de asistencias:</label>
-                <input type="number" class="form-control" id="asistencias" v-model="form.numeroAsistencias">
+                <input type="number" class="form-control" id="assistantsNumber" v-model="form.assistantsNumber">
             </div>
             <div class="col-md-12">
                 <label for="comments" class="form-label">Comentarios:</label>
-                <textarea class="form-control" id="comentarios" rows="3" v-model="form.comentarios"></textarea>
+                <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Escribe un comentario"></textarea>
             </div>
             <div class="containerButton">
             <div class="sendButton">
