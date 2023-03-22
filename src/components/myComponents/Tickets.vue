@@ -31,7 +31,7 @@ export default {
                 {data: 'address'},
                 {data: 'name'},
                 {data: 'name'},
-                {"defaultContent": "<div class='btn-group'><button type='button' class='form btn btn-primary btn-xs'> <i class='fas fa-eye'></i></button><button type='button' class='form btn btn-danger btn-xs'> <i class='fas fa-trash'></i></button></div>"}
+                {"defaultContent": "<div class='btn-group'><button type='button' class='btn btn-success'> <i class='fas fa-eye'></i></button><button type='button' class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
             ],
             botones: [
                 {
