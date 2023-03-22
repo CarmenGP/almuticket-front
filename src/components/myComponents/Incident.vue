@@ -82,11 +82,11 @@ export default {
             </div>
             <div class="col-md-12">
                 <label for="description" class="form-label">Descripción:</label>
-                <textarea class="form-control" id="description" rows="3" v-model="form.descripcion"></textarea>
+                <textarea class="form-control" id="description" rows="3" v-model="form.description" placeholder="Escribe una descripción de la incidencia"></textarea>
             </div>
             <div class="col-md-12">
-                <label for="comments" class="form-label">Comentarios/AlmuMail:</label>
-                <textarea class="form-control" id="comments" rows="3" v-model="form.comentarios"></textarea>
+                <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
+                <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Escribe un comentario"></textarea>
             </div>
             <div class="containerButton">
             <div class="sendButton">

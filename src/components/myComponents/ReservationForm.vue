@@ -5,7 +5,7 @@ export default {
         form: {
             subject:'',
             area:'',
-            site:'',
+            activity:'',
             room:'',
             date:'',
             startTime:'',
@@ -30,9 +30,13 @@ export default {
             <div class="containerTitle">
                 <h1 class="reservationTitle"> Crear Reserva </h1>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <label for="subject" class="form-label">Asunto:</label>
                 <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Asunto de la reserva">
+            </div>
+            <div class="col-md-12">
+                <label for="activity" class="form-label">Actividad:</label>
+                <input type="text" class="form-control" id="activity" v-model="form.activity" placeholder="Título de la actividad">
             </div>
             <div class="col-md-6">
                 <label for="area" class="form-label">Área:</label>
@@ -55,18 +59,6 @@ export default {
                     <option value="begonaReception">Recepción Begoña</option>               
                     <option value="chiclanaReception">Recepción Chiclana</option>
                     <option value="galaxiaReception">Recepción Galaxia</option>
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label for="site" class="form-label">Sede:</label>
-                <select class="form-select" id="site" v-model="form.site">
-                    <option disabled value="">Seleccione una sede</option>
-                    <option value="dosAceras">Dos aceras</option>
-                    <option value="galaxiaBuilding">Edificio Galaxia</option>
-                    <option value="carmen">El Carmen</option>
-                    <option value="socialInnovation">Innovación Social</option>
-                    <option value="begonaPassage">Pasaje Begoña</option>
-                    <option value="remote">Remoto</option>                    
                 </select>
             </div>
             <div class="col-md-6">
@@ -101,7 +93,11 @@ export default {
                 <input type="number" class="form-control" id="assistantsNumber" v-model="form.assistantsNumber">
             </div>
             <div class="col-md-12">
-                <label for="comments" class="form-label">Comentarios:</label>
+                <label for="description" class="form-label">Descripción:</label>
+                <textarea class="form-control" id="description" rows="3" v-model="form.description" placeholder="Escribe una descripción de la incidencia"></textarea>
+            </div>
+            <div class="col-md-12">
+                <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
                 <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Escribe un comentario"></textarea>
             </div>
             <div class="containerButton">
