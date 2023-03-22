@@ -85,11 +85,6 @@ export default {
             <label for="comments" class="form-label">Comentarios:</label>
             <textarea class="form-control" id="comentarios" rows="3" v-model="form.comentarios"></textarea>
         </div>
-        <!-- <div class="containerButton">
-        <div class="sendButton">
-            <button type="submit" class="btn ">Enviar</button>
-        </div> -->
-        
         <div class="containerBack">
         <router-link to="/" class="back-btn">← Volver</router-link>
         </div>
@@ -106,9 +101,9 @@ export default {
     background-color:#FFFCFC;
     align-self: center;
     margin: 50px 50px 50px 50px; 
-    border-width: 5px;
+    /* border-width: 5px;
     border-color: #f08419;
-    border-radius: 10px;
+    border-radius: 10px; */
 }
 h1{
     color:#F08419;

@@ -15,9 +15,18 @@ components: { ReservationForm , SendButton },
 </template>
 
 <style lang="css" scoped>
-/* .containerFormButton{
+.containerFormButton{
+    background-color: #FFFCFC !important;
     display:flex;
-    justify-content: center;
-
-} */
+    flex-direction: column;
+    align-items: center;
+    border-width: 5px;
+    border-color: #f08419;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    margin-top:5%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+}
 </style>
