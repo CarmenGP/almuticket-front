@@ -1,42 +1,38 @@
 <script>
 export default {
-    data() {
-        return {
-        form: {
-            subject:'',
-            area:'',
-            activity:'',
-            room:'',
-            date:'',
-            startTime:'',
-            finishTime:'',
-            assistantsNumber:'',
-            comments:'',
-        }
-        }
+  name: "IncidentView",
+  data() {
+    return {
+      form: {
+        estado: "",
+        programa: "",
+        proyecto: "",
+        sede: "",
+        categoria: "",
+        almumail: "",
+        descripcion: "",
+        comentarios: "",
+      },
+    };
+  },
+  methods: {
+    submitForm() {
+      //Aquí puedes poner la lógica para enviar el formulario
+      console.log("Formulario enviado");
     },
-    methods: {
-        submitForm() {
-        // Aquí podrías enviar el formulario a través de una petición HTTP o realizar alguna otra acción con los datos.
-        console.log(this.form);
-        }
-    }
-    }
+  },
+};
 </script>
 
 <template>
     <div class="formContainer">
         <form @submit.prevent="submitForm" class="form row g-3">
             <div class="containerTitle">
-                <h1 class="reservationTitle"> Crear Reserva </h1>
+                <h1 class="incidentTitle"> Crear Incidencia </h1>
             </div>
             <div class="col-md-12">
                 <label for="subject" class="form-label">Asunto:</label>
-                <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Asunto de la reserva">
-            </div>
-            <div class="col-md-12">
-                <label for="activity" class="form-label">Actividad:</label>
-                <input type="text" class="form-control" id="activity" v-model="form.activity" placeholder="Título de la actividad">
+                <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Asunto de la incidencia">
             </div>
             <div class="col-md-6">
                 <label for="area" class="form-label">Área:</label>
@@ -62,35 +58,27 @@ export default {
                 </select>
             </div>
             <div class="col-md-6">
-                <label for="room" class="form-label">Sala:</label>
-                <select class="form-select" id="room" v-model="form.room">
-                <option disabled value="">Seleccione una sala</option>
-                <option value="carmenTrainingRoom">El Carmen / Aula de formación</option>
-                <option value="carmenCoworking">El Carmen / Coworking</option>
-                <option value="carmenOpenSpace">El Carmen / Espacio central abierto</option>
-                
-                <option value="begonaGalaxia">Begoña / Edificio Galaxia</option>
-                    <option value="Edificio Galaxia">Edificio Galaxia</option>
-                    <option value="Innova. Social">Innova. Social</option>
-                    <option value="Pasaje Begoña">Pasaje Begoña</option>
-                    <option value="El Carmen">El Carmen</option>
+            <label for="sede" class="form-label">Sede:</label>
+            <select class="form-select" id="sede" v-model="form.sede">
+                <option value="Seleccione un estado">Seleccione una sede</option>
+                <option value="Remote">Remoto</option>
+                <option value="Edificio Galaxia">Edificio Galaxia</option>
+                <option value="Innova. Social">Innova. Social</option>
+                <option value="Pasaje Begoña">Pasaje Begoña</option>
+                <option value="El Carmen">El Carmen</option>
+                <option value="Dos aceras">Dos aceras</option>
+            </select>
+            </div>
+            <div class="col-md-12">
+                <label for="category" class="form-label">Categoria:</label>
+                <select class="form-select" id="area" v-model="form.area">
+                    <option disabled value="">Seleccione un área</option>
+                    <option value="programSupport">Apoyo a programa</option>
+                    <option value="it">Informática</option>
+                    <option value="maintenance">Mantenimiento</option>
+                    <option value="supplies">Materiales</option>
+                    <option value="cleaning">Limpieza</option>
                 </select>
-            </div>
-            <div class="col-md-6">
-                <label for="date" class="form-label">Fecha:</label>
-                <input type="date" class="form-control" id="date" v-model="form.date">
-            </div>
-            <div class="col-md-6">
-                <label for="startTime" class="form-label">Hora de inicio:</label>
-                <input type="time" class="form-control" id="startTime" v-model="form.startTime">
-            </div>
-            <div class="col-md-6">
-                <label for="finishTime" class="form-label">Hora final:</label>
-                <input type="time" class="form-control" id="finishTime" v-model="form.finishTime">
-            </div>
-            <div class="col-md-6">
-                <label for="assistantsNumber" class="form-label">Número de asistentes:</label>
-                <input type="number" class="form-control" id="assistantsNumber" v-model="form.assistantsNumber">
             </div>
             <div class="col-md-12">
                 <label for="description" class="form-label">Descripción:</label>
@@ -106,7 +94,7 @@ export default {
             </div>
             </div>
             <div class="containerBack">
-            <router-link to="/" class="back-btn">← Volver</router-link>
+                <router-link to="/" class="back-btn">← Volver</router-link>
             </div>
         </form>
     </div>
@@ -129,6 +117,7 @@ export default {
     border-color: #f08419;
     border-radius: 10px;
 }
+
 h1{
     color:#F08419;
     text-align:center;
@@ -136,7 +125,7 @@ h1{
     font-weight:800;
     font-size: 1.5rem;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
-}
+    }
 
 label{
     color:#F08419;
@@ -221,12 +210,13 @@ select {
 .containerBack{
     margin-bottom: 20px;
 }
-
 @media only screen and (max-width: 768px) {
 .formContainer{
     width:100%;
     margin:auto;
     }
 }
-
 </style>
+
+
+

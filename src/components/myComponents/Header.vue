@@ -32,8 +32,8 @@ export default {
                 <li><RouterLink to="/login"><strong><a href="../views/LoginView.vue">Acceso</a></strong></RouterLink></li>
                 <li><RouterLink to="/"><strong><a href="../views/MenuView.vue">Mi menú</a></strong></RouterLink></li>
                 <li><RouterLink to="/reservation"><strong><a href="../views/ReservationFormView.vue">Crear reserva</a></strong></RouterLink></li>
-                <li><RouterLink to="/incidence"><strong><a href="../views/IncidenceView.vue">Crear incidencia</a></strong></RouterLink></li>
-                <li><RouterLink to="/tickets"><strong><a href="../views/MyTicketsView.vue">Mis Tickets</a></strong></RouterLink></li>
+                <li><RouterLink to="/incident"><strong><a href="../views/IncidentView.vue">Crear incidencia</a></strong></RouterLink></li>
+                <li><RouterLink to="/allTickets"><strong><a href="../views/AllTicketsView.vue">Mis Tickets</a></strong></RouterLink></li>
             </ul>
         </nav>
     </div>
