@@ -89,16 +89,19 @@ export default {
                 <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
                 <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Escribe un comentario"></textarea>
             </div>
-            <div class="containerButton">
-            <div class="sendButton">
-                <button type="submit" class="btn ">Enviar</button>
-            </div>
-            </div>
-            <div class="containerBack">
-                <router-link to="/" class="back-btn">← Volver</router-link>
-            </div>
+                <div class="containerButton">
+                    <div class="resetButton">
+                        <input type="reset" class="btn reset-btn" value="Resetear">
+                    </div>
+                    <div class="sendButton">
+                        <input type="submit" class="btn send-btn" value="Enviar">
+                    </div>
+                </div>
+                <div class="containerBack">
+                    <router-link to="/" class="back-btn">← Volver</router-link>
+                </div>
         </form>
-    </div>
+            </div>
 </template>
 
 <style lang="css" scoped>
@@ -132,17 +135,30 @@ label{
     color:#F08419;
     font-weight: 600;
 }
-.containerButton{
+.containerButton {
     display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
+    justify-content: space-around;
 }
-.sendButton{
+
+.sendButton {
     font-weight: bold;
     color: white;
     background-color:#F08419;
     border-radius:10px;
-    width:10%;
+    width:30%;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.resetButton {
+    font-weight: bold;
+    color: white;
+    background-color: #F08419;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center; 
+}
+.reset-btn {
     text-align: center;
 }
 .btn{
