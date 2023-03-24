@@ -149,7 +149,6 @@ label{
     text-align: center;
     margin-right: 10px;
 }
-
 .resetButton {
     font-weight: bold;
     color: white;
