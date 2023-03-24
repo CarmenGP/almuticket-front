@@ -1,7 +1,7 @@
 <script>
-import RequestButton from '../components/myComponents/RequestButton.vue'
-import IncidenceButton from '../components/myComponents/IncidenceButton.vue'
-import TicketsButton from '../components/myComponents/TicketsButton.vue'
+import RequestButton from '../components/buttons/RequestButton.vue'
+import IncidenceButton from '../components/buttons/IncidenceButton.vue'
+import TicketsButton from '../components/buttons/TicketsButton.vue'
 export default {
     components: { RequestButton, IncidenceButton, TicketsButton },
 }

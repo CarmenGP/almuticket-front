@@ -1,5 +1,5 @@
 <script>
-import Login from '../components/myComponents/Login.vue'
+import Login from '../components/forms/Login.vue'
 export default {
 components: { Login },
 }
