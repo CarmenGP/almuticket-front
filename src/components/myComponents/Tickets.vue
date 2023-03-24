@@ -133,6 +133,4 @@ thead {
     border: 3px solid #F08419;
     
 }
-
-
 </style>

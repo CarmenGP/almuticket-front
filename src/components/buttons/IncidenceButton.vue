@@ -1,6 +1,5 @@
 <script>
-export default {
-    
+export default {   
 }
 </script>
 
@@ -30,5 +29,4 @@ export default {
     color: #F5F6F6;
     border-color: #F5F6F6;
 }
-
 </style>

@@ -15,5 +15,4 @@ components: { Tickets },
 .bodyContainer{
         background-color: #fff3d6;
 }
-
 </style>

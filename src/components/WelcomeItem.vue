@@ -11,6 +11,7 @@
     </div>
   </div>
 </template>
+
 <style scoped>
 .item {
   margin-top: 2rem;
@@ -49,7 +50,6 @@ h3 {
     width: 50px;
     height: 50px;
   }
-
   .item:before {
     content: ' ';
     border-left: 1px solid var(--color-border);
@@ -58,7 +58,6 @@ h3 {
     bottom: calc(50% + 25px);
     height: calc(50% - 25px);
   }
-
   .item:after {
     content: ' ';
     border-left: 1px solid var(--color-border);
@@ -67,11 +66,9 @@ h3 {
     top: calc(50% + 25px);
     height: calc(50% - 25px);
   }
-
   .item:first-of-type:before {
     display: none;
   }
-
   .item:last-of-type:after {
     display: none;
   }

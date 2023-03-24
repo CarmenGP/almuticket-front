@@ -8,16 +8,11 @@
         },
         methods: {
         submitForm() {
-            // Validar datos ingresados por el usuario
             if (!this.email.endsWith("@arrabalempleo.org")) {
-            // Asignar el mensaje de error al elemento div
             const errorMessage = document.querySelector(".error-message");
             errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
             return;
             }
-    
-            // Enviar datos al servidor para iniciar sesión
-            // ...
         },
         },
     };
@@ -56,7 +51,7 @@
                     Acceder
                     </button>
                 </form>
-                <div class="error-message"></div> <!-- Agregar un elemento div para mostrar el mensaje de error -->
+                <div class="error-message"></div>
             </div>
             <div>
                 <p>¿No estás dado de alta en AlmuTicket?
@@ -68,7 +63,6 @@
 </template>
 
 <style lang="css" scoped>
-
 h1{
     color:#F08419;
     text-align:center;
@@ -78,7 +72,6 @@ h1{
     margin-bottom: 5%;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
-
 .formContainer {
     color: #f08419;
     border-width: 5px;
@@ -90,12 +83,10 @@ h1{
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
 label {
     color: #f08419;
     font-weight: bold;
 }
-
 .input-container {
     display: flex;
     width: 100%;
@@ -105,7 +96,6 @@ label {
     justify-content: center; /* Centrar elementos dentro del contenedor de entrada */
     align-items: center; /* Centrar elementos dentro del contenedor de entrada */
 }
-
 .input-field {
     color: #f08419;
     border-radius: 10px;
@@ -113,7 +103,6 @@ label {
     background-color: #E6E6E6;
     margin-bottom: 5%;
 }
-
 .login-button {
     font-weight: bold;
     color: white;
@@ -124,17 +113,14 @@ label {
     margin-bottom: 5%;
     margin:auto;
 }
-
 p{
     color:#f08419;
     margin-top:2%;
     text-align: center;
 }
-
 a:hover{
     color:#f08419;
     text-decoration: underline;
-
 }
 </style>
 

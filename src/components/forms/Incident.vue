@@ -15,7 +15,6 @@ export default {
     },
     methods: {
         submitForm() {
-        //Aquí puedes poner la lógica para enviar el formulario
         console.log("Formulario enviado");
         },
     },
@@ -121,7 +120,6 @@ export default {
     border-color: #f08419;
     border-radius: 10px;
 }
-
 h1{
     color:#F08419;
     text-align:center;
@@ -130,7 +128,6 @@ h1{
     font-size: 1.5rem;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
-
 label{
     color:#F08419;
     font-weight: 600;
@@ -139,7 +136,6 @@ label{
     display: flex;
     justify-content: space-around;
 }
-
 .sendButton {
     font-weight: bold;
     color: white;
@@ -149,6 +145,12 @@ label{
     text-align: center;
     margin-right: 10px;
 }
+.sendButton:hover {
+    background-color: #F5F6F6;
+    color:  #F08419;
+    border-color: #F5F6F6;
+    border: 4px solid #F08419;
+}
 .resetButton {
     font-weight: bold;
     color: white;
@@ -156,6 +158,12 @@ label{
     border-radius: 10px;
     width: 30%;
     text-align: center; 
+}
+.resetButton:hover {
+    background-color: #F5F6F6;
+    color:  #F08419;
+    border-color: #F5F6F6;
+    border: 4px solid #F08419;
 }
 .reset-btn {
     text-align: center;

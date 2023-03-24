@@ -234,12 +234,10 @@ select {
 .containerBack{
     margin-bottom: 20px;
 }
-
 @media only screen and (max-width: 768px) {
 .formContainer{
     width:100%;
     margin:auto;
     }
 }
-
 </style>

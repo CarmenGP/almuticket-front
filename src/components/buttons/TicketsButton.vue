@@ -1,6 +1,5 @@
 <script>
 export default {
-
 }
 </script>
 
@@ -24,12 +23,10 @@ export default {
     padding: 0.8rem 1.2rem;
     cursor: pointer;
     transition: all 0.2s;
-
 }
 .tickets-button:hover {
     background-color: #F08419;
     color: #F5F6F6;
     border-color: #F5F6F6;
 }
-
 </style>

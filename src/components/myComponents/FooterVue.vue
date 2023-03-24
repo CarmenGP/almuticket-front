@@ -41,12 +41,10 @@ export default {
                 <div><img class="logo" src="public\femCoders.png" alt="logo FemCoders"></div>                                               
             </div>
         </div>
-    <!-- Copyright -->
     </MDBFooter>
 </template>
 
 <style lang="css" scoped>
-
 .footerContainer{
     display: flex;
     flex-direction: row;
@@ -68,7 +66,6 @@ export default {
     width: 55px;
     margin-left: 10px;
 }
-
 @media only screen and (max-width: 992px) {
     p{
         font-size: 0.8em;
