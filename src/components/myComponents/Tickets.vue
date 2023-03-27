@@ -32,14 +32,14 @@ export default {
                 {data: 'address'},
                 {data: 'name'},
                 {data: 'name'},
-                {"defaultContent": "<div class='btn-group'><button type='button' class='btn btn-success'> <i class='fas fa-eye'></i></button><button type='button' class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
+                {"defaultContent": "<div class='btn-group'><button class='btn btn-success'> <i class='fas fa-eye'></i></button><button class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
             ],
             botones: [
                 {
                     title: 'Reporte de tickets',
                     extend: 'pdfHtml5',
                     text: '<li class="fa-solid fa-file-pdf"></li> PDF',
-                    className: 'btn btn-danger'
+                    className: 'btn btn-danger my-pdf-button'
 
                 },
                 {
@@ -134,6 +134,10 @@ thead {
     border: 3px solid #F08419;
     
 }
+.my-pdf-button{
+    background-color: red !important;
+}
+
 
 
 </style>
