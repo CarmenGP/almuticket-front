@@ -1,24 +1,30 @@
 <script>
+    import auth from "@/api/auth";
+
     export default {
-        data() {
-        return {
-            email: "",
-            password: "",
-        };
+        data(){
+            return {
+                name:"",
+                surname:"",
+                email: "",
+                password: "",
+            };
         },
         methods: {
-        submitForm() {
-            // Validar datos ingresados por el usuario
-            if (!this.email.endsWith("@arrabalempleo.org")) {
-            // Asignar el mensaje de error al elemento div
-            const errorMessage = document.querySelector(".error-message");
-            errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
-            return;
-            }
-    
-            // Enviar datos al servidor para iniciar sesión
-            // ...
-        },
+            register() {
+                auth.register(this.name, this.surname, this.email, this.password).then(response => {
+                console.log(response);
+                })
+            },
+            submitForm() {
+                // Validar datos ingresados por el usuario
+                if (!this.email.endsWith("@arrabalempleo.org")) {
+                // Asignar el mensaje de error al elemento div
+                const errorMessage = document.querySelector(".error-message");
+                errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
+                return;
+                }
+            },
         },
     };
 </script>
