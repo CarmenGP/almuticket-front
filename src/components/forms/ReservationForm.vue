@@ -151,26 +151,51 @@ label{
 }
 .sendButton {
     font-weight: bold;
-    color: white;
-    background-color:#F08419;
-    border-radius:10px;
-    width:30%;
+    color: #F5F6F6;
+    background-color: #F08419;
+    border-color: #F5F6F6;
+    border-radius: 10px;
+    width: 31%;
     text-align: center;
     margin-right: 10px;
+    border-width: 4px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+.sendButton:hover {
+    background-color: #F5F6F6;
+    color: #F08419;
+    border-color: #F08419;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
 }
 .resetButton {
     font-weight: bold;
-    color: white;
+    color: #F5F6F6;
     background-color: #F08419;
     border-radius: 10px;
-    width: 30%;
-    text-align: center; 
-}.reset-btn {
+    width: 33%;
+    text-align: center;
+    border-color: #F5F6F6;
+    border-width: 4px;
+    border-style: solid;
+    box-sizing: border-box;
+}
+.resetButton:hover {
+    background-color: #F5F6F6;
+    color: #F08419;
+    border-color: #F08419;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 10px;
+}
+.reset-btn {
     text-align: center;
 }
-.btn{
+.btn {
     font-weight: bold;
-    color: white;
+    color: #F5F6F6;
 }
 input[type="text"], select {
     background-color: #E6E6E6;

@@ -92,9 +92,9 @@ label {
     width: 100%;
     background-color: #fff3d6;
     margin-bottom: 5px;
-    flex-direction: column !important; /* Cambiar la dirección del contenedor de entrada a columna */
-    justify-content: center; /* Centrar elementos dentro del contenedor de entrada */
-    align-items: center; /* Centrar elementos dentro del contenedor de entrada */
+    flex-direction: column !important; 
+    justify-content: center; 
+    align-items: center; 
 }
 .input-field {
     color: #f08419;
@@ -112,6 +112,16 @@ label {
     text-align: center;
     margin-bottom: 5%;
     margin:auto;
+    height: 2.5rem;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.login-button:hover {
+    background-color: #F5F6F6;
+    color: #F08419 !important;
+    border-color: #F08419 !important;
+    border-width: 4px !important;
+    height: 2.5rem;
+    box-shadow: 0 0 0 6px #F5F6F6;
 }
 p{
     color:#f08419;

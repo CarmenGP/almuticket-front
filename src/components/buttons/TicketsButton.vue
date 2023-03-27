@@ -7,7 +7,7 @@ export default {
         <div>
             <RouterLink to="/tickets">
                 <a href="../views/MyTicketsView.vue">
-                    <button class="tickets-button" @click="seeTickets()">Ver mis Tickets</button>   
+                    <button class="tickets-button" @click="seeTickets()">  Ver todos mis Tickets  </button>   
                 </a>
             </RouterLink>            
         </div>
@@ -20,7 +20,7 @@ export default {
     border: 8px solid #F08419;
     border-radius: 10px;
     font-size: 1.2rem;
-    padding: 0.8rem 1.2rem;
+    padding: 0.8rem 2.9rem;
     cursor: pointer;
     transition: all 0.2s;
 }
