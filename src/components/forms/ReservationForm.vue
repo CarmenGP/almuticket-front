@@ -1,31 +1,39 @@
 <script>
+import axios from "axios";
 export default {
+    created() {
+            axios.get("http://127.0.0.1:8000/api").then((result) => {
+                console.log(result.data);
+            });
+        },
+
+        methods: {
+            submitForm() {
+            console.log(this.form);
+            },
+        },
+
     data() {
         return {
-        form: {
-            subject:'',
-            area:'',
-            activity:'',
-            room:'',
-            date:'',
-            startTime:'',
-            finishTime:'',
-            assistantsNumber:'',
-            comments:'',
-        }
-        }
-    },
-    methods: {
-        submitForm() {
-        // Aquí podrías enviar el formulario a través de una petición HTTP o realizar alguna otra acción con los datos.
-        console.log(this.form);
-        }
+            form: {
+                subject:'',
+                area:'',
+                activity:'',
+                room:'',
+                date:'',
+                startTime:'',
+                finishTime:'',
+                assistantsNumber:'',
+                comments:'',
+            },
+        };
     }
-    }
+};
+
 </script>
 
 <template>
-    <div class="formContainer">
+    <div v-if="result" class="formContainer">
         <form @submit.prevent="submitForm" class="form row g-3">
             <div class="containerTitle">
                 <h1 class="reservationTitle"> Crear Reserva </h1>
