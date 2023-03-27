@@ -14,8 +14,6 @@ window.JsZip = JsZip;
 DataTable.use(DataTablesLib);
 DataTable.use(pdfmake);
 DataTable.use(ButtonsHtml5);
-
-
 export default {
     components:{DataTable},
     data(){
@@ -39,14 +37,14 @@ export default {
                     title: 'Reporte de tickets',
                     extend: 'pdfHtml5',
                     text: '<li class="fa-solid fa-file-pdf"></li> PDF',
-                    className: 'btn btn-danger my-pdf-button'
+                    className: 'btn btn-danger active'
 
                 },
                 {
                     title: 'Reporte de tickets',
                     extend: 'print',
                     text: '<li class="fa-solid fa-print"></li> Imprimir',
-                    className: 'btn btn-dark'
+                    className: 'btn btn-dark active'
 
                 }
             ],
