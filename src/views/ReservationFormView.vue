@@ -6,7 +6,9 @@ components:{ReservationForm},
 </script>
 
 <template>
-    <ReservationForm/>
+    <div>
+        <ReservationForm/>
+    </div>
 </template>
 
 <style></style>
