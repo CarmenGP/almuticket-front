@@ -28,16 +28,9 @@
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <div class="formContainer flex flex-col items-center justify-center">
                 <h1 class="">Acceso</h1>
-                <form class="flex flex-col mt-4" @submit.prevent="submitForm">
+                <form class="flex flex-col mt-4" @submit.prevent="submitLogin">
                     <label>Correo electrónico
-                    <input
-                        v-model="email"
-                        type="email"
-                        name="email"
-                        class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
-                        placeholder="Correo electrónico"
-                        required
-                    />
+                    <input v-model="email" type="email" name="email" class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm" placeholder="Correo electrónico" required/>
                     </label>
                     <label>Contraseña
                     <input
