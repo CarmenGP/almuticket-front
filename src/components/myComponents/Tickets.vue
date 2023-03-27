@@ -2,6 +2,7 @@
 import axios from 'axios';
 import DataTable from 'datatables.net-vue3' ;
 import DataTablesLib from 'dataTables.net-bs5';
+import 'datatables.net-responsive-dt';
 import 'datatables.net-responsive-bs5';
 import Buttons from 'datatables.net-buttons-bs5' ;
 import ButtonsHtml5 from 'datatables.net-buttons/js/buttons.html5';
@@ -33,7 +34,7 @@ export default {
                 {data: 'name'},
                 {"defaultContent": "<div class='btn-group'><button type='button' class='btn btn-success'> <i class='fas fa-eye'></i></button><button type='button' class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
             ],
-            botones: [
+            buttons: [
                 {
                     title: 'Reporte de tickets',
                     extend: 'pdfHtml5',
@@ -76,32 +77,32 @@ export default {
 </script>
 
 <template>
-            <div class="myTickets table">
-                <h1>Mis Tickets</h1>
-                <div class="table-responsive">
-                    <DataTable :data="tickets" :columns="columns" class="table table-striped display"  
+    <div class="myTickets table">
+        <h1>Mis Tickets</h1>
+        <div class="table-responsive">
+            <DataTable :data="tickets" :columns="columns" :responsiveLayout="scroll" class="table table-striped display"  
                     :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
-                            search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
-                            infoFiltered: '(Filtrados de _MAX_ registros.)',
+                        search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
+                        infoFiltered: '(Filtrados de _MAX_ registros.)',
                             paginate:{ first: 'Primero', previous:'Anterior', next:'Siguiente', last:'Último'}
-                            }, buttons:botones}">
-                            <thead>
-                                <tr>
-                                    <th >Nº</th>
-                                    <th >Fecha</th>
-                                    <th >Usuario</th>
-                                    <th >Tipo de ticket</th>
-                                    <th >Categoría</th>
-                                    <th >Área</th>
-                                    <th >Descripción</th>
-                                    <th >Sede</th>
-                                    <th >Estado</th>
-                                    <th >Acciones</th>
-                                </tr>
-                            </thead>
-                    </DataTable>
-                </div>
+                            }, buttons:buttons}" >
+                        <thead>
+                            <tr>
+                                <th >Nº</th>
+                                <th >Fecha</th>
+                                <th >Usuario</th>
+                                <th >Tipo de ticket</th>
+                                <th >Asunto</th>
+                                <th >Categoría</th>
+                                <th >Área</th>                                    
+                                <th >Sede</th>
+                                <th >Estado</th>
+                                <th >Acciones</th>
+                            </tr>
+                        </thead>
+            </DataTable>
         </div>
+    </div>
 </template>
 
 <style lang="css" scoped>
@@ -132,5 +133,27 @@ thead {
     background-color:#FFF3D6!important;
     border: 3px solid #F08419;
     
+}
+
+@media only screen and (max-width: 768px) {
+.myTickets{
+    width:50%!important;
+    border-color:#F08419;
+    border-width: 5px;
+    margin: 5%!important;
+    border-radius: 10px;
+    background-color: #fffcfc;
+}
+.table{
+    width:50%!important;
+    margin: auto;
+    
+}
+thead {
+    margin-top:5%!important;
+    background-color:#FFF3D6!important;
+    border: 3px solid #F08419;
+    
+}
 }
 </style>
