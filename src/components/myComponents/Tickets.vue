@@ -10,7 +10,7 @@ import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfmake.vfs =pdfFonts.pdfMake.vfs;
 import 'datatables.net-responsive-bs5';
 import JsZip from 'jszip';
-window.JsZip = JsZip;
+window.JSZip = JsZip;
 DataTable.use(DataTablesLib);
 DataTable.use(pdfmake);
 DataTable.use(ButtonsHtml5);
@@ -42,6 +42,13 @@ export default {
                 },
                 {
                     title: 'Reporte de tickets',
+                    extend: 'excelHtml5',
+                    text: '<li class="fa-solid fa-file-excel"></li> Excel',
+                    className: 'btn btn-success active'
+
+                },
+                {
+                    title: 'Reporte de tickets',
                     extend: 'print',
                     text: '<li class="fa-solid fa-print"></li> Imprimir',
                     className: 'btn btn-dark active'
@@ -52,6 +59,7 @@ export default {
     },
     mounted(){
         this.getticket();
+
     },
 
     methods:{
