@@ -3,8 +3,8 @@ import axios from 'axios'
 const baseUrl ="http://127.0.0.1:8000/api"
 
 export const apiService = {
-    getProducts(){
-        return axios.get(baseUrl + '/products')
+    get(){
+        return axios.get(baseUrl + '/booking')
     },
     getProduct(id) {
         return axios.get(baseUrl + `/products/${id}`)
