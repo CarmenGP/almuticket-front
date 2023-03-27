@@ -1,26 +1,55 @@
 <script>
+    // import { authService } from './authService';
+
     export default {
-        data() {
-        return {
-            email: "",
-            password: "",
-        };
+        const : userData = {
+            email: '',
+            password: '',
         },
-        methods: {
-        submitForm() {
-            // Validar datos ingresados por el usuario
-            if (!this.email.endsWith("@arrabalempleo.org")) {
-            // Asignar el mensaje de error al elemento div
-            const errorMessage = document.querySelector(".error-message");
-            errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
-            return;
-            }
+        methods:{
+        authService.getLogin(userData)
+            .then(response => {
+                console.log(response.data);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+        }
+        // name: 'Login',
+        // data() {
+        // return {
+        //     email: "",
+        //     password: "",
+        // };
+        // },
+        // methods: {
+        //     async submitForm()
+        //     {
+        //         const payload = {
+        //             email: this.email,
+        //             password: this.password,
+        //         };
+
+        //         await this.axios.post('/auth/login', payload)
+        //         .then(response=> {
+        //             console.log(response);
+        //     });
+                
+        // submitForm() {
+        //     // Validar datos ingresados por el usuario
+        //     if (!this.email.endsWith("@arrabalempleo.org")) {
+        //     // Asignar el mensaje de error al elemento div
+        //     const errorMessage = document.querySelector(".error-message");
+        //     errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
+        //     return;
+        //     }
     
             // Enviar datos al servidor para iniciar sesión
             // ...
-        },
-        },
+        
+        
     };
+
 </script>
 
 <template>
@@ -28,7 +57,7 @@
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <div class="formContainer flex flex-col items-center justify-center">
                 <h1 class="">Acceso</h1>
-                <form class="flex flex-col mt-4" @submit.prevent="submitLogin">
+                <form class="flex flex-col mt-4" @submit.prevent="submitForm()">
                     <label>Correo electrónico
                     <input v-model="email" type="email" name="email" class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm" placeholder="Correo electrónico" required/>
                     </label>
@@ -130,4 +159,3 @@ a:hover{
 
 }
 </style>
-
