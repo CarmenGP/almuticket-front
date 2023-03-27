@@ -2,18 +2,19 @@
 import axios from 'axios';
 import DataTable from 'datatables.net-vue3' ;
 import DataTablesLib from 'dataTables.net-bs5';
-import 'datatables.net-responsive-bs5';
 import Buttons from 'datatables.net-buttons-bs5' ;
 import ButtonsHtml5 from 'datatables.net-buttons/js/buttons.html5';
 import print from 'datatables.net-buttons/js/buttons.print'
 import pdfmake from 'pdfmake';
 import pdfFonts from 'pdfmake/build/vfs_fonts';
 pdfmake.vfs =pdfFonts.pdfMake.vfs;
+import 'datatables.net-responsive-bs5';
 import JsZip from 'jszip';
 window.JsZip = JsZip;
+DataTable.use(DataTablesLib);
 DataTable.use(pdfmake);
 DataTable.use(ButtonsHtml5);
-DataTable.use(DataTablesLib);
+
 
 export default {
     components:{DataTable},
