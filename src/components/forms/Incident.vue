@@ -57,16 +57,19 @@ export default {
             <div class="col-md-6">
                 <label for="room" class="form-label">Sala:</label>
                 <select class="form-select" id="room" v-model="form.room">
-                <option disabled value="">Seleccione una sala</option>
-                <option value="carmenTrainingRoom">El Carmen / Aula de formación</option>
-                <option value="carmenCoworking">El Carmen / Coworking</option>
-                <option value="carmenOpenSpace">El Carmen / Espacio central abierto</option>
-                
-                <option value="begonaGalaxia">Begoña / Edificio Galaxia</option>
-                    <option value="Edificio Galaxia">Edificio Galaxia</option>
-                    <option value="Innova. Social">Innova. Social</option>
-                    <option value="Pasaje Begoña">Pasaje Begoña</option>
-                    <option value="El Carmen">El Carmen</option>
+                    <option disabled value="">Seleccione una sala</option>
+                    <option value="dosAcerasClasroom3">Dos Aceras/Aula 3</option>
+                    <option value="dosAceras">Dos Aceras/Sala Común 1ª Planta</option>
+                    <option value="DosAcerasAssemblyHall">Dos Aceras/Salón de Actos</option>
+                    <option value="carmenTrainingRoom">El Carmen/Aula de formación</option>
+                    <option value="carmenCoworking">El Carmen/Coworking</option>
+                    <option value="carmenOpenSpace">El Carmen/Espacio central abierto</option>
+                    <option value="Edificio Galaxia">Edificio Galxia/Sala Galaxia</option>
+                    <option value="IMOTrainingRoom">IMO/Sala de Formación</option>
+                    <option value="IMOInovationRoom">IMO/Espacio de Innovación</option>
+                    <option value="IMOMeetingRoom">IMO/Salón de Encuentros</option>                 
+                    <option value="IMOAssemblyHall">IMO/Salón de Actos</option>
+                    <option value="other">Otros</option>
                 </select>
             </div>
             <div class="col-md-12">
@@ -75,9 +78,9 @@ export default {
                     <option disabled value="">Seleccione un área</option>
                     <option value="programSupport">Apoyo a programa</option>
                     <option value="it">Informática</option>
-                    <option value="maintenance">Mantenimiento</option>
-                    <option value="supplies">Materiales</option>
                     <option value="cleaning">Limpieza</option>
+                    <option value="maintenance">Mantenimiento</option>
+                    <option value="supplies">Materiales</option>                    
                 </select>
             </div>
             <div class="col-md-12">
