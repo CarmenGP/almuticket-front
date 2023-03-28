@@ -11,6 +11,7 @@
             password: "",
         };
         },
+        
         methods: {
             async submitRegister()
             {
