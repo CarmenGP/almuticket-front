@@ -1,23 +1,32 @@
 <script>
-    import { authService } from "../../services/authService";
+    import axios from 'axios';
+
     export default {
-        name: "Register",
+        name: 'Register',
         data() {
-            return {
-                form: {
-                    name:'',
-                    surname:'',
-                    email: '',
-                    password: '',
-                    // c_password: '',
-                },
-            };
+        return {
+            name:"",
+            surname:"",
+            email: "",
+            password: "",
+        };
         },
         methods: {
-            async submitRegister() {
-                let response = authService.getRegister(this.form)
-            }    
+            async submitRegister()
+            {
+
+                await axios.post('http://127.0.0.1:8000/api/auth/register', {
+                    name: this.name,
+                    surname: this.surname,
+                    email: this.email,
+                    password: this.password,
+                })
+
+                .then(response=> {
+                    console.log(response);
+            });
         },
+        }
     }
 </script>
 
@@ -26,7 +35,7 @@
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <div class="formContainer">
                 <h1 class="">Registro</h1>
-                <form action class="flex flex-col mt-4" @submit.prevent="submitRegister">
+                <form action class="flex flex-col mt-4" @submit.prevent="submitRegister()">
                 <label>Nombre
                     <input
                     type="text"
