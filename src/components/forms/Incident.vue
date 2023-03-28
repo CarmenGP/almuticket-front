@@ -1,4 +1,5 @@
 <script>
+import email from '@/email';
 export default {
     name: "IncidentView",
     data() {
@@ -16,6 +17,21 @@ export default {
     methods: {
         submitForm() {
         console.log("Formulario enviado");
+        },
+    },
+    methods: {
+        submitForm() {
+            // Lógica para enviar el email
+
+            if (this.status === 'Finalizado' || this.status === 'Rechazado') {
+                const data = {
+                    to_name: this.name,
+                    to_email: this.email,
+                    message_html: this.message,
+                };
+
+                email.sendEmail(data);
+            }
         },
     },
 };
