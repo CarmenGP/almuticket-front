@@ -1,5 +1,9 @@
 <script>
+    import axios from 'axios';
+    // import { authService } from '../../services/authService';
+
     export default {
+        name: 'Login',
         data() {
         return {
             email: "",
@@ -7,15 +11,22 @@
         };
         },
         methods: {
-        submitForm() {
-            if (!this.email.endsWith("@arrabalempleo.org")) {
-            const errorMessage = document.querySelector(".error-message");
-            errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
-            return;
-            }
+            async submitForm()
+            {
+
+                await axios.post('http://127.0.0.1:8000/api/auth/login', {
+                    email: this.email,
+                    password: this.password,
+                })
+
+                .then(response=> {
+                    console.log(response.data);
+                    localStorage.setItem('token', response.data.token);
+            });
         },
-        },
-    };
+        }
+    }
+
 </script>
 
 <template>
@@ -23,16 +34,9 @@
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <div class="formContainer flex flex-col items-center justify-center">
                 <h1 class="">Acceso</h1>
-                <form class="flex flex-col mt-4" @submit.prevent="submitForm">
+                <form class="flex flex-col mt-4" @submit.prevent="submitForm()">
                     <label>Correo electrónico
-                    <input
-                        v-model="email"
-                        type="email"
-                        name="email"
-                        class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
-                        placeholder="Correo electrónico"
-                        required
-                    />
+                    <input v-model="email" type="email" name="email" class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm" placeholder="Correo electrónico" required/>
                     </label>
                     <label>Contraseña
                     <input
@@ -133,4 +137,3 @@ a:hover{
     text-decoration: underline;
 }
 </style>
-
