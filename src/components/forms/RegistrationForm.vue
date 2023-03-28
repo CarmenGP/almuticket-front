@@ -39,7 +39,7 @@
                 <label>Nombre
                     <input
                     type="text"
-                    id="name"
+                    v-model="name"
                     name="name"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Nombre"
@@ -47,8 +47,8 @@
                 </label>
                 <label>Apellidos
                     <input
+                    v-model="surname"
                     type="text"
-                    id="surname"
                     name="surname"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Apellidos"
@@ -57,7 +57,7 @@
                 <label>Correo electrónico
                     <input
                     type="email"
-                    id="email"
+                    v-model="email"
                     name="email"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Correo electrónico"
@@ -66,7 +66,7 @@
                 <label>Contraseña
                     <input
                     type="password"
-                    id="password"
+                    v-model="password"
                     name="password"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Contraseña"
