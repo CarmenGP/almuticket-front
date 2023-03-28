@@ -35,10 +35,11 @@
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <div class="formContainer">
                 <h1 class="">Registro</h1>
-                <form class="flex flex-col mt-4" @submit.prevent="submitForm">
+                <form action class="flex flex-col mt-4" @submit.prevent="submitRegister()">
                 <label>Nombre
                     <input
                     type="text"
+                    v-model="name"
                     name="name"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Nombre"
@@ -46,6 +47,7 @@
                 </label>
                 <label>Apellidos
                     <input
+                    v-model="surname"
                     type="text"
                     name="surname"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
@@ -55,6 +57,7 @@
                 <label>Correo electrónico
                     <input
                     type="email"
+                    v-model="email"
                     name="email"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Correo electrónico"
@@ -63,11 +66,13 @@
                 <label>Contraseña
                     <input
                     type="password"
+                    v-model="password"
                     name="password"
                     class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm"
                     placeholder="Contraseña"
                 />
                 </label>
+                
                 <button  type="submit" class="register-button mt-4 px-4 py-2  text-base rounded-md border border-transparent text-white focus:outline-none bg-orange-500 text-blue-100 hover:text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer inline-flex items-center w-full justify-center items-center font-medium focus:outline-none"
                 >
                     Registrarse
