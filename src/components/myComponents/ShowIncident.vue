@@ -26,31 +26,31 @@ export default {
     <div class="formContainer">
         <form @submit.prevent="submitForm" class="form row g-3">
             <div class="containerTitle">
-                <h1> Mi Incidencia </h1>
+                <h1> Detalle de incidencia </h1>
             </div>
             <div class="col-md-12">
                 <label for="state" class="form-label">Estado:</label>
-                <input type="text1" class="form-control" id="state" v-model="form.state" placeholder="Estado de la incidencia">
+                <input type="text" class="form-control" id="state" v-model="form.state" placeholder="Estado de la incidencia">
             </div>
-            <div class="col-md-12">
+            <div class="staticField1 col-md-12">
                 <label for="subject" class="form-label">Asunto:</label>
-                <input type="text2" class="form-control" id="subject" v-model="form.subject" placeholder="Asunto de la incidencia">
+                <p>{{ form.subject }}</p>
             </div>
-            <div class="col-md-6">
+            <div class="staticField col-md-6">
                 <label for="area" class="form-label">Área:</label>
-                <input type="text2" class="form-control" id="area" v-model="form.area" placeholder="Área de la incidencia">
+                <p>{{ form.area }}</p>
             </div>
-            <div class="col-md-6">
+            <div class="staticField col-md-6">
                 <label for="room" class="form-label">Sala:</label>
-                <input type="text2" class="form-control" id="sala" v-model="form.sala" placeholder="Sala de la incidencia">
+                <p>{{ form.room }}</p>
             </div>
-            <div class="col-md-12">
+            <div class="staticField col-md-12">
                 <label for="category" class="form-label">Categoria:</label>
-                <input type="text2" class="form-control" id="Category" v-model="form.category" placeholder="Categoria de la incidencia">
+                <p>{{ form.category }}</p>
             </div>
-            <div class="col-md-12">
+            <div class="staticField col-md-12">
                 <label for="description" class="form-label">Descripción:</label>
-                <input type="text2" class="form-control" id="Description" v-model="form.description" placeholder="Descripción de la incidencia">
+                <p>{{ form.description }}</p>
             </div>
             <div class="col-md-12">
                 <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
@@ -91,73 +91,38 @@ h1{
     }
 
 label{
+    margin-top: 10px;
     color:#F08419;
     font-weight: 600;
 }
-
-input[type="text"], select {
-    background-color: #E6E6E6;
-    border: 2px solid #F08419;
-    color:#402306;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
+.staticField{
+    margin-bottom: 20px;
 }
 
-input[type="text"]:focus {
-    background-color: #E6E6E6;
-    border: 2px solid #F08419;
-    color:#402306;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
+.staticField1{
+    margin-bottom: 20px;
+    margin-top:-1px;
 }
 
-input[type="text2"] {
+p{
     background-color: #F0F0F0;
     color:#402306;
+    width:100%;
+    height: 70%;
     border-radius: 5px;
-    padding: 5px;
+    padding: px;
     margin-bottom: 10px;
 }
 
-input[type="text1"] {
+input[type="text"] {
     background-color: #F0F0F0;
     border: 2px solid #F08419;
     color:#402306;
     border-radius: 5px;
     padding: 5px;
-    margin-bottom: 10px;
 }
 
 input[type="text"]:focus {
-    background-color: #E6E6E6;
-    border: 2px solid #F08419;
-    color:#402306;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-input[type="date"], select {
-    background-color: #E6E6E6;
-    border: 2px solid #F08419;
-    color:#402306;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-input[type="time"], select {
-    background-color: #E6E6E6;
-    border: 2px solid #F08419;
-    color:#402306;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-input[type="number"], select {
     background-color: #E6E6E6;
     border: 2px solid #F08419;
     color:#402306;
