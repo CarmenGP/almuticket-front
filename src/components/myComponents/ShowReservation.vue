@@ -12,7 +12,7 @@ export default {
                 date: "",
                 startTime: "",
                 endTime: "",
-                attendees: "",
+                assistantsNumber: "",
                 description: "",
                 comments: "",
             },
@@ -36,41 +36,41 @@ export default {
         <label for="state" class="form-label">Estado:</label>
         <input type="text" class="form-control" id="state" v-model="form.state" placeholder="Reservation state">
     </div>
-    <div class="col-md-12">
+    <div class="staticField1 col-md-12">
         <label for="subject" class="form-label">Asunto:</label>
-        <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Reservation subject">
+        <p>{{ form.subject }}</p>
     </div>
-    <div class="col-md-6">
+    <div class="activityField staticField col-md-6">
         <label for="activity" class="form-label">Actividad:</label>
-        <input type="text" class="form-control" id="activity" v-model="form.activity" placeholder="Reservation activity">
+        <p>{{ form.activity }}</p>
     </div>
-    <div class="col-md-6">
+    <div class="staticField col-md-6">
         <label for="area" class="form-label">Area:</label>
-        <input type="text" class="form-control" id="area" v-model="form.area" placeholder="Reservation area">
+        <p>{{ form.area }}</p>
     </div>
-    <div class="col-md-6">
+    <div class="staticField col-md-6">
         <label for="room" class="form-label">Sala:</label>
-        <input type="text" class="form-control" id="room" v-model="form.room" placeholder="Reservation room">
+        <p>{{ form.room }}</p>
     </div>
-    <div class="col-md-3">
+    <div class="staticField col-md-3">
         <label for="date" class="form-label">Fecha:</label>
-        <input type="date" class="form-control" id="date" v-model="form.date" placeholder="Reservation date">
+        <p>{{ form.date }}</p>
     </div>
-    <div class="col-md-3">
+    <div class="staticField col-md-3">
         <label for="start_time" class="form-label">Hora de inicio:</label>
-        <input type="time" class="form-control" id="start_time" v-model="form.start_time" placeholder="Reservation start time">
+        <p>{{ form.start_time }}</p>
     </div>
-    <div class="col-md-3">
+    <div class="staticField col-md-3">
         <label for="end_time" class="form-label">Hora de fin:</label>
-        <input type="time" class="form-control" id="end_time" v-model="form.end_time" placeholder="Reservation end time">
+        <p>{{ form.end_time }}</p>
     </div>
-    <div class="col-md-3">
-        <label for="num_attendees" class="form-label">Número de asistentes:</label>
-        <input type="number" class="form-control" id="num_attendees" v-model="form.num_attendees" placeholder="Reservation number of attendees">
+    <div class="staticField col-md-3">
+        <label for="assistantsNumber" class="form-label">Número de asistentes:</label>
+        <p>{{ form.assistantsNumber }}</p>
     </div>
-    <div class="col-md-12">
+    <div class="staticField col-md-12">
         <label for="description" class="form-label">Descripción:</label>
-        <input type="text" class="form-control" id="description" v-model="form.description" placeholder="Reservation description">
+        <p>{{ form.description }}</p>
     </div>
     <div class="inputForm col-md-12">
         <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
@@ -111,6 +111,27 @@ h1{
 label{
     color:#F08419;
     font-weight: 600;
+}
+
+p{
+    background-color: #F0F0F0;
+    color:#402306;
+    width:100%;
+    height: 70%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.staticField{
+    margin-bottom: 20px;
+}
+
+.staticField1{
+    margin-bottom: 20px;
+    margin-top:-1px;
+}
+
+.activityField{
+    width: 100%;
 }
 .containerButton {
     display: flex;
@@ -165,7 +186,7 @@ label{
     color: #F5F6F6;
 }
 input[type="text"], select {
-    background-color: #E6E6E6;
+    background-color: #F0F0F0;
     border: 2px solid #F08419;
     color:#402306;
     border-radius: 5px;
@@ -190,7 +211,7 @@ input[type="date"], input[type="time"], input[type="number"], select {
 }
 
 textarea{
-    background-color: #E6E6E6;
+    background-color: #F0F0F0;
     border: 2px solid #F08419;
     color:#402306;
     border-radius: 5px;
