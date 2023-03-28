@@ -11,8 +11,8 @@ export default {
                 room: "",
                 date: "",
                 startTime: "",
-                startEnd: "",
-                numberOfAttendees: "",
+                endTime: "",
+                attendees: "",
                 description: "",
                 comments: "",
             },
@@ -20,7 +20,7 @@ export default {
     },
     methods: {
         submitForm() {
-        console.log("Formulario enviado");
+            console.log("Formulario enviado");
         },
     },
 };
@@ -28,46 +28,54 @@ export default {
 
 <template>
     <div class="formContainer">
-        <form @submit.prevent="submitForm" class="form row g-3">
-            <div class="containerTitle">
-                <h1> Mi Reserva </h1>
-            </div>
-            <div class="imputForm col-md-12">
-                <label for="state" class="form-label">Estado:</label>
-                <input type="text" class="form-control" id="state" v-model="form.state" placeholder="Estado de la incidencia">
-            </div>
-            <div class="col-md-12">
-                <label for="subject" class="form-label">Asunto:</label>
-                <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Asunto de la reserva">
-            </div>
-            <div class="col-md-6">
-                <label for="area" class="form-label">Área:</label>
-                <input type="text" class="form-control" id="area" v-model="form.area" placeholder="Área de la incidencia">
-            </div>
-            <div class="col-md-6">
-                <label for="room" class="form-label">Sala:</label>
-                <input type="text" class="form-control" id="sala" v-model="form.sala" placeholder="Sala de la incidencia">
-            </div>
-            <div class="col-md-12">
-                <label for="category" class="form-label">Categoria:</label>
-                <input type="text" class="form-control" id="Category" v-model="form.category" placeholder="Categoria de la incidencia">
-            </div>
-            <div class="col-md-12">
-                <label for="description" class="form-label">Descripción:</label>
-                <input type="text" class="form-control" id="Description" v-model="form.description" placeholder="Descripción de la incidencia">
-            </div>
-            <div class="inputForm col-md-12">
-                <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
-                <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Escribe un comentario"></textarea>
-            </div>
-                <div class="containerButton">
-                    <div class="resetButton">
-                        <input type="reset" class="btn reset-btn" value="Resetear">
-                    </div>
-                    <div class="sendButton">
-                        <input type="submit" class="btn send-btn" value="Enviar">
-                    </div>
-                </div>
+    <form @submit.prevent="submitForm" class="form row g-3">
+    <div class="containerTitle">
+        <h1>Mi Reserva</h1>
+    </div>
+    <div class="imputForm col-md-12">
+        <label for="state" class="form-label">Estado:</label>
+        <input type="text" class="form-control" id="state" v-model="form.state" placeholder="Reservation state">
+    </div>
+    <div class="col-md-12">
+        <label for="subject" class="form-label">Asunto:</label>
+        <input type="text" class="form-control" id="subject" v-model="form.subject" placeholder="Reservation subject">
+    </div>
+    <div class="col-md-6">
+        <label for="activity" class="form-label">Actividad:</label>
+        <input type="text" class="form-control" id="activity" v-model="form.activity" placeholder="Reservation activity">
+    </div>
+    <div class="col-md-6">
+        <label for="area" class="form-label">Area:</label>
+        <input type="text" class="form-control" id="area" v-model="form.area" placeholder="Reservation area">
+    </div>
+    <div class="col-md-6">
+        <label for="room" class="form-label">Sala:</label>
+        <input type="text" class="form-control" id="room" v-model="form.room" placeholder="Reservation room">
+    </div>
+    <div class="col-md-3">
+        <label for="date" class="form-label">Fecha:</label>
+        <input type="date" class="form-control" id="date" v-model="form.date" placeholder="Reservation date">
+    </div>
+    <div class="col-md-3">
+        <label for="start_time" class="form-label">Hora de inicio:</label>
+        <input type="time" class="form-control" id="start_time" v-model="form.start_time" placeholder="Reservation start time">
+    </div>
+    <div class="col-md-3">
+        <label for="end_time" class="form-label">Hora de fin:</label>
+        <input type="time" class="form-control" id="end_time" v-model="form.end_time" placeholder="Reservation end time">
+    </div>
+    <div class="col-md-3">
+        <label for="num_attendees" class="form-label">Número de asistentes:</label>
+        <input type="number" class="form-control" id="num_attendees" v-model="form.num_attendees" placeholder="Reservation number of attendees">
+    </div>
+    <div class="col-md-12">
+        <label for="description" class="form-label">Descripción:</label>
+        <input type="text" class="form-control" id="description" v-model="form.description" placeholder="Reservation description">
+    </div>
+    <div class="inputForm col-md-12">
+        <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
+        <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Write a comment"></textarea>
+        </div>
                 <div class="containerBack">
                     <router-link to="/" class="back-btn">← Volver</router-link>
                 </div>
@@ -172,7 +180,7 @@ input[type="text"]:focus {
     padding: 5px;
     margin-bottom: 10px;
 }
-input[type="date"], select {
+input[type="date"], input[type="time"], input[type="number"], select {
     background-color: #E6E6E6;
     border: 2px solid #F08419;
     color:#402306;
@@ -180,22 +188,7 @@ input[type="date"], select {
     padding: 5px;
     margin-bottom: 10px;
 }
-input[type="time"], select {
-    background-color: #E6E6E6;
-    border: 2px solid #F08419;
-    color:#402306;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-input[type="number"], select {
-    background-color: #E6E6E6;
-    border: 2px solid #F08419;
-    color:#402306;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
+
 textarea{
     background-color: #E6E6E6;
     border: 2px solid #F08419;
@@ -204,9 +197,11 @@ textarea{
     padding: 5px;
     margin-bottom: 10px;
 }
+
 select {
     color:#402306;
 }
+
 .back-btn {
     background-color: transparent;
     border: none;
@@ -214,14 +209,16 @@ select {
     color: #F08419;
     font-size: 1.2rem;
     cursor: pointer;
-    }
+}
+
 .containerBack{
     margin-bottom: 20px;
 }
+
 @media only screen and (max-width: 768px) {
-.formContainer{
-    width:100%;
-    margin:auto;
+    .formContainer{
+        width:100%;
+        margin:auto;
     }
 }
 </style>
