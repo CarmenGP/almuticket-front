@@ -30,7 +30,7 @@ export default {
     <div class="formContainer">
     <form @submit.prevent="submitForm" class="form row g-3">
     <div class="containerTitle">
-        <h1>Mi Reserva</h1>
+        <h1>Detalles de la reserva</h1>
     </div>
     <div class="imputForm col-md-12">
         <label for="state" class="form-label">Estado:</label>
