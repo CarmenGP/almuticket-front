@@ -121,8 +121,17 @@ label {
     text-align: center;
     margin-bottom: 5%;
     margin:auto;
+    height: 2.5rem;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
-
+.login-button:hover {
+    background-color: #F5F6F6;
+    color: #F08419 !important;
+    border-color: #F08419 !important;
+    border-width: 4px !important;
+    height: 2.5rem;
+    box-shadow: 0 0 0 6px #F5F6F6;
+}
 p{
     color:#f08419;
     margin-top:2%;

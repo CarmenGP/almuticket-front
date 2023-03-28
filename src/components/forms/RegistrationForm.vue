@@ -123,14 +123,24 @@ label{
         margin-bottom: 5%;
 }
     
-.register-button{
+.register-button {
     font-weight: bold;
     color: white;
-    background-color:#F08419;
-    border-radius:10px ; /* Redondear las esquinas del botón */
-    width:50%;
-    margin:auto;
+    background-color: #f08419;
+    border-radius: 10px;
+    width: 50%;
     text-align: center;
-    }
-
+    margin-bottom: 5%;
+    margin:auto;
+    height: 2.5rem;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.register-button:hover {
+    background-color: #F5F6F6;
+    color: #F08419 !important;
+    border-color: #F08419 !important;
+    border-width: 4px !important;
+    height: 2.5rem;
+    box-shadow: 0 0 0 6px #F5F6F6;
+}
 </style>
