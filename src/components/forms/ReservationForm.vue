@@ -152,7 +152,7 @@ label{
 .sendButton {
     font-weight: bold;
     color: #F5F6F6;
-    background-color: #d92e56;
+    background-color: #F08419;
     border-color: #F5F6F6;
     border-radius: 10px;
     width: 31%;
