@@ -1,5 +1,9 @@
 <script>
+    import axios from 'axios';
+    // import { authService } from '../../services/authService';
+
     export default {
+        name: 'Login',
         data() {
         return {
             email: "",
@@ -7,20 +11,21 @@
         };
         },
         methods: {
-        submitForm() {
-            // Validar datos ingresados por el usuario
-            if (!this.email.endsWith("@arrabalempleo.org")) {
-            // Asignar el mensaje de error al elemento div
-            const errorMessage = document.querySelector(".error-message");
-            errorMessage.innerHTML = 'Solo se permiten correos electrónicos que terminen en "@arrabalempleo.org".';
-            return;
-            }
-    
-            // Enviar datos al servidor para iniciar sesión
-            // ...
+            async submitForm()
+            {
+
+                await axios.post('http://127.0.0.1:8000/api/auth/login', {
+                    email: this.email,
+                    password: this.password,
+                })
+
+                .then(response=> {
+                    console.log(response);
+            });
         },
-        },
-    };
+        }
+    }
+
 </script>
 
 <template>
@@ -28,7 +33,7 @@
         <div class="w-full md:w-1/2 lg:w-1/3 mx-auto my-12">
             <div class="formContainer flex flex-col items-center justify-center">
                 <h1 class="">Acceso</h1>
-                <form class="flex flex-col mt-4" @submit.prevent="submitLogin">
+                <form class="flex flex-col mt-4" @submit.prevent="submitForm()">
                     <label>Correo electrónico
                     <input v-model="email" type="email" name="email" class="input-field px-4 py-3 w-full rounded-md border-transparent focus:border-orange-500 focus:bg-white focus:ring-0 text-sm" placeholder="Correo electrónico" required/>
                     </label>
@@ -130,4 +135,3 @@ a:hover{
 
 }
 </style>
-
