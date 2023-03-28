@@ -20,7 +20,8 @@
                 })
 
                 .then(response=> {
-                    console.log(response);
+                    console.log(response.data);
+                    localStorage.setItem('token', response.data.token);
             });
         },
         }
