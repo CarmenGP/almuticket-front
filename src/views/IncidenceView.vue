@@ -1,11 +1,11 @@
 <script>
-export default {}
+import IncidenceForm from '../components/forms/IncidenceForm.vue'
+export default {
+    components: { IncidenceForm }}
 </script>
 
 <template>
-    <div>
-        <h1>Vista Crear Incidencia</h1>
-    </div>
+        <IncidenceForm/>        
 </template>
 
 <style></style>

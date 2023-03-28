@@ -22,7 +22,6 @@ export default {
     }),
     methods: {
         submitForm() {
-        // Aquí podrías enviar el formulario a través de una petición HTTP o realizar alguna otra acción con los datos.
         console.log(this.form);
         }
     },
@@ -33,7 +32,7 @@ export default {
     <div v-if="result" class="formContainer">
         <form @submit.prevent="submitForm" class="form row g-3">
             <div class="containerTitle">
-                <h1 class="reservationTitle"> Crear Reserva </h1>
+                <h1 class="bookingTitle"> Crear Reserva </h1>
             </div>
             <div class="col-md-12">
                 <label for="subject" class="form-label">Asunto:</label>

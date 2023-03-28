@@ -1,10 +1,13 @@
 <script>
-export default {}
+import BookingForm from '../components/forms/BookingForm.vue'
+export default {
+components:{BookingForm},
+}
 </script>
 
 <template>
     <div>
-        <h1>Vista Crear Reserva</h1>
+        <BookingForm/>
     </div>
 </template>
 

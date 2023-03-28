@@ -4,8 +4,7 @@ import MenuView from '../views/MenuView.vue'
 import IncidenceView from '../views/IncidenceView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import MyTicketsView from '../views/MyTicketsView.vue'
-import ReservationFormView from '../views/ReservationFormView.vue'
-import IncidentView from '../views/IncidentView.vue'
+import BookingView from '../views/BookingView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -36,15 +35,10 @@ const router = createRouter({
       component: RegisterView
     },
     {
-      path: '/reservation',
-      name: 'reservation',
-      component: ReservationFormView
+      path: '/booking',
+      name: 'booking',
+      component: BookingView
     }, 
-    {
-      path: '/incident',
-      name: 'incident',
-      component: IncidentView 
-    }
   ]
 })
 export default router
