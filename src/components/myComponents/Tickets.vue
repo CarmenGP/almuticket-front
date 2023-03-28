@@ -18,18 +18,19 @@ export default {
     components:{DataTable},
     data(){
         return {
-            tickets:null,
+            incidences:null,
             columns:[
                 {data:null, render: function(data,type,row,meta)
                 {return `${meta.row+1}`}},
-                {data: 'name'},
-                {data: 'ticket'},
-                {data: 'email'},
-                {data: 'phone'},
-                {data: 'site'},
-                {data: 'address'},
-                {data: 'name'},
-                {data: 'name'},
+                {data: 'id'},
+                {data: 'created_at'},
+                {data: 'user_id'},
+                {data: 'area_id'},
+                {data: 'category_id'},
+                {data: 'location_id'},
+                {data: 'title'},
+                {data: 'state_id'},
+                {data: 'description'},
                 {"defaultContent": "<div class='btn-group'><button class='btn btn-success'> <i class='fas fa-eye'></i></button><button class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
             ],
             botones: [
@@ -58,22 +59,28 @@ export default {
         }
     },
     mounted(){
-        this.getticket();
+        this.getincidence();
 
     },
 
     methods:{
-        getticket(){
-            axios.get('https://jsonplaceholder.typicode.com/users').then(
+        getincidence(){
+            axios.get('http://127.0.0.1:8000/api/incidences', {
+                    headers: {
+                        'Authorization': 'Bearer ' + localStorage.getItem('token')
+                        }
+                        }).then(
                 response=>(
-                    this.tickets = response.data.map(ticket => ({
-                        name: ticket.name ,
-                        ticket: ticket.username,
-                        email: ticket.email,
-                        phone: ticket.phone,
-                        site: ticket.website,
-                        company: ticket.company.name,
-                        address:ticket.address.street
+                    this.incidences = response.data.map(incidence => ({
+                        id: incidence.id,
+                        created_at: incidence.created_at,
+                        user_id: incidence.user_id,
+                        category_id: incidence.category_id,
+                        area_id: incidence.area_id,
+                        title: incidence.title,
+                        description: incidence.description,
+                        location_id: incidence.location_id,
+                        state_id: incidence.state_id,
                     }))
                 )
             );
@@ -86,7 +93,7 @@ export default {
             <div class="myTickets table">
                 <h1>Mis Tickets</h1>
                 <div class="table-responsive">
-                    <DataTable :data="tickets" :columns="columns" class="table table-striped display"  
+                    <DataTable :data="incidences" :columns="columns" class="table table-striped display"  
                     :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
                             search:'Buscar', zeroRecords:'No hay registro para mostrar', info: 'Mostrando del _START_ a _END_ de _TOTAL_ registros',
                             infoFiltered: '(Filtrados de _MAX_ registros.)',
@@ -94,16 +101,16 @@ export default {
                             }, buttons:botones}">
                             <thead>
                                 <tr>
-                                    <th >Nº</th>
-                                    <th >Fecha</th>
-                                    <th >Usuario</th>
-                                    <th >Tipo de ticket</th>
-                                    <th >Categoría</th>
-                                    <th >Área</th>
-                                    <th >Descripción</th>
-                                    <th >Sede</th>
-                                    <th >Estado</th>
-                                    <th >Acciones</th>
+                                    <th>#</th>
+                                    <th>Fecha</th>
+                                    <th>Usuario</th>
+                                    <th>Tipo de ticket</th>
+                                    <th>Área</th>
+                                    <th>Sede</th>
+                                    <th>Asunto</th>
+                                    <th>Description</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                     </DataTable>
