@@ -7,6 +7,7 @@ import MyTicketsView from '../views/MyTicketsView.vue'
 import ReservationFormView from '../views/ReservationFormView.vue'
 import IncidentView from '../views/IncidentView.vue'
 import ShowIncidentView from '../views/ShowIncidentView.vue'
+import ShowReservationView from '../views/ShowReservationView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,6 +51,11 @@ const router = createRouter({
       path: '/showincident',
       name: 'showincident',
       component: ShowIncidentView 
+    },
+    {
+      path: '/showreservation',
+      name: 'showreservation',
+      component: ShowReservationView 
     }
   ]
 })
