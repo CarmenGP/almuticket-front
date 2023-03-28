@@ -1,4 +1,5 @@
 <script>
+import email from '@/email';
 export default {
     data() {
         return {
@@ -20,8 +21,23 @@ export default {
         // Aquí podrías enviar el formulario a través de una petición HTTP o realizar alguna otra acción con los datos.
         console.log(this.form);
         }
-    }
-    }
+    },
+    methods: {
+        submitForm() {
+            // Lógica para enviar el email
+
+            if (this.status === 'Finalizado' || this.status === 'Rechazado') {
+                const data = {
+                    to_name: this.name,
+                    to_email: this.email,
+                    message_html: this.message,
+                };
+
+                email.sendEmail(data);
+            }
+        },
+    },
+}
 </script>
 
 <template>
