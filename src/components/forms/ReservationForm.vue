@@ -72,9 +72,9 @@ export default {
                     <option value="carmenCoworking">El Carmen / Coworking</option>
                     <option value="carmenOpenSpace">El Carmen / Espacio central abierto</option>
                     <option value="Edificio Galaxia">Sala Galaxia</option>
+                    <option value="IMOInnovationSpace">IMO / Espacio de Innovación</option>
                     <option value="IMOMeetingRoom">IMO / Salón de Encuentros</option>
                     <option value="IMOTrainingRoom">IMO / Sala de Formación</option>
-                    <option value="IMOInnovationSpace">IMO / Sala de Innovación</option>
                     <option value="IMOAssembly Hall">IMO / Salón de Actos</option>
                     <option value="other">Otros</option>
                 </select>
