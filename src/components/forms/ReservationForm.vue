@@ -28,9 +28,9 @@ export default {
 
             if (this.status === 'Finalizado' || this.status === 'Rechazado') {
                 const data = {
-                    to_name: this.name,
-                    to_email: this.email,
-                    message_html: this.message,
+                    'john example': this.name,
+                    'example@arrabalempleo.org': this.email,
+                    'Su ticket ha sido finalizado': this.message,
                 };
 
                 email.sendEmail(data);
