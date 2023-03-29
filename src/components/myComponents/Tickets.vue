@@ -23,12 +23,11 @@ export default {
                 {data:null, render: function(data,type,row,meta)
                 {return `${meta.row+1}`}},
                 {data: 'created_at'},
-                {data: 'user_id'},
-                {data: 'area_id'},
-                {data: 'location_id'},
+                {data: 'user_name'},
+                {data: 'area_name'},
+                {data: 'location_name'},
                 {data: 'title'},
-                {data: 'state_id'},
-                {"defaultContent": "<div class='btn-group'><button class='btn btn-success'><i class='fas fa-eye'></i></button><button class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
+                {data: 'state_name'},
             ],
             botones: [
                 {
@@ -36,7 +35,6 @@ export default {
                     extend: 'pdfHtml5',
                     text: '<li class="fa-solid fa-file-pdf"></li> PDF',
                     className: 'btn btn-danger active'
-
                 },
                 {
                     title: 'Reporte de tickets',
@@ -70,11 +68,11 @@ export default {
                 response=>(
                     this.incidences = response.data.map(incidence => ({
                         created_at: incidence.created_at,
-                        user_id: incidence.user_id,
+                        user_name: incidence.user_name,
                         title: incidence.title,
-                        area_id: incidence.area_id,
-                        location_id: incidence.location_id,
-                        state_id: incidence.state_id,
+                        area_name: incidence.area_name,
+                        location_name: incidence.location_name,
+                        state_name: incidence.state_name,
                     }))
                 )
             );
@@ -85,7 +83,7 @@ export default {
 
 <template>
             <div class="myTickets table">
-                <h1>Mis Tickets</h1>
+                <h1>Tickets</h1>
                 <div class="table-responsive">
                     <DataTable :data="incidences" :columns="columns" class="table table-striped display"  
                     :options="{response:true,autoWidth:false, dom:'Bfrtip', pageLength: 5, language:{
@@ -98,11 +96,11 @@ export default {
                                     <th>Id</th>
                                     <th>Fecha</th>
                                     <th>Usuario</th>
-                                    <th>Asunto</th>
                                     <th>Área</th>
                                     <th>Sede</th>
+                                    <th>Asunto</th>
                                     <th>Estado</th>
-                                    <th>Acciones</th>
+                                    
                                 </tr>
                             </thead>
                     </DataTable>
@@ -127,22 +125,16 @@ h1{
     border-radius: 10px;
     background-color: #fffcfc;
 }
-
 .table{
     width:90%;
-    margin: auto;
-    
+    margin: auto;    
 }
 thead {
     margin-top:5%!important;
     background-color:#FFF3D6!important;
-    border: 3px solid #F08419;
-    
+    border: 3px solid #F08419;   
 }
 .my-pdf-button{
     background-color: red !important;
 }
-
-
-
 </style>

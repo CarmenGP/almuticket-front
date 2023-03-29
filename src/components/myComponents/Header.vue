@@ -1,5 +1,6 @@
 <script>
 import { ref } from 'vue';
+
 export default {
     setup() {
         let showMenu = ref(false);
@@ -13,7 +14,7 @@ export default {
     <div class="headerContainer bg-indigo-600">
         <nav class="container px-4  py-2 mx-auto md:flex md:justify-between md:items-center ">
             <div class="logoArrabal flex items-center justify-between">
-                <router-link     to="/"    class="text-xl font-bold text-gray-100  md:text-2xl ">
+                <router-link     to="/menu"    class="text-xl font-bold text-gray-100  md:text-2xl ">
                     <a class="logoArrabal" href="../views/login.vue">
                         <img class="logoArrabal" src="public/logoArrabal.png" alt="Logo Arrabal">
                     </a>
@@ -27,11 +28,12 @@ export default {
                 </div>
             </div>
             <ul :class="showMenu ? 'flex' : 'hidden'"  class="menu flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
-                <li><RouterLink to="/login"><strong><a href="../views/LoginView.vue">Acceso</a></strong></RouterLink></li>
-                <li><RouterLink to="/"><strong><a href="../views/MenuView.vue">Mi menú</a></strong></RouterLink></li>
-                <li><RouterLink to="/reservation"><strong><a href="../views/ReservationFormView.vue">Crear reserva</a></strong></RouterLink></li>
-                <li><RouterLink to="/incident"><strong><a href="../views/IncidentView.vue">Crear incidencia</a></strong></RouterLink></li>
-                <li><RouterLink to="/tickets"><strong><a href="../views/MyTicketsView.vue">Mis Tickets</a></strong></RouterLink></li>
+                <li><RouterLink to="/"><strong>Acceso</strong></RouterLink></li>
+                <li><RouterLink to="/menu"><strong>Menú</strong></RouterLink></li>
+                <li><RouterLink to="/reservation"><strong>Crear reserva</strong></RouterLink></li>
+                <li><RouterLink to="/incident"><strong>Crear incidencia</strong></RouterLink></li>
+                <li><RouterLink to="/tickets"><strong>Tickets</strong></RouterLink></li>
+                <li><RouterLink to="/"><strong>Cerrar Sesión</strong></RouterLink></li>
             </ul>
         </nav>
     </div>
@@ -61,20 +63,20 @@ a:hover{
     text-decoration: underline;
 }
 @media only screen and (max-width: 768px) {
-.logoArrabal{
-    width: 90%;
-    margin-left: 2%;
-}
-a{
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    color:white;
-    justify-items: center;
-}
-a:hover{
-    color:white;
-    text-decoration: underline;
-}
+    .logoArrabal{
+        width: 90%;
+        margin-left: 2%;
+    }
+    a{
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        color:white;
+        justify-items: center;
+    }
+    a:hover{
+        color:white;
+        text-decoration: underline;
+    }
 }
 </style>

@@ -5,7 +5,10 @@ export default {
 </script>
 
 <template>
-        <Incident/>        
+    <div>
+        <Incident/>
+    </div>        
 </template>
 
-<style></style>
+<style>
+</style>

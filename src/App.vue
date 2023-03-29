@@ -24,6 +24,7 @@ export default {
     <FooterVue />
   </div>
 </template>
+
 <style>
 #app{
   background-color:#FFF3D6;

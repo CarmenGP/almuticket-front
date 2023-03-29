@@ -1,5 +1,6 @@
 <script>
 import ShowReservation from '../components/myComponents/ShowReservation.vue'
+
 export default {
 components:{ ShowReservation },
 }
@@ -9,7 +10,5 @@ components:{ ShowReservation },
     <ShowReservation/>
 </template>
 
-
 <style>
-
 </style>

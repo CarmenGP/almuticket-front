@@ -4,31 +4,19 @@ export default {
 </script>
 <template>
     <MDBFooter :text="['center', 'lg-start']">
-    <!-- Grid container -->
     <MDBContainer class=" p-4 pb-0">
-        <!--Grid row-->
         <MDBRow>
-            <!--Grid column-->
             <MDBCol auto class="mb-4 mb-md-0">
-
             </MDBCol>
-            <!--Grid column-->
-            <!--Grid column-->
+
             <MDBCol md="5" col="12" class="mb-4 mb-md-0">
-            <!-- Email input -->
-
             </MDBCol>
-            <!--Grid column-->
-            <!--Grid column-->
+
             <MDBCol auto class="mb-4 mb-md-0">
-
-            </MDBCol>
-            <!--Grid column-->
+            </MDBCol>    
         </MDBRow>
-        <!--Grid row-->
     </MDBContainer>
-    <!-- Grid container -->
-    <!-- Copyright -->
+    
         <div class="footerContainer">
             <div class="text-center p-3">
                 <p>&copy; Asociacionarrabal.org</p>
@@ -71,7 +59,7 @@ export default {
         font-size: 0.8em;
     }
     .logo{
-    width: 70px;
-}
+        width: 70px;
+    }
 }
 </style>

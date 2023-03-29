@@ -10,6 +10,7 @@ components: { Login },
                 <Login/>
         </div>
 </template>
+
 <style lang="css" scoped>
 .bodyContainer{
         background-color: #fff3d6;

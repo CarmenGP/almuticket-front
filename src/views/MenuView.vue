@@ -15,7 +15,7 @@ export default {
     </div>
 </template>
 
-<style lang="css">
+<style lang="css" scoped>
 .buttonsContainer {
     display: flex;
     flex-direction: row;
@@ -31,21 +31,21 @@ export default {
         align-items: center;
     }
     .request-button, .incidence-button, .tickets-button {
-    background-color: #F5F6F6;
-    color: #F08419;
-    border: 8px solid #F08419;
-    border-radius: 13px;
-    font-size: 0.5rem;
-    padding: 0.8rem 1.2rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    margin-top:2rem;
-    margin-bottom: 2rem;
+        background-color: #F5F6F6;
+        color: #F08419;
+        border: 8px solid #F08419;
+        border-radius: 13px;
+        font-size: 0.5rem;
+        padding: 0.8rem 1.2rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        margin-top:2rem;
+        margin-bottom: 2rem;
     }   
     .request-button:hover, .incidence-button:hover, .tickets-button:hover {
-    background-color: #F08419;
-    color:  #F5F6F6;
-    border-color: #F5F6F6;
+        background-color: #F08419;
+        color:  #F5F6F6;
+        border-color: #F5F6F6;
     }
 }
 </style>

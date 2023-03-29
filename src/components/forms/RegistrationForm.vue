@@ -65,7 +65,7 @@
                 .then(response=> {
                     console.log(response);
                     localStorage.setItem('token', response.data.token);
-                    router.push('/'); 
+                    router.push('/menu'); 
             });
         },
         }
@@ -116,7 +116,7 @@
                 </label>
                 <button  type="submit" class="register-button mt-4 px-4 py-2  text-base rounded-md border border-transparent text-white focus:outline-none bg-orange-500 text-blue-100 hover:text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 cursor-pointer inline-flex items-center w-full justify-center items-center font-medium focus:outline-none"
                 >
-                    Registrarse
+                Registrarse
                 </button>            
                 </form>
                 <div class="error-message mt-4" v-if="errorMessage">{{ errorMessage }}</div>
@@ -135,7 +135,6 @@ h1{
     margin-bottom: 5%;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
-
 .formContainer{
     color:#F08419;
     border-width: 5px;
@@ -144,18 +143,15 @@ h1{
     padding: 20px;
     background-color: #FFFCFC;
 }
-
 label{
     color:#F08419;
     font-weight: bold;
-
 }
 .input-container {
     display: flex;
     width:100%;
     background-color:#FFF3D6;
     margin-bottom:15px;
-
 }    
 .input-field {
         color: #F08419;
@@ -170,8 +166,7 @@ label{
     margin-bottom: 10px;
     font-size: small;
     font-weight: bold;
-}
-    
+} 
 .register-button {
     font-weight: bold;
     color: white;
