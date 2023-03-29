@@ -106,7 +106,7 @@ export default {
                     </DataTable>
                 </div>
                 <div class="containerBack">
-                    <router-link to="/" class="back-btn">← Volver</router-link>
+                    <router-link to="/menu" class="back-btn">← Volver</router-link>
                 </div>
         </div>
 </template>
