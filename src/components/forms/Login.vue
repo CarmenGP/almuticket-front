@@ -152,7 +152,6 @@ label {
     background-color: #E6E6E6;
     margin-bottom: 5%;
 }
-
 .login-button {
     font-weight: bold;
     color: white;
