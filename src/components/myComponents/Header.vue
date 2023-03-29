@@ -1,5 +1,7 @@
 <script>
 import { ref } from 'vue';
+import LogoutButton from '../buttons/LogoutButton.vue';
+
 export default {
     setup() {
         let showMenu = ref(false);
@@ -32,6 +34,7 @@ export default {
                 <li><RouterLink to="/reservation"><strong><a href="../views/ReservationFormView.vue">Crear reserva</a></strong></RouterLink></li>
                 <li><RouterLink to="/incident"><strong><a href="../views/IncidentView.vue">Crear incidencia</a></strong></RouterLink></li>
                 <li><RouterLink to="/tickets"><strong><a href="../views/MyTicketsView.vue">Mis Tickets</a></strong></RouterLink></li>
+                <li><LogoutButton/></li>
             </ul>
         </nav>
     </div>

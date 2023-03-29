@@ -62,7 +62,7 @@
                 .then(response=> {
                     console.log(response.data);
                     localStorage.setItem('token', response.data.token);
-                    router.push('/'); 
+                    router.push('/menu'); 
             });
         },
         }
