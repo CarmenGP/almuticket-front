@@ -24,7 +24,7 @@ export default {
         const auth = {headers: {
                         'Authorization': 'bearer ' + localStorage.getItem('token')}}
 
-        await axios.post('http://127.0.0.1:8000/api/auth/register',{
+        await axios.post('http://127.0.0.1:8000/api/createBooking',{
                         subject: this.subject,
                         area: this.area,
                         activity: this.activity,
