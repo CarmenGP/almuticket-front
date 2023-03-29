@@ -43,9 +43,9 @@
                     console.log('Error al hacer petición:', error);
                     if (error.response) {
                         if (error.response.status === 401) {
-                            this.errorMessage = 'Credenciales inválidas';
+                            this.errorMessage = 'Correo no Registrado';
                         } else {
-                            this.errorMessage = 'Error al iniciar sesión';
+                            this.errorMessage ='Registro Correcto';
                         }
                     } else {
                         this.errorMessage = 'Error al conectar con el servidor';
@@ -165,9 +165,11 @@ label{
         margin-bottom: 5%;
 }
 .error-message {
-    color: #402306;
+    color: red;
     margin-top: 5px;
     margin-bottom: 10px;
+    font-size: small;
+    font-weight: bold;
 }
     
 .register-button {
