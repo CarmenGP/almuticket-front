@@ -119,6 +119,7 @@ h1{
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
 
+    
 .formContainer {
     color: #f08419;
     border-width: 5px;
