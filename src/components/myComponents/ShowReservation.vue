@@ -34,7 +34,15 @@ export default {
     </div>
     <div class="imputForm col-md-12">
         <label for="state" class="form-label">Estado:</label>
-        <input type="text" class="form-control" id="state" v-model="form.state" placeholder="Reservation state">
+        <select class="form-select" id="state" v-model="form.state">
+                    <option disabled value="">Seleccione un estado</option>
+                    <option value="">Emitido</option>
+                    <option value="">Visto</option>
+                    <option value="">Pendiente</option>
+                    <option value="">En trámite</option>
+                    <option value="">Finalizado</option>
+                    <option value="">Rechazado</option>
+        </select>
     </div>
     <div class="staticField1 col-md-12">
         <label for="subject" class="form-label">Asunto:</label>
@@ -74,7 +82,7 @@ export default {
     </div>
     <div class="inputForm col-md-12">
         <label for="comments" class="form-label">Comentarios de la persona que administra:</label>
-        <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Write a comment"></textarea>
+        <textarea class="form-control" id="comments" rows="3" v-model="form.comments" placeholder="Escribe un comentario"></textarea>
         </div>
                 <div class="containerBack">
                     <router-link to="/" class="back-btn">← Volver</router-link>
@@ -209,7 +217,7 @@ input[type="date"], input[type="time"], input[type="number"], select {
 textarea{
     background-color: #F0F0F0;
     border: 2px solid #F08419;
-    color:#402306;
+    color:#402306!important;
     border-radius: 5px;
     padding: 5px;
     margin-bottom: 10px;

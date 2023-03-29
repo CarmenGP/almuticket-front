@@ -28,9 +28,17 @@ export default {
             <div class="containerTitle">
                 <h1> Detalle de incidencia </h1>
             </div>
-            <div class="col-md-12">
+            <div class="imputForm col-md-12">
                 <label for="state" class="form-label">Estado:</label>
-                <input type="text" class="form-control" id="state" v-model="form.state" placeholder="Estado de la incidencia">
+                <select class="form-select" id="state" v-model="form.state">
+                    <option disabled value="">Seleccione un estado</option>
+                    <option value="">Emitido</option>
+                    <option value="">Visto</option>
+                    <option value="">Pendiente</option>
+                    <option value="">En trámite</option>
+                    <option value="">Finalizado</option>
+                    <option value="">Rechazado</option>
+                </select>
             </div>
             <div class="staticField1 col-md-12">
                 <label for="subject" class="form-label">Asunto:</label>
@@ -109,7 +117,7 @@ p{
     padding: px;
     margin-bottom: 10px;
 }
-input[type="text"] {
+input[type="text"], select {
     background-color: #F0F0F0;
     border: 2px solid #F08419;
     color:#402306;
