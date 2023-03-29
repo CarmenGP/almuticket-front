@@ -105,6 +105,9 @@ export default {
                             </thead>
                     </DataTable>
                 </div>
+                <div class="containerBack">
+                    <router-link to="/" class="back-btn">← Volver</router-link>
+                </div>
         </div>
 </template>
 
@@ -136,5 +139,17 @@ thead {
 }
 .my-pdf-button{
     background-color: red !important;
+}
+.back-btn {
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+    color: #F08419;
+    font-size: 1.2rem;
+    cursor: pointer;
+    }
+.containerBack{
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 </style>
