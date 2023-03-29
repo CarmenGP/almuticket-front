@@ -6,9 +6,10 @@ export default {
     data() {
         return {
         form: {
+            user_id:'',
             subject:'',
-            area:'',
             activity:'',
+            area:'',
             room:'',
             date:'',
             startTime:'',
@@ -20,6 +21,8 @@ export default {
     },
     methods: {
         async submitForm() {
+        const auth = {headers: {
+                        'Authorization': 'bearer ' + localStorage.getItem('token')}}
 
         await axios.post('http://127.0.0.1:8000/api/auth/register',{
                         subject: this.subject,
