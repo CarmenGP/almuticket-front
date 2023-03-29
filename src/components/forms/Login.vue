@@ -10,6 +10,7 @@
             password: "",
         };
         },
+        
         methods: {
             async submitForm()
             {
