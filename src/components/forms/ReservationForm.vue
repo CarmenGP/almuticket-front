@@ -22,8 +22,6 @@ export default {
         async submitForm() {
 
         await axios.post('http://127.0.0.1:8000/api/auth/register',{
-                    // headers: {
-                    //     'Authorization': 'Bearer ' + localStorage.getItem('token')},
                         subject: this.subject,
                         area: this.area,
                         activity: this.activity,
@@ -37,8 +35,6 @@ export default {
 
                     .then(response=> {
                         console.log(response);
-                            // localStorage.setItem('token', response.data.token);
-
                 });
         }
     }
@@ -164,7 +160,6 @@ h1{
     font-size: 1.5rem;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
 }
-
 label{
     color:#F08419;
     font-weight: 600;
@@ -287,6 +282,6 @@ select {
 .formContainer{
     width:100%;
     margin:auto;
-    }
+}
 }
 </style>

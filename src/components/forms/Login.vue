@@ -67,7 +67,6 @@
         },
         }
     }
-
 </script>
 
 <template>
@@ -108,7 +107,6 @@
 </template>
 
 <style lang="css" scoped>
-
 h1{
     color:#F08419;
     text-align:center;
@@ -118,7 +116,6 @@ h1{
     margin-bottom: 5%;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
-
 .formContainer {
     color: #f08419;
     border-width: 5px;
@@ -130,7 +127,6 @@ h1{
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
 label {
     color: #f08419;
     font-weight: bold;
@@ -140,11 +136,10 @@ label {
     width: 100%;
     background-color: #fff3d6;
     margin-bottom: 5px;
-    flex-direction: column !important; /* Cambiar la dirección del contenedor de entrada a columna */
-    justify-content: center; /* Centrar elementos dentro del contenedor de entrada */
-    align-items: center; /* Centrar elementos dentro del contenedor de entrada */
+    flex-direction: column !important; 
+    justify-content: center; 
+    align-items: center; 
 }
-
 .input-field {
     color: #f08419;
     border-radius: 10px;
@@ -184,10 +179,8 @@ p{
     font-size: small;
     font-weight: bold;
 }
-
 a:hover{
     color:#f08419;
     text-decoration: underline;
-
 }
 </style>

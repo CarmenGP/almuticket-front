@@ -1,5 +1,6 @@
 <script>
 import Tickets from '../components/myComponents/Tickets.vue'
+
 export default {
 components: { Tickets },
 }
@@ -13,6 +14,6 @@ components: { Tickets },
 
 <style>
 .bodyContainer{
-        background-color: #fff3d6;
+    background-color: #fff3d6;
 }
 </style>

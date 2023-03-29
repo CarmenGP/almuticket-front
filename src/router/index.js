@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import LoginView from '../views/LoginView.vue'
 import MenuView from '../views/MenuView.vue'
-import IncidenceView from '../views/IncidenceView.vue'
 import RegisterView from '../views/RegisterView.vue'
 import MyTicketsView from '../views/MyTicketsView.vue'
 import ReservationFormView from '../views/ReservationFormView.vue'
@@ -21,11 +20,6 @@ const router = createRouter({
       path: '/',
       name: 'login',
       component: LoginView
-    },
-    {
-      path: '/incidence',
-      name: 'incidence',
-      component: IncidenceView
     },
     {
       path: '/tickets',
@@ -48,12 +42,12 @@ const router = createRouter({
       component: IncidentView 
     },
     {
-      path: '/showincident/:id',
+      path: '/showincident',
       name: 'showincident',
       component: ShowIncidentView 
     },
     {
-      path: '/showreservation/:id',
+      path: '/showreservation',
       name: 'showreservation',
       component: ShowReservationView 
     }

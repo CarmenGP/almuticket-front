@@ -112,7 +112,6 @@ label{
     color:#F08419;
     font-weight: 600;
 }
-
 p{
     background-color: #F0F0F0;
     color:#402306;
@@ -124,12 +123,10 @@ p{
 .staticField{
     margin-bottom: 20px;
 }
-
 .staticField1{
     margin-bottom: 20px;
     margin-top:-1px;
 }
-
 .activityField{
     width: 100%;
 }
@@ -209,7 +206,6 @@ input[type="date"], input[type="time"], input[type="number"], select {
     padding: 5px;
     margin-bottom: 10px;
 }
-
 textarea{
     background-color: #F0F0F0;
     border: 2px solid #F08419;
@@ -218,11 +214,9 @@ textarea{
     padding: 5px;
     margin-bottom: 10px;
 }
-
 select {
     color:#402306;
 }
-
 .back-btn {
     background-color: transparent;
     border: none;
@@ -231,11 +225,9 @@ select {
     font-size: 1.2rem;
     cursor: pointer;
 }
-
 .containerBack{
     margin-bottom: 20px;
 }
-
 @media only screen and (max-width: 768px) {
     .formContainer{
         width:100%;

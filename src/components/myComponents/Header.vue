@@ -1,5 +1,6 @@
 <script>
 import { ref } from 'vue';
+
 export default {
     setup() {
         let showMenu = ref(false);
@@ -62,20 +63,20 @@ a:hover{
     text-decoration: underline;
 }
 @media only screen and (max-width: 768px) {
-.logoArrabal{
-    width: 90%;
-    margin-left: 2%;
-}
-a{
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    color:white;
-    justify-items: center;
-}
-a:hover{
-    color:white;
-    text-decoration: underline;
-}
+    .logoArrabal{
+        width: 90%;
+        margin-left: 2%;
+    }
+    a{
+        text-decoration: none;
+        display: flex;
+        flex-direction: row;
+        color:white;
+        justify-items: center;
+    }
+    a:hover{
+        color:white;
+        text-decoration: underline;
+    }
 }
 </style>

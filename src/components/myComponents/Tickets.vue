@@ -135,22 +135,16 @@ h1{
     border-radius: 10px;
     background-color: #fffcfc;
 }
-
 .table{
     width:90%;
-    margin: auto;
-    
+    margin: auto;    
 }
 thead {
     margin-top:5%!important;
     background-color:#FFF3D6!important;
-    border: 3px solid #F08419;
-    
+    border: 3px solid #F08419;   
 }
 .my-pdf-button{
     background-color: red !important;
 }
-
-
-
 </style>

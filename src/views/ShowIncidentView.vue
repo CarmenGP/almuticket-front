@@ -1,5 +1,6 @@
 <script>
 import ShowIncident from '../components/myComponents/ShowIncident.vue'
+
 export default {
 components:{ ShowIncident },
 }
@@ -10,5 +11,4 @@ components:{ ShowIncident },
 </template>
 
 <style>
-
 </style>
