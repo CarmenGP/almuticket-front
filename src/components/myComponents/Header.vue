@@ -1,17 +1,30 @@
 <script>
 import { ref } from 'vue'; 
+import { mapGetters, mapActions } from "vuex";
 
 export default {
+    name: "Header",
+    computed: {
+        ...mapGetters({
+            authenticated: "auth/authenticated",
+            user: "auth/user",
+        }),
+    },
+    methods:{
+        ...mapActions({
+            logOutAction: 'auth/logOut'
+        }),
+        logOut(){
+            this.logOutAction().then(()=>{
+            this.push({ path: '/login' });
+            })
+        }
+    },
     setup() {
         let showMenu = ref(false);
         const toggleNav = () => (showMenu.value = !showMenu.value);
         return { showMenu, toggleNav };
-    }
-    methods: {
-        async logout() {
-        this.$router.push({ path: '/login' });
-        }
-    }
+    },
 }
 </script>
 
@@ -33,11 +46,16 @@ export default {
                 </div>
             </div>
             <ul :class="showMenu ? 'flex' : 'hidden'"  class="menu flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
-                <li><RouterLink to="/login"><strong>Acceso</strong></RouterLink></li>
-                <li><RouterLink to="/"><strong>Mi Menú</strong></RouterLink></li>
-                <li><RouterLink to="/reservation"><strong>Crear Reserva</strong></RouterLink></li>
-                <li><RouterLink to="/incident"><strong>Crear incidencia</strong></RouterLink></li>
-                <li><RouterLink to="/tickets"><strong>Mis Tickets</strong></RouterLink></li>
+                <span v-if="!authenticated">
+                    <li><RouterLink to="/login"><strong>Acceso</strong></RouterLink></li>
+                </span>
+                <span v-if="authenticated">
+                    <li><RouterLink to="/"><strong>Mi Menú</strong></RouterLink></li>
+                    <li><RouterLink to="/reservation"><strong>Crear Reserva</strong></RouterLink></li>
+                    <li><RouterLink to="/incident"><strong>Crear incidencia</strong></RouterLink></li>
+                    <li><RouterLink to="/tickets"><strong>Mis Tickets</strong></RouterLink></li>
+                    <li><button @click.prevent="logOut">Cerrar sesión</button></li>
+                </span>
             </ul>
         </nav>
     </div>
