@@ -27,11 +27,12 @@ export default {
                 </div>
             </div>
             <ul :class="showMenu ? 'flex' : 'hidden'"  class="menu flex-col mt-8 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
-                <li><RouterLink to="/"><strong><a href="../views/LoginView.vue">Acceso</a></strong></RouterLink></li>
-                <li><RouterLink to="/menu"><strong><a href="../views/MenuView.vue">Mi menú</a></strong></RouterLink></li>
-                <li><RouterLink to="/reservation"><strong><a href="../views/ReservationFormView.vue">Crear reserva</a></strong></RouterLink></li>
-                <li><RouterLink to="/incident"><strong><a href="../views/IncidentView.vue">Crear incidencia</a></strong></RouterLink></li>
-                <li><RouterLink to="/tickets"><strong><a href="../views/MyTicketsView.vue">Mis Tickets</a></strong></RouterLink></li>
+                <li><RouterLink to="/"><strong>Acceso</strong></RouterLink></li>
+                <li><RouterLink to="/menu"><strong>Mi menú</strong></RouterLink></li>
+                <li><RouterLink to="/reservation"><strong>Crear reserva</strong></RouterLink></li>
+                <li><RouterLink to="/incident"><strong>Crear incidencia</strong></RouterLink></li>
+                <li><RouterLink to="/tickets"><strong>Mis Tickets</strong></RouterLink></li>
+                <li><RouterLink to="/"><strong>Logout</strong></RouterLink></li>
             </ul>
         </nav>
     </div>

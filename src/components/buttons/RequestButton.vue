@@ -6,11 +6,7 @@ export default {
 <template>
         <div>
             <RouterLink to="/reservation">
-                <a href="../views/ReservationFormView.vue">
-                    <button class="request-button">
-                    Solicitud de reserva de sala
-                    </button>   
-                </a>
+                <button class="request-button">Solicitud de reserva de sala</button>   
             </RouterLink>
         </div>
 </template>
