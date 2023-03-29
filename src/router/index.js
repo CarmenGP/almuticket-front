@@ -48,12 +48,12 @@ const router = createRouter({
       component: IncidentView 
     },
     {
-      path: '/showincident',
+      path: '/showincident/:id',
       name: 'showincident',
       component: ShowIncidentView 
     },
     {
-      path: '/showreservation',
+      path: '/showreservation/:id',
       name: 'showreservation',
       component: ShowReservationView 
     }
