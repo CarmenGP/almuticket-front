@@ -11,20 +11,33 @@ export default {
         };
     },
     methods: {
-        async submitForm() {
+        verifyEmailDomain() {
         const emailDomain = this.email.split('@')[1];
-        if (emailDomain !== 'arrabalempleo.com') {
-            this.errorMessage = 'Solo se permiten correos de @arrabalempleo.com';
+        console.log('emailDomain:', emailDomain);
+        if (emailDomain !== 'arrabalempleo.org') {
+            console.log('Correo no válido:', this.email);
+    this.errorMessage = 'Solo se permiten correos de @arrabalempleo.org';
+    setTimeout(() => {
+    this.errorMessage = '';
+    }, 5000);
+    return;
+        }
+        return true;
+        },
+        async submitForm() {
+        if (!this.verifyEmailDomain()) {
             return;
         }
-
+        
         try {
             const response = await axios.post('http://127.0.0.1:8000/api/auth/login', {
             email: this.email,
             password: this.password
             });
+            console.log('Token recibido:', response.data.token);
             localStorage.setItem('token', response.data.token);
         } catch (error) {
+            console.log('Error al hacer petición:', error);
             if (error.response) {
             if (error.response.status === 401) {
                 this.errorMessage = 'Credenciales inválidas';
@@ -35,6 +48,10 @@ export default {
             this.errorMessage = 'Error al conectar con el servidor';
             }
         }
+        
+        setTimeout(() => {
+            this.errorMessage = '';
+        }, 5000);
         }
     }
 };
