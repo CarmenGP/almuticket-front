@@ -1,5 +1,8 @@
 <script>
+import axios from 'axios';
+
 export default {
+    name: 'ReservationForm',
     data() {
         return {
         form: {
@@ -16,9 +19,27 @@ export default {
         }
     },
     methods: {
-        submitForm() {
-        // Aquí podrías enviar el formulario a través de una petición HTTP o realizar alguna otra acción con los datos.
-        console.log(this.form);
+        async submitForm() {
+
+        await axios.post('http://127.0.0.1:8000/api/auth/register',{
+                    // headers: {
+                    //     'Authorization': 'Bearer ' + localStorage.getItem('token')},
+                        subject: this.subject,
+                        area: this.area,
+                        activity: this.activity,
+                        room: this.room,
+                        date: this.date,
+                        startTime: this.startTime,
+                        finishTime: this.finishTime,
+                        assistantsNumber: this.assistantsNumber,
+                        comments: this.comments,
+                    })
+
+                    .then(response=> {
+                        console.log(response);
+                            // localStorage.setItem('token', response.data.token);
+
+                });
         }
     }
     }
@@ -26,7 +47,7 @@ export default {
 
 <template>
     <div class="formContainer">
-        <form @submit.prevent="submitForm" class="form row g-3">
+        <form @submit.prevent="submitForm()" class="form row g-3">
             <div class="containerTitle">
                 <h1 class="reservationTitle"> Crear Reserva </h1>
             </div>

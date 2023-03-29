@@ -1,5 +1,6 @@
 <script>
     import axios from 'axios';
+    import router from '@/router';
 
     export default {
         name: 'Login',
@@ -21,6 +22,7 @@
                 .then(response=> {
                     console.log(response.data);
                     localStorage.setItem('token', response.data.token);
+                    router.push('/'); 
             });
         },
         }
