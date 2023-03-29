@@ -186,9 +186,13 @@ This readme corresponds to the frontend development of the application, which is
 </div>
 
 <h2>12. Next steps</h2>
-
 <ul>
-<li>In development process</li>
+<li>Frontend test</li>
+<li>Implementation of more functionality in tables.</li>    
+<li>Connection of all components with AXIOS.</li>    
+<li>Enable route to show views from tickets.</li> 
+<li>Implement media query in Frontend.</li>
+<li>Implement the view of the helper CRUD's.</li>    
 </ul>
 
 
