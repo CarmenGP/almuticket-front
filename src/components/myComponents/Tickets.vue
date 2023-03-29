@@ -22,16 +22,13 @@ export default {
             columns:[
                 {data:null, render: function(data,type,row,meta)
                 {return `${meta.row+1}`}},
-                {data: 'id'},
                 {data: 'created_at'},
                 {data: 'user_id'},
                 {data: 'area_id'},
-                {data: 'category_id'},
                 {data: 'location_id'},
                 {data: 'title'},
                 {data: 'state_id'},
-                {data: 'description'},
-                {"defaultContent": "<div class='btn-group'><button class='btn btn-success'> <i class='fas fa-eye'></i></button><button class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
+                {"defaultContent": "<div class='btn-group'><button class='btn btn-success'><i class='fas fa-eye'></i></button><button class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
             ],
             botones: [
                 {
@@ -72,13 +69,10 @@ export default {
                         }).then(
                 response=>(
                     this.incidences = response.data.map(incidence => ({
-                        id: incidence.id,
                         created_at: incidence.created_at,
                         user_id: incidence.user_id,
-                        category_id: incidence.category_id,
-                        area_id: incidence.area_id,
                         title: incidence.title,
-                        description: incidence.description,
+                        area_id: incidence.area_id,
                         location_id: incidence.location_id,
                         state_id: incidence.state_id,
                     }))
@@ -101,14 +95,12 @@ export default {
                             }, buttons:botones}">
                             <thead>
                                 <tr>
-                                    <th>#</th>
+                                    <th>Id</th>
                                     <th>Fecha</th>
                                     <th>Usuario</th>
-                                    <th>Tipo de ticket</th>
+                                    <th>Asunto</th>
                                     <th>Área</th>
                                     <th>Sede</th>
-                                    <th>Asunto</th>
-                                    <th>Description</th>
                                     <th>Estado</th>
                                     <th>Acciones</th>
                                 </tr>
