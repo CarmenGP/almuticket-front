@@ -31,7 +31,7 @@ export default {
                 {data: 'title'},
                 {data: 'state_id'},
                 {data: 'description'},
-                {"defaultContent": "<div class='btn-group'><button class='btn btn-success'> <i class='fas fa-eye'></i></button><button class='btn btn-danger'> <i class='fas fa-trash'></i></button></div>"}
+                {"defaultContent": "<div class='btn-group'><button class='btn btn-success'> <i class='fas fa-eye'></i></button></button></div>"}
             ],
             botones: [
                 {
