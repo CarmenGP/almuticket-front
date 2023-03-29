@@ -118,7 +118,6 @@ h1{
     margin-bottom: 5%;  
     text-shadow: -1px -1px 0 #402306, 1px -1px 0 #402306, -1px 1px 0 #402306, 1px 1px 0 #402306;
     }
-
     
 .formContainer {
     color: #f08419;
