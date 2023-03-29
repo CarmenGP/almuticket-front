@@ -135,7 +135,6 @@ label {
     color: #f08419;
     font-weight: bold;
 }
-
 .input-container {
     display: flex;
     width: 100%;
