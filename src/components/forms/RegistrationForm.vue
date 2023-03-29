@@ -10,12 +10,51 @@
             surname:"",
             email: "",
             password: "",
+            errorMessage: "",
         };
         },
         methods: {
-            async submitRegister()
-            {
+            verifyEmailDomain() {
+                const emailDomain = this.email.split('@')[1];
+                console.log('emailDomain:', emailDomain);
+                if (emailDomain !== 'arrabalempleo.org') {
+                    console.log('Correo no válido:', this.email);
+                    this.errorMessage = 'Solo se permiten correos de @arrabalempleo.org';
+                setTimeout(() => {
+                    this.errorMessage = '';
+                }, 5000);
+                    return;
+                }
+                    return true;
+                },
 
+            async submitRegister(){
+                if (!this.verifyEmailDomain()) {
+                    return;
+                }
+                try {
+                    const response = await axios.post('http://127.0.0.1:8000/api/auth/register', {
+                    email: this.email,
+                    password: this.password
+                    });
+                    console.log('Token recibido:', response.data.token);
+                    localStorage.setItem('token', response.data.token);
+                } catch (error) {
+                    console.log('Error al hacer petición:', error);
+                    if (error.response) {
+                        if (error.response.status === 401) {
+                            this.errorMessage = 'Correo no Registrado';
+                        } else {
+                            this.errorMessage ='Registro Correcto';
+                        }
+                    } else {
+                        this.errorMessage = 'Error al conectar con el servidor';
+                    }
+                };
+                
+                setTimeout(() => {
+                    this.errorMessage = '';
+                }, 5000);
                 await axios.post('http://127.0.0.1:8000/api/auth/register', {
                     name: this.name,
                     surname: this.surname,
@@ -80,7 +119,7 @@
                     Registrarse
                 </button>            
                 </form>
-                <div class="error-message"></div> <!-- Agregar un elemento div para mostrar el mensaje de error -->
+                <div class="error-message mt-4" v-if="errorMessage">{{ errorMessage }}</div>
             </div>
         </div>
     </div>
@@ -124,6 +163,13 @@ label{
         border: .1rem solid #F08149;
         background-color: #E6E6E6;
         margin-bottom: 5%;
+}
+.error-message {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: small;
+    font-weight: bold;
 }
     
 .register-button {

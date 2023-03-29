@@ -8,13 +8,52 @@
         return {
             email: "",
             password: "",
+            errorMessage: "",
         };
         },
         
         methods: {
-            async submitForm()
-            {
+            verifyEmailDomain() {
+                const emailDomain = this.email.split('@')[1];
+                console.log('emailDomain:', emailDomain);
+                if (emailDomain !== 'arrabalempleo.org') {
+                    console.log('Correo no válido:', this.email);
+                    this.errorMessage = 'Solo se permiten correos de @arrabalempleo.org';
+                setTimeout(() => {
+                    this.errorMessage = '';
+                }, 5000);
+                    return;
+                }
+                    return true;
+                },
 
+            async submitForm(){
+                if (!this.verifyEmailDomain()) {
+                    return;
+                }
+                try {
+                    const response = await axios.post('http://127.0.0.1:8000/api/auth/login', {
+                    email: this.email,
+                    password: this.password
+                    });
+                    console.log('Token recibido:', response.data.token);
+                    localStorage.setItem('token', response.data.token);
+                } catch (error) {
+                    console.log('Error al hacer petición:', error);
+                    if (error.response) {
+                        if (error.response.status === 401) {
+                            this.errorMessage = 'Correo no Registrado';
+                        } else {
+                            this.errorMessage = 'Error al iniciar sesión';
+                        }
+                    } else {
+                        this.errorMessage = 'Registro Correcto';
+                    }
+                };
+                
+                setTimeout(() => {
+                    this.errorMessage = '';
+                }, 5000);
                 await axios.post('http://127.0.0.1:8000/api/auth/login', {
                     email: this.email,
                     password: this.password,
@@ -57,7 +96,7 @@
                     Acceder
                     </button>
                 </form>
-                <div class="error-message"></div> <!-- Agregar un elemento div para mostrar el mensaje de error -->
+                <div class="error-message mt-4" v-if="errorMessage">{{ errorMessage }}</div>
             </div>
             <div>
                 <p>¿No estás dado de alta en AlmuTicket?
@@ -96,7 +135,6 @@ label {
     color: #f08419;
     font-weight: bold;
 }
-
 .input-container {
     display: flex;
     width: 100%;
@@ -114,7 +152,6 @@ label {
     background-color: #E6E6E6;
     margin-bottom: 5%;
 }
-
 .login-button {
     font-weight: bold;
     color: white;
@@ -139,6 +176,13 @@ p{
     color:#f08419;
     margin-top:2%;
     text-align: center;
+}
+.error-message {
+    color: red;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: small;
+    font-weight: bold;
 }
 
 a:hover{
