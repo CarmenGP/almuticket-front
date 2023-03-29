@@ -6,9 +6,10 @@ export default {
     data() {
         return {
         form: {
+            user_id:'',
             subject:'',
-            area:'',
             activity:'',
+            area:'',
             room:'',
             date:'',
             startTime:'',
@@ -20,25 +21,26 @@ export default {
     },
     methods: {
         async submitForm() {
+        const auth = {headers: {
+                        'Authorization': 'bearer ' + localStorage.getItem('token')}}
 
-        await axios.post('http://127.0.0.1:8000/api/auth/register',{
-                    // headers: {
-                    //     'Authorization': 'Bearer ' + localStorage.getItem('token')},
-                        subject: this.subject,
-                        area: this.area,
-                        activity: this.activity,
-                        room: this.room,
-                        date: this.date,
-                        startTime: this.startTime,
-                        finishTime: this.finishTime,
-                        assistantsNumber: this.assistantsNumber,
-                        comments: this.comments,
-                    })
+        await axios.post('http://127.0.0.1:8000/api/createBooking',{
+
+                        user_id: localStorage.getItem('user_id'),
+                        subject: this.form.subject,
+                        activity: this.form.activity,
+                        area: this.form.area,
+                        room: this.form.room,
+                        date: this.form.date,
+                        startTime: this.form.startTime,
+                        finishTime: this.form.finishTime,
+                        assistantsNumber: this.form.assistantsNumber,
+                        comments: this.form.comments,
+                    },auth)
 
                     .then(response=> {
                         console.log(response);
-                            // localStorage.setItem('token', response.data.token);
-
+                            localStorage.setItem('token', response.data.token);
                 });
         }
     }
