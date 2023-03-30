@@ -179,7 +179,7 @@ This readme corresponds to the frontend development of the application, which is
 <li>Type in the IDE terminal: <b>npm install jszip</b> and press intro to install JSZip</li>
 </ul>
 
-<h4>11.3 Warning & Testing</h4>
+<h4>11.3 Testing</h4>
 <div style="display:flex; flex-wrap:wrap; justify-content:center; margin:auto">
 <img style="width:780px; height:390px; margin:12px" src="https://user-images.githubusercontent.com/116546588/228353492-7fdf086b-d898-474f-ab59-91c81ac1dac4.jpg" alt="testBackend"/>
 </div>
