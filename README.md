@@ -190,7 +190,7 @@ This readme corresponds to the frontend development of the application, which is
 <li>Implementation of more functionality in tables.</li>    
 <li>Connection of all components with AXIOS.</li>    
 <li>Enable route to show views from tickets.</li> 
-<li>Implement media query in Frontend.</li>
+<li>Finish implementing media query in frontend.</li>
 <li>Implement the view of the helper CRUD's.</li>
 <li>Automatic sending of emails, using EmailJS.</li>
 </ul>
